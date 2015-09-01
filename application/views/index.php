@@ -9,6 +9,7 @@
     <link href="/assets/css/main.css" rel="stylesheet">
     <link href="/assets/css/bootstrap-chosen.css" rel="stylesheet">
     <link href="/assets/css/chosen/chosen.css" rel="stylesheet">
+    <link href="/assets/css/ihover.css" rel="stylesheet">
   </head>
   <body>
     <nav class="navbar navbar-default">
@@ -64,101 +65,112 @@
           <p>Eat. Together.</p>
         </div>
       </div>
+
       <div class="row">
         <div class="page-header">
           <h3>Made for you</h3>
           <h4>Discover gourmet meals at home-cooked prices</h4>
         </div>
+        <div class="meals-mid col-md-2 col-lg-2 col-sm-2">
+        </div>
+        <div class="meals-mid col-md-8 col-lg-8 col-sm-8">
+          <div class="row">
+            <div class="col-xs-4 col-md-4 col-lg-4">
+              <div class="ih-item square colored effect6 from_top_and_bottom thumbnail"><a href="#">
+                <div class="img"><img src="/assets/images/meal-korean.jpg" alt="umsik"></div>
+                <div class="info">
+                  <h3>Korean</h3>
+                  <p>Click to discover Korean food near you</p>
+              </div></a></div>
+            </div>
+            <div class="col-xs-4 col-md-4 col-lg-4">
+              <div class="ih-item square colored effect6 from_top_and_bottom thumbnail"><a href="#">
+                <div class="img"><img src="/assets/images/meal-italian.jpg" alt="italian"></div>
+                <div class="info">
+                  <h3>Italian</h3>
+                  <p>Click to discover Italian food near you</p>
+              </div></a></div>
+            </div>
+            <div class="col-xs-4 col-md-4 col-lg-4">
+              <div class="ih-item square colored effect6 from_top_and_bottom thumbnail"><a href="#">
+                <div class="img"><img src="/assets/images/meal-steak.jpg" alt="steak"></div>
+                <div class="info">
+                  <h3>Fine Dining</h3>
+                  <p>Click to discover fine dining near you</p>
+              </div></a></div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-4 col-md-4 col-lg-4">
+              <div class="ih-item square colored effect6 from_top_and_bottom thumbnail"><a href="#">
+                <div class="img"><img src="/assets/images/meal-sandwich.jpeg" alt="sandwich"></div>
+                <div class="info">
+                  <h3>Seafood</h3>
+                  <p>Click to discover Seafood food near you</p>
+              </div></a></div>
+            </div>
+            <div class="col-xs-4 col-md-4 col-lg-4">
+              <div class="ih-item square colored effect6 from_top_and_bottom thumbnail"><a href="#">
+                <div class="img"><img src="/assets/images/meal-dessert.jpg" alt="dessert"></div>
+                <div class="info">
+                  <h3>Sweets</h3>
+                  <p>Click for delicious desserts</p>
+              </div></a></div>
+            </div>
+            <div class="col-xs-4 col-md-4 col-lg-4">
+              <div class="ih-item square colored effect6 from_top_and_bottom thumbnail"><a href="#">
+                <div class="img"><img src="/assets/images/meal-vegetarian.jpg" alt="veggie"></div>
+                <div class="info">
+                  <h3>Vegetarian</h3>
+                  <p>Click for vegetarian options</p>
+              </div></a></div>
+            </div>
+          </div>
+
+        </div>
         <div class="meals-mid col-md-1 col-lg-1 col-sm-1">
         </div>
-        <div class="meals-mid col-md-10 col-lg-10 col-sm-10">
-          <div class="col-xs-6 col-md-3">
-            <a href="#" class="thumbnail">
-              <img src="/assets/images/meal-korean.jpg" alt="umsik">
-            </a>
-          </div>
-          <div class="col-xs-6 col-md-3">
-            <a href="#" class="thumbnail">
-              <img src="/assets/images/meal-italian.jpg" alt="italian">
-            </a>
-          </div>
-          <div class="col-xs-6 col-md-3">
-            <a href="#" class="thumbnail">
-              <img src="/assets/images/meal-sandwich.jpeg" alt="sandwich">
-            </a>
-          </div>
-          <div class="col-xs-6 col-md-3">
-            <a href="#" class="thumbnail">
-              <img src="/assets/images/meal-dessert.jpg" alt="dessert">
-            </a>        
-          </div>
-        
-          <div class="col-xs-6 col-md-3">
-            <a href="#" class="thumbnail">
-              <img src="/assets/images/meal-chicken.jpg" alt="chicken">
-            </a>
-          </div>
-          <div class="col-xs-6 col-md-3">
-            <a href="#" class="thumbnail">
-              <img src="/assets/images/meal-burgers.jpg" alt="burgers">
-            </a>
-          </div>
-          <div class="col-xs-6 col-md-3">
-            <a href="#" class="thumbnail">
-              <img src="/assets/images/meal-steak.jpg" alt="steak">
-            </a>
-          </div>
-          <div class="col-xs-6 col-md-3">
-            <a href="#" class="thumbnail">
-              <img src="/assets/images/meal-vegetarian.jpg" alt="veggie">
-            </a>        
-          </div>
-        </div>
-        <div class="meals-mid col-md-1 col-lg-1 col-sm-1">
-        </div>
-      </div>
+      </div> <!-- end middle-row  -->
+
+
+
       <div class="row">
         <div class="page-header">
-          <h3>Find a meal today</h3>
+          <h3>Or search by type and/or date</h3>
         </div>
         <div class="background-bottom col-md-12 col-lg-12 col-sm-12">
           <div class="col-md-3 col-lg-3 col-sm-3"></div>
           <div class="background-bottom-form col-md-6 col-lg-6 col-sm-6">
             <form action="" method="post">
               <div class="form-group">
-                <label for="type" class="col-sm-4 control-label">Cuisine:</label>
-                <div class="col-sm-5">  
-                  <select class="chosen-select form-control" data-placeholder="Search for foods" style="width:350px;"  name="type" multiple>
-                    <option value></option>
-                    <optgroup label="Asian">
-                      <option value="1">Thai</option>
-                      <option value="2">Korean</option>
-                      <option value="3">Chinese</option>
-                      <option value="4">Japanese</option>
-                    </optgroup>
-                    <optgroup label="Western">
-                      <option value="5">Burgers</option>
-                      <option value="6">Italian</option>
-                      <option value="7">Vegetarian</option>
-                      <option value="8">French</option>
-                    </optgroup>
-                    <optgroup label="Fine Dining">
-                      <option value="9">Seafood</option>
-                      <option value="10">Lobster</option>
-                      <option value="11">Steak</option>
-                      <option value="12">Fish</option>
-                    </optgroup>
-                  </select>
-                </div>
+                <label for="type" class="control-label">Cuisine:</label> 
+                <select class="chosen-select form-control" data-placeholder="Search for foods" style="width:200px;"  name="type" multiple>
+                  <option value></option>
+                  <optgroup label="Asian">
+                    <option value="1">Thai</option>
+                    <option value="2">Korean</option>
+                    <option value="3">Chinese</option>
+                    <option value="4">Japanese</option>
+                  </optgroup>
+                  <optgroup label="Western">
+                    <option value="5">Burgers</option>
+                    <option value="6">Italian</option>
+                    <option value="7">Vegetarian</option>
+                    <option value="8">French</option>
+                  </optgroup>
+                  <optgroup label="Fine Dining">
+                    <option value="9">Seafood</option>
+                    <option value="10">Lobster</option>
+                    <option value="11">Steak</option>
+                    <option value="12">Fish</option>
+                  </optgroup>
+                </select>
               </div>
               <div class="form-group">
-                <label for="type" class="col-sm-4 control-label">Date:</label>
-                <div class="col-sm-5">  
-                  <input type="date" name="date_of_meal" tabindex="1" class="form-control" value="">
-                </div>
-              </div>   
-              <input type="hidden" name="" value=''>    
-              <input class="btn btn-default" type="submit" value="Find meals">
+                <label for="type" class="control-label">Date:</label>
+                <input type="date" name="date_of_meal" tabindex="1" class="form-control" value="" style="width: 200px;">
+            </div>
+            <input class="btn btn-default" type="submit" value="Find meals">
             </form>
           </div> <!-- /.background-bottom-form -->
           <div class="col-md-3 col-lg-3 col-sm-3"></div>
@@ -183,6 +195,16 @@
       for (var selector in config) {
         $(selector).chosen(config[selector]);
       }
+    </script>
+    <script type="text/javascript">
+    $(document).ready(function() {
+      $('.mask').hover(
+        function(){
+          $(this).find(".thumbnail").addClass("lowerOpacity");
+        }, function(){
+          $(this).find(".thumbnail").removeClass("lowerOpacity");
+      })
+    });
     </script>
   </body>
 </html>

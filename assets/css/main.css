@@ -27,6 +27,9 @@
   font-size: 7rem;
   transform: translate(-50%, -50%);
 }
+.lowerOpacity {
+	opacity: 0.2;
+}
 .background-bottom {
   background: 
     linear-gradient(
@@ -40,15 +43,17 @@
 .background-bottom img {
   opacity: 0.5;
 }
+.background-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
 .background-bottom-form label {
   font-family: 'Roboto', sans-serif;
   color: white;
   font-weight: 400;
-/*  position: absolute;
-  top: 50%;
-  left: 50%;*/
   font-size: 2rem;
-  transform: translate(-50%, -50%);
 }
 .thumbnail img {
 	height: 200px; 
