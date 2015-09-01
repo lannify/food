@@ -61,73 +61,78 @@
     </nav>
 
     <div class="container-fluid">
-        <div class="col-sm-3 col-md-2 sidebar">
-            <ul class="nav nav-sidebar">
-                <li class="active"><a href="">Filter options<span class="sr-only">(current)</span></a></li>
-            </ul>
-            <ul class="nav nav-sidebar">
-                <li class="active"><a href="">Type of Cuisine</a></li>
-                <li><a href="">Thai</a></li>
-                <li><a href="">Fine Dining</a></li>
-                <li><a href="">Italian</a></li>
-                <li><a href="">Vegetarian</a></li>
-                <li><a href="">Indian</a></li>
-                <li role="separator" class="divider"></li>
-            </ul>
-            <ul class="nav nav-sidebar">
-                <li class="active"><a href="">Dietary Options</a></li>
-                <li><a href="">Low Carb</a></li>
-                <li><a href="">Vegetarian/Vegan</a></li>
-                <li><a href="">Gluten-Free</a></li>
-                <li><a href="">Allergies</a></li>
-                <li><a href="">Calorie Restrictions</a></li>
-                <li role="separator" class="divider"></li>
-            </ul>
-            <ul class="nav nav-sidebar">
-                <li class="active"><a href="">Other Criteria</a></li>
-                <li><a href="">Price</a></li>
-                <li><a href="">Distance</a></li>
-                <li><a href="">Rating/Reviews</a></li>
-                <li><a href="">Time</a></li>
-            </ul>
-        </div>
-        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-            <div class="row">
-                <div id="map">Map Goes Here</div>
+        <div class="row">
+            <div class="col-sm-3 col-md-2 sidebar">
+                <ul class="nav nav-sidebar">
+                    <li class="active"><a href="">Filter options<span class="sr-only">(current)</span></a></li>
+                </ul>
+                <ul class="nav nav-sidebar">
+                    <li class="active"><a href="">Type of Cuisine</a></li>
+                    <li><a href="">Thai</a></li>
+                    <li><a href="">Fine Dining</a></li>
+                    <li><a href="">Italian</a></li>
+                    <li><a href="">Vegetarian</a></li>
+                    <li><a href="">Indian</a></li>
+                    <li role="separator" class="divider"></li>
+                </ul>
+                <ul class="nav nav-sidebar">
+                    <li class="active"><a href="">Dietary Options</a></li>
+                    <li><a href="">Low Carb</a></li>
+                    <li><a href="">Vegetarian/Vegan</a></li>
+                    <li><a href="">Gluten-Free</a></li>
+                    <li><a href="">Allergies</a></li>
+                    <li><a href="">Calorie Restrictions</a></li>
+                    <li role="separator" class="divider"></li>
+                </ul>
+                <ul class="nav nav-sidebar">
+                    <li class="active"><a href="">Other Criteria</a></li>
+                    <li><a href="">Price</a></li>
+                    <li><a href="">Distance</a></li>
+                    <li><a href="">Rating/Reviews</a></li>
+                    <li><a href="">Time</a></li>
+                </ul>
             </div>
-            <div class="row">
-                <div class="col-sm-6 col-md-4">
-                    <div class="thumbnail">
-                      <img src="" alt="...">
-                      <div class="caption">
-                        <h3>Chef Ani</h3>
-                        <p>...</p>
-                        <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
-                      </div>
-                    </div>
+            <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2">
+                <div class="row">
+                    <div id="map" style="height: 400px; text-align: center;vertical-align: middle;">Map Goes Here</div>
                 </div>
-                <div class="col-sm-6 col-md-4">
-                    <div class="thumbnail">
-                      <img src="" alt="...">
-                      <div class="caption">
-                        <h3>Chef Lan</h3>
-                        <p>...</p>
-                        <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
-                      </div>
+                <div class="row">
+                    <div class="col-sm-6 col-md-4">
+                        <div class="thumbnail">
+                          <img src="/assets/images/meal-japanese.jpg" alt="1" style="position: relative; top: 0; left: 0;">
+                          <img class="small-chef-picture" src="/assets/images/chef-results-2.jpeg" alt="chef1"/>
+                          <div class="caption">
+                            <h3>Ennui</h3>
+                            <p>...</p>
+                            <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+                          </div>
+                        </div>
                     </div>
-                </div>
-                <div class="col-sm-6 col-md-4">
-                    <div class="thumbnail">
-                      <img src="" alt="...">
-                      <div class="caption">
-                        <h3>Chef Nick</h3>
-                        <p>...</p>
-                        <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
-                      </div>
+                    <div class="col-sm-6 col-md-4">
+                        <div class="thumbnail">
+                          <img src="/assets/images/meal-viet.jpg" alt="1" style="position: relative; top: 0; left: 0;">
+                          <img class="small-chef-picture" src="/assets/images/chef-results-3.jpeg" alt="chef1"/>
+                          <div class="caption">
+                            <h3>Homemade Vietnamese</h3>
+                            <p>...</p>
+                            <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+                          </div>
+                        </div>
                     </div>
-                </div>
-            </div><!-- row -->
-        </div><!-- main content -->
+                    <div class="col-sm-6 col-md-4">
+                        <div class="thumbnail">
+                          <img src="/assets/images/meal-steak-home.jpg" alt="1" style="position: relative; top: 0; left: 0;">
+                          <img class="small-chef-picture" src="/assets/images/chef-results-4.jpg" alt="chef1"/>
+                          <div class="caption">
+                            <h3>Steak and Potatoes</h3>
+                            <p>...</p>
+                            <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+                          </div>
+                        </div>
+                    </div>
+                </div><!-- row -->
+            </div><!-- main content -->
+        </div><!-- row -->
     </div><!-- /.container-fluid -->
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->

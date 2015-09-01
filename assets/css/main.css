@@ -67,3 +67,16 @@
 .page-header {
 	text-align: center;
 }
+
+/* Styles for Results page */
+.thumbnail .small-chef-picture {
+	/* Round picture */
+	border-radius: 50%;
+	border: 3px solid white;
+	height: 60px;
+	width: 60px;
+	position: relative;
+	top: -20px;
+	left: 80px;
+	overflow: hidden;
+}
