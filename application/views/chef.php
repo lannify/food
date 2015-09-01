@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Chefs page</title>
+    <title>Chef page</title>
     <link href="/assets/css/bootstrap.min.css" rel="stylesheet">
     <link href="/assets/css/main.css" rel="stylesheet">
   </head>
@@ -22,9 +22,9 @@
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">      
           <form class="navbar-form navbar-right" role="search">
-            <div class="form-group">
+        <!--     <div class="form-group">
               <input type="text" class="form-control" placeholder="Search">
-            </div>
+            </div> -->
 <!--             <button type="submit" class="btn btn-default">Search</button> -->
           </form>
           <ul class="nav navbar-nav navbar-right">
@@ -56,9 +56,24 @@
       </div><!-- /.container-fluid -->
     </nav>
 
-    <div class="container">
-      <div>
-        <h1>Chefs Page</h1>
+    <div class=""container-fluid"">
+      <div class="profile">
+        <div class="row">
+        <div class="col-md-offset-1 col-md-3">
+           <img class="photo" src="/assets/img/chef1.jpg">
+        </div>         
+          <div class="col-md-6 description">
+            <h1>Chef Name</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia 
+            deserunt mollit anim id est laborum.</p>
+          </div>
+        </div>       
       </div>
     </div>
 

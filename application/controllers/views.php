@@ -6,15 +6,16 @@ class Views extends CI_Controller {
 	{
 		parent::__construct();
 		// $this->output->enable_profiler();
+		$this->load->model('user');
 	}
 
 	public function index()
 	{
 		$this->load->view('index');
 	}
-	public function chefs()
+	public function chef()
 	{
-		$this->load->view('chefs');
+		$this->load->view('chef');
 	}
 }
 
