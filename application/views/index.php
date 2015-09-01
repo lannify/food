@@ -52,48 +52,69 @@
             </li>
             <li><a href="#">Your Cart <span class= "glyphicon glyphicon-shopping-cart"></span></a></li>
             <li class="dropdown">
-            <a class="dropdown-toggle" href="#" data-toggle="dropdown">Sign In <strong class="caret"></strong></a>
-            <div class="dropdown-menu" style="padding: 15px; padding-bottom: 10px;">
-                <!-- Login Form -->
+
+            <!-- Modal for Login & Register-->
+
+            <a class="dropdown-toggle" href="#" data-toggle="modal" data-target="#myModal">Sign In <strong class="caret"></strong></a>
+            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" 
+                aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                <div class="modal-content">
+                     <!-- Modal Header -->
+                 <div class="modal-header">
+                    <button type="button" class="close" 
+                            data-dismiss="modal">
+                       <span aria-hidden="true">&times;</span>
+                       <span class="sr-only">Close</span>
+                </button>
+                <h4 class="modal-title" id="myModalLabel">
+                    Login
+                </h4>
+            </div>
+            <!-- Modal Body -->
+            <div class="modal-body">
+            <!-- Login Form -->
 <?php 
 
             if($this->session->flashdata("login_error")){
                 echo $this->session->flashdata("login_error");
             } 
 ?>
-              <form action="/users/user_login" method="post">
-                  <label>Email:</label>
-                  <input type="text" name="email"><br>
-                  <label>Password:</label>
-                  <input type="password" name="password"><br><br>
-                  <input type="submit" name="login" value="Login"><br>
+              <form class="form-horizontal" role="form" action="/users/user_login" method="post">
+                    <input type="text" name="email" class="form-control" id="email" placeholder="Email"><br>
+                    <input type="password" name="password" class="form-control" id="password" placeholder="Password"><br>
+                    <input type="submit" class="btn btn-default" value='Sign In'>
               </form>
-              <br>
               <!-- Registeration Form -->
-              Register New Account
+              <div class="modal-header">
+                <h4 class="modal-title" id="myModalLabel">
+                    Register
+                </h4>
+            </div><br>
 <?php 
                     if($this->session->flashdata("error")) 
                     {
                         echo $this->session->flashdata("error")."<br>";
                     }
 ?>
-              <form action="/users/register/" method="post">
-                    <label>Name:</label>
-                    <input type="text" name="name" value=""><br>
-                    <label>Email:</label>
-                    <input type="text" name="email" value=""><br>
-                    <label>Phone:</label>
-                    <input type="text" name="phone" value="">
-                    <br><label>Cook or Eat?</label><br>
-                        <input type="radio" name="level" value="2"> Cook<br>
-                        <input type="radio" name="level" value="3"> Eat
-                    <br><label>Password</label>
-                    <input type="password" name="password" value=""><br>
-                    <label>Confirm Password</label>
-                    <input type="password" name="passconf" value=""><br><br>
-                    <input type="submit" name="register" value="Register">
+              <form class="form-horizontal" role="form" action="/users/register/" method="post">
+                    <input type="text" name="name" class="form-control" placeholder="Enter Your Name"><br>
+                    <input type="text" name="email" class="form-control" placeholder="Email"><br>
+                    <input type="text" name="phone" class="form-control" placeholder="Phone Number"><br>
+                    <select class="form-control" name="level">
+                                    <option value='0' selected disabled>Do You want to Cook or Eat?</option>
+                                    <option value='2'>Cook</option>
+                                    <option value='3'>Eat</option>
+                    </select><br>
+                    <input type="password" name="password" class="form-control" placeholder="Password"><br>
+                    <input type="password" name="passconf" class="form-control" placeholder="Confirm Password"><br>
+                    <input type="submit" class="btn btn-default" value='Register'>
             </form>
             </div>
+        </div>
+        </div>
+        </div>
+        </div>
           </li>
           </ul>
 
@@ -105,9 +126,7 @@
       <div>
         <h1>Home Page</h1>
       </div>
-    </div>
-
-
+    </div>  
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="/assets/js/bootstrap.min.js"></script>

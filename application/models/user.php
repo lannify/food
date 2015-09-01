@@ -6,7 +6,7 @@ class User extends CI_Model {
     	$this->load->library("form_validation");
         $this->form_validation->set_rules("name", "Name", "required|max_length[12]");
         $this->form_validation->set_rules('email', 'Email', 'trim|required|valid_email|is_unique[users.email]');
-        $this->form_validation->set_rules('level', 'Cook or Eat?!', 'required');
+        $this->form_validation->set_rules('level', 'Cook or Eat?!', 'required|greater_than[0]');
         $this->form_validation->set_rules('phone', 'Phone', 'required|numeric');
         $this->form_validation->set_rules('password', 'Password', 'trim|required');
         $this->form_validation->set_rules('passconf', 'Password Confirmation', 'trim|required|matches[password]');
