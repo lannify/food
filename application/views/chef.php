@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Chefs page</title>
+    <title>Chef page</title>
     <link href="/assets/css/bootstrap.min.css" rel="stylesheet">
     <link href="/assets/css/main.css" rel="stylesheet">
   </head>
@@ -22,9 +22,9 @@
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">      
           <form class="navbar-form navbar-right" role="search">
-            <div class="form-group">
+        <!--     <div class="form-group">
               <input type="text" class="form-control" placeholder="Search">
-            </div>
+            </div> -->
 <!--             <button type="submit" class="btn btn-default">Search</button> -->
           </form>
           <ul class="nav navbar-nav navbar-right">
@@ -56,94 +56,25 @@
       </div><!-- /.container-fluid -->
     </nav>
 
-    <div class="profile">
-      <div class ="container">
+    <div class=""container-fluid"">
+      <div class="profile">
         <div class="row">
-              <div class="col-md-4">
-                <div class="profile_photo">
-                  <h3>Chef Photo</h3>
-                  <img class = "user_photo" src = "/assets/img/chef1.jpg" alt="chef photo">
-                </div>
-              </div>
-              <div class="col-md-8">
-                <div class="description">                 
-                  <h3>Intro</h3>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                </div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                </div>
-              </div>
+        <div class="col-md-offset-1 col-md-3">
+           <img class="photo" src="/assets/img/chef1.jpg">
+        </div>         
+          <div class="col-md-6 description">
+            <h1>Chef Name</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia 
+            deserunt mollit anim id est laborum.</p>
           </div>
+        </div>       
       </div>
-    </div>
-    <div class="main-content text-center">
-      <div class ="container">
-          <div class="row">
-              <div class="col-md-4">
-                <div class="meal">
-                  <div class="view">  
-                     <img src="/assets/img/japanese1.jpeg" />  
-                     <div class="mask">  
-                     <h2>Sushi</h2>  
-                     <p></p>  
-                         <a href="#" class="info">09.12.15</a>  
-                     </div>  
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-4">
-                <div class="meal">
-                  <div class="view">  
-                     <img src="/assets/img/ramen.jpeg" />  
-                     <div class="mask">  
-                     <h2>Tonkotsu Ramen</h2>  
-                     <p>September 10, 2015</p>  
-                         <a href="#" class="info">See Detail</a>  
-                     </div>  
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-4">
-                <div class="meal">
-                  <div class="view">  
-                     <img src="/assets/img/japanese3.jpeg" />  
-                     <div class="mask">  
-                     <h2>Sushi Feast</h2>  
-                     <p>September 10, 2015</p>  
-                         <a href="#" class="info">Order</a>  
-                     </div>  
-                  </div>
-                </div>
-              </div>
-
-              
-      </div>
-    </div>
-    <div class="footer">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-4">
-            <p>Link</p>
-          </div>
-          <div class="col-md-4">
-            <p>Link</p>
-          </div>
-          <div class="col-md-4">
-            <p>Link</p>
-          </div>
-        </div>
-    </div>
-      
     </div>
 
 
