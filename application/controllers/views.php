@@ -10,12 +10,23 @@ class Views extends CI_Controller {
 
 	public function index()
 	{
-		$this->load->view('index');
+		$this->load->view('mockup');
 	}
+
+	public function landing()
+	{
+		$this->load->view('landing');
+	}
+
 	public function chefs()
 	{
 		$this->load->view('chefs');
-	}	
+	}
+
+	public function results()
+	{
+		$this->load->view('results');
+	}
 }
 
 //end of main controller
