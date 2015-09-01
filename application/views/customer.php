@@ -61,8 +61,8 @@
         <div class="row">
               <div class="col-md-4">
                 <div class="profile_photo">
-                  <h3>Chef Photo</h3>
-                  <img class = "user_photo" src = "/assets/img/chef1.jpg" alt="chef photo">
+                  <h3>Customer Photo</h3>
+                  <img class = "user_photo" src = "/assets/img/" alt="customer photo">
                 </div>
               </div>
               <div class="col-md-8">
@@ -91,42 +91,72 @@
           <div class="row">
               <div class="col-md-4">
                 <div class="meal">
-                  <div class="view">  
-                     <img src="/assets/img/japanese1.jpeg" />  
-                     <div class="mask">  
-                     <h2>Sushi</h2>  
-                     <p></p>  
-                         <a href="#" class="info">09.12.15</a>  
-                     </div>  
-                  </div>
+                
+                  <h3>Current Meals</h3>
+                  <p>Meals within this week</p>
                 </div>
               </div>
               <div class="col-md-4">
                 <div class="meal">
-                  <div class="view">  
-                     <img src="/assets/img/ramen.jpeg" />  
-                     <div class="mask">  
-                     <h2>Tonkotsu Ramen</h2>  
-                     <p>September 10, 2015</p>  
-                         <a href="#" class="info">See Detail</a>  
-                     </div>  
-                  </div>
+                  
+                  <h3>Upcoming Meals</h3>
+                  <p>Meals after this week</p>
+                </div>
+              </div>
+              <div class="col-md-4">
+               <div class="meal">
+                  
+                  <h3>Past Meals</h3>
+                  <p>Past meals or maybe bestselling meals</p>
+                </div>
+              </div>
+          </div>
+          <div class="row">
+              <div class="col-md-4">
+                <div class="meal">
+                 
+                  <h3>My Favorite Chefs</h3>
+                  <p>Photos of kitchen. Dynamic gallery</p>
                 </div>
               </div>
               <div class="col-md-4">
                 <div class="meal">
-                  <div class="view">  
-                     <img src="/assets/img/japanese3.jpeg" />  
-                     <div class="mask">  
-                     <h2>Sushi Feast</h2>  
-                     <p>September 10, 2015</p>  
-                         <a href="#" class="info">Order</a>  
-                     </div>  
-                  </div>
+                  
+                  <h3>My Preferences</h3>
+                  <p>Might not need this</p>
                 </div>
               </div>
-
-              
+              <div class="col-md-4">
+               <div class="meal">
+                 
+                  <h3>Location</h3>
+                  <p>Google Map goes here</p>
+                </div>
+              </div>
+          </div>
+          <div class="row">
+              <div class="col-md-4">
+                <div class="meal">
+                 
+                  <h3>Reviews</h3>
+                  <p></p>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="meal">
+                 
+                 <h3>Requests</h3>
+                  <p>Might not need this</p>
+                </div>
+              </div>
+              <div class="col-md-4">
+               <div class="meal">
+                  
+                  <h3>Contact Me</h3>
+                  <p>Twilio API goes here</p>
+                </div>
+              </div>
+          </div>
       </div>
     </div>
     <div class="footer">
