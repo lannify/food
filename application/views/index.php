@@ -51,7 +51,52 @@
               </ul>
             </li>
             <li><a href="#">Your Cart <span class= "glyphicon glyphicon-shopping-cart"></span></a></li>
+            <li class="dropdown">
+            <a class="dropdown-toggle" href="#" data-toggle="dropdown">Sign In <strong class="caret"></strong></a>
+            <div class="dropdown-menu" style="padding: 15px; padding-bottom: 10px;">
+                <!-- Login Form -->
+<?php 
+
+            if($this->session->flashdata("login_error")){
+                echo $this->session->flashdata("login_error");
+            } 
+?>
+              <form action="/users/user_login" method="post">
+                  <label>Email:</label>
+                  <input type="text" name="email"><br>
+                  <label>Password:</label>
+                  <input type="password" name="password"><br><br>
+                  <input type="submit" name="login" value="Login"><br>
+              </form>
+              <br>
+              <!-- Registeration Form -->
+              Register New Account
+<?php 
+                    if($this->session->flashdata("error")) 
+                    {
+                        echo $this->session->flashdata("error")."<br>";
+                    }
+?>
+              <form action="/users/register/" method="post">
+                    <label>Name:</label>
+                    <input type="text" name="name" value=""><br>
+                    <label>Email:</label>
+                    <input type="text" name="email" value=""><br>
+                    <label>Phone:</label>
+                    <input type="text" name="phone" value="">
+                    <br><label>Cook or Eat?</label><br>
+                        <input type="radio" name="level" value="2"> Cook<br>
+                        <input type="radio" name="level" value="3"> Eat
+                    <br><label>Password</label>
+                    <input type="password" name="password" value=""><br>
+                    <label>Confirm Password</label>
+                    <input type="password" name="passconf" value=""><br><br>
+                    <input type="submit" name="register" value="Register">
+            </form>
+            </div>
+          </li>
           </ul>
+
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container-fluid -->
     </nav>

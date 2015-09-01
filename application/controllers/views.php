@@ -15,7 +15,7 @@ class Views extends CI_Controller {
 	public function chefs()
 	{
 		$this->load->view('chefs');
-	}
+	}	
 }
 
 //end of main controller
