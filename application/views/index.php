@@ -73,59 +73,60 @@
         </div>
         <div class="meals-mid col-md-2 col-lg-2 col-sm-2">
         </div>
-        <div class="meals-mid col-md-8 col-lg-8 col-sm-8">
-          <div class="row">
-            <div class="col-xs-4 col-md-4 col-lg-4">
-              <div class="ih-item square colored effect6 from_top_and_bottom thumbnail"><a href="#">
+        <div class="meals-mid col-md-9 col-lg-9 col-sm-9">
+            <div class="col-xs-3 col-md-3 col-lg-3 ih-item square colored effect6 from_top_and_bottom">
+              <a href="#">
                 <div class="img"><img src="/assets/images/meal-korean.jpg" alt="umsik"></div>
                 <div class="info">
                   <h3>Korean</h3>
                   <p>Click to discover Korean food near you</p>
-              </div></a></div>
+              </div></a>
             </div>
-            <div class="col-xs-4 col-md-4 col-lg-4">
-              <div class="ih-item square colored effect6 from_top_and_bottom thumbnail"><a href="#">
+            <div class="col-xs-3 col-md-3 col-lg-3 ih-item square colored effect6 from_top_and_bottom">
+              <a href="#">
                 <div class="img"><img src="/assets/images/meal-italian.jpg" alt="italian"></div>
                 <div class="info">
                   <h3>Italian</h3>
                   <p>Click to discover Italian food near you</p>
-              </div></a></div>
+                </div>
+              </a>
             </div>
-            <div class="col-xs-4 col-md-4 col-lg-4">
-              <div class="ih-item square colored effect6 from_top_and_bottom thumbnail"><a href="#">
+            <div class="col-xs-3 col-md-3 col-lg-3 ih-item square colored effect6 from_top_and_bottom">
+              <a href="#">
                 <div class="img"><img src="/assets/images/meal-steak.jpg" alt="steak"></div>
                 <div class="info">
                   <h3>Fine Dining</h3>
                   <p>Click to discover fine dining near you</p>
-              </div></a></div>
+                </div>
+              </a>
             </div>
-          </div>
-          <div class="row">
-            <div class="col-xs-4 col-md-4 col-lg-4">
-              <div class="ih-item square colored effect6 from_top_and_bottom thumbnail"><a href="#">
+            <div class="col-xs-3 col-md-3 col-lg-3 ih-item square colored effect6 from_top_and_bottom">
+              <a href="#">
                 <div class="img"><img src="/assets/images/meal-sandwich.jpeg" alt="sandwich"></div>
                 <div class="info">
                   <h3>Seafood</h3>
                   <p>Click to discover Seafood food near you</p>
-              </div></a></div>
+                </div>
+              </a>
             </div>
-            <div class="col-xs-4 col-md-4 col-lg-4">
-              <div class="ih-item square colored effect6 from_top_and_bottom thumbnail"><a href="#">
+            <div class="col-xs-3 col-md-3 col-lg-3 ih-item square colored effect6 from_top_and_bottom">
+              <a href="#">
                 <div class="img"><img src="/assets/images/meal-dessert.jpg" alt="dessert"></div>
                 <div class="info">
                   <h3>Sweets</h3>
                   <p>Click for delicious desserts</p>
-              </div></a></div>
+                </div>
+            </a>
             </div>
-            <div class="col-xs-4 col-md-4 col-lg-4">
-              <div class="ih-item square colored effect6 from_top_and_bottom thumbnail"><a href="#">
+            <div class="col-xs-3 col-md-3 col-lg-3 ih-item square colored effect6 from_top_and_bottom">
+              <a href="#">
                 <div class="img"><img src="/assets/images/meal-vegetarian.jpg" alt="veggie"></div>
                 <div class="info">
                   <h3>Vegetarian</h3>
                   <p>Click for vegetarian options</p>
-              </div></a></div>
+                </div>
+              </a>
             </div>
-          </div>
 
         </div>
         <div class="meals-mid col-md-1 col-lg-1 col-sm-1">
