@@ -12,9 +12,9 @@ class Views extends CI_Controller {
 	{
 		$this->load->view('index');
 	}
-	public function chefs()
+	public function chef()
 	{
-		$this->load->view('chefs');
+		$this->load->view('chef');
 	}
 }
 

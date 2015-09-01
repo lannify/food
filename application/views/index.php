@@ -29,7 +29,7 @@
           </form>
           <ul class="nav navbar-nav navbar-right">
             <li><a href="#">How It Works</a></li>
-            <li><a href="#">Chefs</a></li>
+            <li><a href="/views/chef">Chef</a></li>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Foods<span class="caret"></span></a>
               <ul class="dropdown-menu">
