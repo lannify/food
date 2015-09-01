@@ -54,7 +54,72 @@
               </ul>
             </li>
             <li><a href="#">Your Cart <span class= "glyphicon glyphicon-shopping-cart"></span></a></li>
+            <li class="dropdown">
+
+            <!-- Modal for Login & Register-->
+
+            <a class="dropdown-toggle" href="#" data-toggle="modal" data-target="#myModal">Sign In <strong class="caret"></strong></a>
+            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" 
+                aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                <div class="modal-content">
+                     <!-- Modal Header -->
+                 <div class="modal-header">
+                    <button type="button" class="close" 
+                            data-dismiss="modal">
+                       <span aria-hidden="true">&times;</span>
+                       <span class="sr-only">Close</span>
+                </button>
+                <h4 class="modal-title" id="myModalLabel">
+                    Login
+                </h4>
+            </div>
+            <!-- Modal Body -->
+            <div class="modal-body">
+            <!-- Login Form -->
+<?php 
+
+            if($this->session->flashdata("login_error")){
+                echo $this->session->flashdata("login_error");
+            } 
+?>
+              <form class="form-horizontal" role="form" action="/users/user_login" method="post">
+                    <input type="text" name="email" class="form-control" id="email" placeholder="Email"><br>
+                    <input type="password" name="password" class="form-control" id="password" placeholder="Password"><br>
+                    <input type="submit" class="btn btn-default" value='Sign In'>
+              </form>
+              <!-- Registeration Form -->
+              <div class="modal-header">
+                <h4 class="modal-title" id="myModalLabel">
+                    Register
+                </h4>
+            </div><br>
+<?php 
+                    if($this->session->flashdata("error")) 
+                    {
+                        echo $this->session->flashdata("error")."<br>";
+                    }
+?>
+              <form class="form-horizontal" role="form" action="/users/register/" method="post">
+                    <input type="text" name="name" class="form-control" placeholder="Enter Your Name"><br>
+                    <input type="text" name="email" class="form-control" placeholder="Email"><br>
+                    <input type="text" name="phone" class="form-control" placeholder="Phone Number"><br>
+                    <select class="form-control" name="level">
+                                    <option value='0' selected disabled>Do You want to Cook or Eat?</option>
+                                    <option value='2'>Cook</option>
+                                    <option value='3'>Eat</option>
+                    </select><br>
+                    <input type="password" name="password" class="form-control" placeholder="Password"><br>
+                    <input type="password" name="passconf" class="form-control" placeholder="Confirm Password"><br>
+                    <input type="submit" class="btn btn-default" value='Register'>
+            </form>
+            </div>
+        </div>
+        </div>
+        </div>
+          </li>
           </ul>
+
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container-fluid -->
     </nav>
@@ -178,7 +243,6 @@
         </div> <!-- /.background-bottom -->
       </div> <!-- /.row -->
     </div> <!-- /.container-fluid -->
-
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
