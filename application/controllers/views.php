@@ -13,7 +13,7 @@ class Views extends CI_Controller {
 	{
 		$this->load->view('mockup');
 	}
-<<<<<<< HEAD
+
 
 	public function landing()
 	{
@@ -29,7 +29,7 @@ class Views extends CI_Controller {
 	{
 		$this->load->view('results');
 	}
-=======
+
 	public function chef()
 	{
 		$this->load->view('chef');
@@ -43,7 +43,7 @@ class Views extends CI_Controller {
 		$this->load->view('cart');
 	}
 
->>>>>>> lan
+
 }
 
 //end of main controller
