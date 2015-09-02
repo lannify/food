@@ -10,15 +10,6 @@
     <link href="/assets/css/bootstrap-chosen.css" rel="stylesheet">
     <link href="/assets/css/chosen/chosen.css" rel="stylesheet">
     <link href="/assets/css/ihover.css" rel="stylesheet">
-    <style>
-      #map {
-        
-    width: 100%;
-    height: 400px;
-    background-color: #CCC;
-  
-      }
-    </style>
   </head>
   <body>
     <nav class="navbar navbar-default">
@@ -167,7 +158,7 @@
           </div>
         </div>
     </div>
-    <div id="map"></div>
+  
 
 
  
@@ -183,23 +174,6 @@
     <script type="text/javascript">
 
 
-  function initialize(location) {
-    var mapCanvas = document.getElementById('map');
-    var currentLocation = new google.maps.LatLng(location.coords.latitude, location.coords.longitude);
-    var mapOptions = {
-      center: currentLocation,
-      zoom: 15,
-      mapTypeId: google.maps.MapTypeId.ROADMAP
-    }
-    var map = new google.maps.Map(mapCanvas, mapOptions);
-    var marker = new google.maps.Marker({
-      position: currentLocation,
-      map: map
-    });
-  }
-  $(document).ready(function(){
-      navigator.geolocation.getCurrentPosition(initialize);
-  });
 </script>
   </body>
 </html>
