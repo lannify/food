@@ -6,12 +6,14 @@ class Views extends CI_Controller {
 	{
 		parent::__construct();
 		// $this->output->enable_profiler();
+		$this->load->model('user');
 	}
 
 	public function index()
 	{
 		$this->load->view('mockup');
 	}
+<<<<<<< HEAD
 
 	public function landing()
 	{
@@ -27,6 +29,21 @@ class Views extends CI_Controller {
 	{
 		$this->load->view('results');
 	}
+=======
+	public function chef()
+	{
+		$this->load->view('chef');
+	}
+	public function customer()
+	{
+		$this->load->view('customer');
+	}
+	public function cart()
+	{
+		$this->load->view('cart');
+	}
+
+>>>>>>> lan
 }
 
 //end of main controller

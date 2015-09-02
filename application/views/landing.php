@@ -24,15 +24,12 @@
           <a class="navbar-brand" href="#">Home</a>
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">      
-          <form class="navbar-form navbar-right" role="search">
-            <div class="form-group">
-              <input type="text" class="form-control" placeholder="Search">
-            </div>
-<!--             <button type="submit" class="btn btn-default">Search</button> -->
-          </form>
+          
           <ul class="nav navbar-nav navbar-right">
             <li><a href="#">How It Works</a></li>
-            <li><a href="#">Chefs</a></li>
+
+            <li><a href="/views/chef">Chef</a></li>
+
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Foods<span class="caret"></span></a>
               <ul class="dropdown-menu">
@@ -127,7 +124,7 @@
     <div class="container-fluid">
       <div class="row">
         <div class="background-top col-md-12 col-lg-12 col-sm-12">
-          <p>Eat. Together.</p>
+          <p>Dine. Together.</p>
         </div>
       </div>
 

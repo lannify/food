@@ -1,3 +1,133 @@
+.profile {
+	margin-top: 30px;
+	padding: 30px 0;
+	background-color: #dfdfdf;
+	height: 400px;
+	overflow: hidden;
+}
+.profile_photo {
+	width: 200px;
+	height: 200px;
+}
+.user_photo {
+	height: 270px;
+}
+
+.main-content {
+	margin: 15px auto;
+	padding: 0 10px;
+}
+.row {
+	margin: 0 auto;
+}
+.meal {
+	height: 200px;
+	margin: 10px auto;
+
+}
+.footer {
+	padding: 30px;
+}
+.view {
+    width: 100%;
+    height: 100%;
+    margin: 15px;
+    float: left;
+    border: 10px solid #fff;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    box-shadow: 1px 1px 2px #e6e6e6;
+    cursor: default;
+    background: #fff url() no-repeat center center
+}
+.view img{
+	width: 100%;
+}
+.view .mask, .view .content {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    left: 0
+}
+.view img {
+    display: block;
+    position: relative
+}
+.view h2 {
+    text-transform: uppercase;
+    color: #fff;
+    text-align: center;
+    position: relative;
+    font-size: 17px;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.8);
+    margin: 20px 0 0 0
+}
+.view p {
+    font-family: Georgia, serif;
+    font-style: italic;
+    font-size: 12px;
+    position: relative;
+    color: #fff;
+    padding: 10px 20px 20px;
+    text-align: center
+}
+.view a.info {
+    display: inline-block;
+    text-decoration: none;
+    padding: 7px 14px;
+    background: #000;
+    color: #fff;
+    text-transform: uppercase;
+    box-shadow: 0 0 1px #000
+}
+.view a.info:hover {
+    box-shadow: 0 0 5px #000
+}
+.view img { 
+	transition: all 0.2s linear;
+}
+.view .mask { 
+    opacity: 0;
+    background-color: rgba(255,255,255, 0.1); 
+    transition: all 0.4s ease-in-out;
+}	
+.view h2{
+    transform: translateY(-200px);
+    opacity: 0;
+    transition: all 0.2s ease-in-out;
+}
+.view p {
+    transform: translateY(400px);
+    opacity: 0;
+	transition: all 0.2s linear;
+}
+.view a.info { 
+      opacity: 0;
+	transition: all 0.2s ease-in-out;
+}
+
+.view:hover img { 
+	transform: scale(1.1);
+}
+.view:hover .mask { 
+	opacity: 1;
+}																			 
+.view:hover h2,
+.view:hover p,
+.view:hover a.info{ 
+    opacity: 1;
+    transform: translateY(0px);
+}
+.view:hover p {
+    transition-delay: 0.1s;
+}
+.view:hover a.info {
+    transition-delay: 0.2s;
+}
 @import url(http://fonts.googleapis.com/css?family=Roboto:400,900);
 .row > div > img { 
 	width: 100%; 
@@ -67,6 +197,7 @@
 .page-header {
 	text-align: center;
 }
+<<<<<<< HEAD
 
 /* Styles for Results page */
 .thumbnail .small-chef-picture {
@@ -79,4 +210,14 @@
 	top: -20px;
 	left: 80px;
 	overflow: hidden;
+
+.form-meal {
+	width: 60%;
+	margin: 20px auto;
+}
+th {
+	padding: 10px 20px;
+}
+.red {
+	color: red;
 }
