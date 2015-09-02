@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -38,6 +39,7 @@
     </script>	
 </head>
 <body>
+
 <nav class="navbar navbar-default">
       <div class="container-fluid">
         <div class="navbar-header">
@@ -71,8 +73,10 @@
 
           </nav>
           <div>
-          <?php var_dump($this->session->flashdata('first_login')); ?>
+          <?php var_dump($this->session->flashdata('first_login'));
+            
 
+           ?>
           </div>
 </body>
-</html>	
+</html>

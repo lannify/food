@@ -33,7 +33,7 @@ class Users extends CI_Controller {
         $email = $this->input->post('email');
         $password = $this->input->post('password');
         $user = $this->user->get_user_by_email($email);
-          
+   
         if($user['password'] == $password)
         {
             $this->session->set_userdata('current_user',array(
@@ -44,14 +44,12 @@ class Users extends CI_Controller {
                 'is_logged_in' => TRUE));
 
             // var_dump($this->session->userdata('current_user'));
-            $user_login = $this->session->userdata('is_logged_in');
+            $user_login = $this->session->userdata('current_user');
 
             if($user_login['is_logged_in'] === TRUE)
             {
-
-
                 $this->session->set_userdata('display_name', $this->session->userdata('current_user'));
-                redirect('/users/dashboard');
+                redirect('/users/dashboard/');
             }          
         }else
             {
