@@ -49,4 +49,9 @@ class Users extends CI_Controller {
             redirect('/');
             }
     }
+    public function logoff()
+    {
+        $this->session->sess_destroy();
+        redirect('/');
+    }
 }

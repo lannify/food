@@ -201,3 +201,13 @@
 	width: 60%;
 	margin: 20px auto;
 }
+#new_meal {
+	background: url('/assets/images/food-bg.jpg') center center no-repeat;
+	background-size: cover;
+}
+th {
+	padding: 10px 20px;
+}
+.red {
+	color: red;
+}

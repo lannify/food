@@ -63,13 +63,14 @@
         <div class="row">
               <div class="col-md-4">
                 <div class="profile_photo">
-                  <h3>Chefr Photo</h3>
+                  <h3>Chef Photo</h3>
                   <img class = "user_photo" src = "/assets/images/chef1.jpg" alt="chef photo">
                 </div>
               </div>
               <div class="col-md-8">
                 <div class="description">                 
                   <h3>Intro</h3>
+                  <button class="form-inline">Edit</button>
                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                   tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
                   quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
@@ -97,7 +98,7 @@
                    <img class="photo" src="/assets/images/japanese1.jpeg">
                    <div class="mask">  
                    <h2>Title</h2>  
-                   <p>Your Text</p>  
+                   <p>Sushi Nom Nom Nom</p>  
                        <a href="#" class="info">Read More</a>  
                    </div>  
                 </div> 
@@ -107,7 +108,7 @@
                    <img class="photo" src="/assets/images/ramen.jpeg">
                    <div class="mask">  
                    <h2>Title</h2>  
-                   <p>Your Text</p>  
+                   <p>Tonkotsu Ramen</p>  
                        <a href="#" class="info">Read More</a>  
                    </div>  
                 </div> 
@@ -117,7 +118,7 @@
                    <img class="photo" src="/assets/images/japanese3.jpeg">
                    <div class="mask">  
                    <h2>Title</h2>  
-                   <p>Your Text</p>  
+                   <p>Sushi Feast</p>  
                        <a href="#" class="info">Read More</a>  
                    </div>  
                 </div> 
@@ -129,7 +130,7 @@
                    <img class="photo" src="/assets/images/dining_table.jpg">
                    <div class="mask">  
                    <h2>Title</h2>  
-                   <p>Your Text</p>  
+                   <p>My dinning table</p>  
                        <a href="#" class="info">Read More</a>  
                    </div>  
                 </div> 
@@ -148,8 +149,8 @@
                 <div class="view">  
                    <img class="photo" src="/assets/images/japanese1.jpeg">
                    <div class="mask">  
-                   <h2>Title</h2>  
-                   <p>Your Text</p>  
+                   <h2>LOCATION</h2>  
+                   <p>My Location</p>  
                        <a href="#" class="info">Read More</a>  
                    </div>  
                 </div> 
