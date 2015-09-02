@@ -25,5 +25,11 @@ class User extends CI_Model {
         public function get_user_by_email($email){
             $query = "SELECT * from users where email = ?";
             return $this->db->query($query, array($email))->row_array();
-    }
+        }
+
+        public function add_details($post){
+            $query = "UPDATE users SET description =? , photo = ? , updated_at = NOW() WHERE user_id = ?";
+            $values = array($post['description'], $post['pic'], $post['id']);
+            return $this->db->query($query,$values); 
+        }
 }

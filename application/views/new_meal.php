@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -10,6 +11,9 @@
     <link href="/assets/css/bootstrap-chosen.css" rel="stylesheet">
     <link href="/assets/css/chosen/chosen.css" rel="stylesheet">
     <link href="/assets/css/ihover.css" rel="stylesheet">
+    <script type="text/javascript">
+   $.cloudinary.config({"api_key":"778955365652697","cloud_name":"foodphp"});
+    </script> 
   </head>
   <body>
     <div id="new_meal">
@@ -101,14 +105,25 @@
       </div>
     </div>
     
-    
+    <div>
+    <input name="file" type="file" id="uploadinput"
+           class="cloudinary-fileupload" data-cloudinary-field="image_upload" 
+           data-form-data="" ></input>
+    </div>
   
 
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="/assets/js/bootstrap.min.js"></script>
-
     <script src="/assets/js/main.js"></script>
+
+    <!-- jquery for Cloudinary -->
+
+    <script src='jquery.min.js' type='text/javascript'></script>
+    <script src='jquery.ui.widget.js' type='text/javascript'></script>
+    <script src='jquery.iframe-transport.js' type='text/javascript'></script>
+    <script src='jquery.fileupload.js' type='text/javascript'></script>
+    <script src='jquery.cloudinary.js' type='text/javascript'></script>
   </body>
 </html>
