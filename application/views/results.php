@@ -94,7 +94,9 @@
             </div>
             <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2">
                 <div class="row">
-                    <div id="map" style="height: 400px; text-align: center;vertical-align: middle;">Map Goes Here</div>
+                    <div class="flexible-container" id="map">
+                      <iframe frameborder="0" scrolling="no" style="border:0" src="https://www.google.com/maps/embed/v1/view?zoom=12&center=37.3541,-121.9552&key=AIzaSyCUukl_bE1MEZktu17VofVpDwtMcCPR4Kk" allowfullscreen></iframe>
+                    </div>
                 </div>
                 <div class="row">
                     <div class="col-sm-6 col-md-4">
