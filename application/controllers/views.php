@@ -27,6 +27,11 @@ class Views extends CI_Controller {
 	{
 		$this->load->view('results');
 	}
+
+	public function cart()
+	{
+		$this->load->view('cart');
+	}
 }
 
 //end of main controller
