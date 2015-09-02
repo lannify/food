@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -39,7 +38,6 @@
     </script>	
 </head>
 <body>
-
 <nav class="navbar navbar-default">
       <div class="container-fluid">
         <div class="navbar-header">
@@ -53,9 +51,11 @@
 <?php 
 		if($this->session->userdata("current_user")['level'] == 3){ ?>
 			<a class="navbar-brand" href="#">Book a Meal</a>
+            <a class="navbar-brand" href="#">Profile</a>    
 <?php } else{ ?>
 			<a class="navbar-brand" href="#">Add New Meal</a>
 			<a class="navbar-brand" href="#">Book a Meal!</a>
+            <a class="navbar-brand" href="#">Profile</a>
 		<?php }
 ?>
         </div>
@@ -72,9 +72,31 @@
             </ul>
 
           </nav>
-          <div>
-          <?php var_dump($this->session->flashdata('first_login'));
-            
+          <div> <!-- Div For Dashboard -->
+<?php 
+            if($this->session->userdata('first_login') == TRUE){
+                echo "Thank you for Registering ". $this->session->userdata("current_user")['name']."<br>";
+                echo "Would you Like to add a profile Picture & Description?"."<br>";
+?>  
+                <form action="/users/description_image/" class="form-horizontal" role="form" method="post"> <!-- Div for prompt on profile pic upload & description on registering. -->
+                  <div>
+                      <label>Description:</label>
+                      <textarea class="form-control" rows="5" column="20" id="comment" name="description" placeholder="Add A Description"></textarea>
+                      <label>Upload File</label>
+                      <input type="file" name="profile" class="btn btn-default btn-file">
+                <input type="submit" class="btn btn-info" value="Submit">
+                </div>
+                </form>
+                <br>
+                <div> <!-- Skip Button -->
+                <form action="/users/skip/">
+                  <input type="submit" class="btn btn-info" value="Skip">
+                </form>
+                </div>
+          <?php }else{
+            echo "Hi Old User"; 
+          }
+
 
            ?>
           </div>

@@ -24,8 +24,25 @@ class Users extends CI_Controller {
                 'password' => $this->input->post('password'));
         $add_user = $this->user->add_user($register_details);
         $register_dash = array('first_login' => TRUE, 'name' => $this->input->post('name'), 'email' => $this->input->post('email'));
-        $this->session->set_flashdata('first_login', $register_dash);
+        $this->session->set_userdata('first_login', $register_dash);
+        $user = $this->user->get_user_by_email($this->input->post('email'));
+        $this->session->set_userdata('current_user',array(
+                'name' => $user['name'],
+                'user_id' => $user['user_id'],
+                'level' => $user['level']));
+            $user_login = $this->session->userdata('current_user');
         redirect('/users/dashboard');
+    }
+
+    public function description_image()
+    {
+        $description_image = array(
+                'description' => $this->input->post('description'),
+                'pic' => $this->input->post('profile'),
+                'id' => $this->session->userdata('current_user')['user_id']);
+        
+        $add_details =  $this->user->add_details($description_image);
+        redirect('/users/skip/');
     }
 
     public function user_login(){
@@ -33,7 +50,6 @@ class Users extends CI_Controller {
         $email = $this->input->post('email');
         $password = $this->input->post('password');
         $user = $this->user->get_user_by_email($email);
-   
         if($user['password'] == $password)
         {
             $this->session->set_userdata('current_user',array(
@@ -65,8 +81,12 @@ class Users extends CI_Controller {
 
     public function logout(){
         $this->session->sess_destroy();
-        // $this->session->unset_userdata('current_user');
         redirect('/');
+    }
+
+    public function skip(){
+        $this->session->unset_userdata('first_login');
+        redirect('/users/dashboard/');
     }
 
 }
