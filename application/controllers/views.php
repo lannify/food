@@ -6,16 +6,20 @@ class Views extends CI_Controller {
 	{
 		parent::__construct();
 		// $this->output->enable_profiler();
-		$this->load->model('user');
+		$this->load->model('User');
+		$this->load->model('Meal');
 	}
 
 	public function index()
 	{
-		$this->load->view('index');
+		$this->load->view('landing');
 	}
-	public function chef()
+	public function chef($id)
 	{
-		$this->load->view('chef');
+		$chef = $this->User->find($id);
+		$latest_meal = $this->Meal->get_latest_meal_by_user_id($id);
+		$past_meals = $this->Meal->get_past_meals_by_user_id($id);
+		$this->load->view('chef', array('chef'=> $chef, 'latest_meal'=> $latest_meal, 'past_meals'=> $past_meals));
 	}
 	public function customer()
 	{
@@ -24,6 +28,14 @@ class Views extends CI_Controller {
 	public function cart()
 	{
 		$this->load->view('cart');
+	}
+	public function checkout()
+	{
+		$this->load->view('checkout');
+	}
+	public function thankyou()
+	{
+		$this->load->view('thankyou');
 	}
 
 }

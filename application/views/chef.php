@@ -49,13 +49,13 @@
         <div class="row">
               <div class="col-md-4">
                 <div class="profile_photo">
-                  <h3>Chef Photo</h3>
+                  <h3><?= $chef['name']?></h3>
                   <img class = "user_photo" src = "/assets/images/chef1.jpg" alt="chef photo">
                 </div>
               </div>
               <div class="col-md-8">
                 <div class="description">                 
-                  <h3>Intro</h3>
+                  <h3><?= $chef['name']?>'s Story</h3>
                   <button class="form-inline">Edit</button>
                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                   tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
@@ -75,7 +75,9 @@
           </div>
       </div>
     </div> <!-- End Profile header -->
-   
+
+<!-- Get Meals Info/Photo and output them in each div.col-md-4 below -->
+  
     <div class="main-content text-center">
       <div class ="container">
           <div class="row">
@@ -83,9 +85,9 @@
                 <div class="view">  
                    <img class="photo" src="/assets/images/japanese1.jpeg">
                    <div class="mask">  
-                   <h2>Title</h2>  
-                   <p>Sushi Nom Nom Nom</p>  
-                       <a href="#" class="info">Read More</a>  
+                   <h2><?= $latest_meal['name']?></h2>  
+                   <p><?= $latest_meal['description']?></p>  
+                       <a href="#" class="info"><?= date('M d y',strtotime($latest_meal['date_of_meal']))?></a>  
                    </div>  
                 </div> 
               </div>
@@ -93,7 +95,7 @@
                 <div class="view">  
                    <img class="photo" src="/assets/images/ramen.jpeg">
                    <div class="mask">  
-                   <h2>Title</h2>  
+                   <h2><?= $past_meals['name']?></h2>  
                    <p>Tonkotsu Ramen</p>  
                        <a href="#" class="info">Read More</a>  
                    </div>  
