@@ -40,6 +40,10 @@ class Meal extends CI_Model {
 		$this->db->where('meal_id', $id);
 		$this->db->delete('meals');
 	}
+	public function find($id)
+	{
+		return $this->db->query("SELECT * FROM meals WHERE meal_id = ?", array($id))->row_array();
+	}
 	public function get_meals_by_user_id($id)
 	{
 		return $this->db->query("SELECT * FROM meals WHERE user_id = ?", array($id))->result_array();

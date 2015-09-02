@@ -25,6 +25,11 @@ class Views extends CI_Controller {
 	{
 		$this->load->view('customer');
 	}
+	public function meal($id)
+	{
+		$meal = $this->Meal->find($id);
+		$this->load->view('meal', array('meal'=>$meal));
+	}
 	public function cart()
 	{
 		$this->load->view('cart');
