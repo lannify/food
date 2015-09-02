@@ -41,6 +41,7 @@ class Users extends CI_Controller {
                 'email' => $user['email'],
                 'phone' => $user['phone'],
                 'level' => $user['level'],
+                'user_id' => $user['id'],
                 'is_logged_in' => TRUE));
 
             // var_dump($this->session->userdata('current_user'));
