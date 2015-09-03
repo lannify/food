@@ -12,7 +12,8 @@ class Meal extends CI_Model {
 		// Have changed min length of description to be 10 for ease of testing
 		$this->form_validation->set_rules("description", "Description", "trim|min_length[10]|required");
 		$this->form_validation->set_rules("location", "Location", "trim|required");
-		$this->form_validation->set_rules("meal_data", "Date of Meal", "required");
+
+		$this->form_validation->set_rules("meal_date", "Date of Meal", "required");
 		$this->form_validation->set_rules("quantity", "Quantity/Serving", "required|greater_than[1]");
 		$result = array();
 		if($this->form_validation->run() === FALSE)
@@ -34,8 +35,11 @@ class Meal extends CI_Model {
 	{
 
 
-		$query = "INSERT INTO meals (name, description,location, meal_data, price, quantity, created_at, updated_at) VALUES (?,?,?,?,?,?, NOW(), NOW())";
-		$values = array($meal['name'],$meal['description'],$meal['location'],$meal['meal_data'],$meal['price'],$meal['quantity']);
+
+		$query = "INSERT INTO meals (name, description,location, price, quantity, meal_date,meal_images,created_at, updated_at) VALUES (?,?,?,?,?,?,?, NOW(), NOW())";
+		$values = array($meal['name'],$meal['description'],$meal['location'],$meal['price'],$meal['quantity'],$meal['meal_date'],$meal['meal_images']);
+
+		return $this->db->query($query, $values);
 		$this->db->query($query, $values);
 		$meal_id = $this->db->insert_id();
 		$query2 = "INSERT INTO categories(name) VALUES(?)";
