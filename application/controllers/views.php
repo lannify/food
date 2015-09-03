@@ -36,6 +36,7 @@ class Views extends CI_Controller {
 
 	public function chef()
 	{
+		
 		$this->load->view('chef');
 	}
 
