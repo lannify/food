@@ -5,14 +5,15 @@ class Meals extends CI_Controller {
 	public function __construct()
 	{
 		parent::__construct();
-		$this->output->enable_profiler();
+		// $this->output->enable_profiler();
 		$this->load->model('Meal');
 		$this->load->library('Session');
 	}
 
 	public function index()
 	{
-		$this->load->view('new_meal');
+		$meal = $this->Meal->get_meals_by_meal_id();
+		$this->load->view('meal', array('meal' => $meal));
 	}
 	public function new_meal()
 	{
@@ -41,7 +42,6 @@ class Meals extends CI_Controller {
 		}
 		
 	}
-	
 
 
 }

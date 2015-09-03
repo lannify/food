@@ -70,6 +70,11 @@ class Meal extends CI_Model {
 	{
 		return $this->db->query("SELECT * FROM meals WHERE user_id = ? AND date(meal_date) < CURRENT_DATE ORDER BY meal_id DESC LIMIT 1", array($id))->row_array();
 	}
+
+	public function get_meals_by_meal_id()
+	{
+		return $this->db->query("SELECT *, meals.name as meal_name, users.name AS user_name, meals.description as meal_description, users.description as user_description FROM meals LEFT JOIN users ON users.user_id = meals.user_id WHERE meal_id = 3")->row_array();
+	}
 	public function all_categories()
 	{
 		return $this->db->query("SELECT * FROM categories")->result_array();
