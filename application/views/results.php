@@ -97,11 +97,31 @@
                 </ul>
                 <ul class="nav nav-sidebar">
                     <li class="active"><a href="">Dietary Options</a></li>
-                    <li><input type="checkbox" id="blankCheckbox" value="option1" aria-label="..."><a href="">Low Carb</a></li>
-                    <li><input type="checkbox" id="blankCheckbox" value="option1" aria-label="..."><a href="">Vegetarian/Vegan</a></li>
-                    <li><input type="checkbox" id="blankCheckbox" value="option1" aria-label="..."><a href="">Gluten-Free</a></li>
-                    <li><input type="checkbox" id="blankCheckbox" value="option1" aria-label="..."><a href="">Allergies</a></li>
-                    <li><input type="checkbox" id="blankCheckbox" value="option1" aria-label="..."><a href="">Calorie Restrictions</a></li>
+                    <li><div class="checkbox">
+                      <label>
+                        <input type="checkbox" value=""><a href="/views/results">Low Carb</a>
+                      </label>
+                    </div></li>
+                    <li><div class="checkbox">
+                      <label>
+                        <input type="checkbox" value=""><a href="/views/results">Vegetarian/Vegan</a>
+                      </label>
+                    </div></li>
+                    <li><div class="checkbox">
+                      <label>
+                        <input type="checkbox" value=""><a href="/views/results">Gluten-Free</a>
+                      </label>
+                    </div></li>
+                    <li><div class="checkbox">
+                      <label>
+                        <input type="checkbox" value=""><a href="/views/results">Allergies</a>
+                      </label>
+                    </div></li>
+                    <li><div class="checkbox">
+                      <label>
+                        <input type="checkbox" value=""><a href="/views/results">Caloric Restrictions</a>
+                      </label>
+                    </div></li>
                     <li role="separator" class="divider"></li>
                 </ul>
                 <ul class="nav nav-sidebar">
