@@ -183,7 +183,7 @@
         </div>
         <div class="meals-mid col-md-9 col-lg-9 col-sm-9">
             <div class="col-xs-3 col-md-3 col-lg-3 ih-item square colored effect6 from_top_and_bottom">
-              <a href="#">
+              <a href="/landings/search_category/70">
                 <div class="img"><img src="/assets/images/meal-korean.jpg" alt="umsik"></div>
                 <div class="info">
                   <h3>Korean</h3>
@@ -191,7 +191,7 @@
               </div></a>
             </div>
             <div class="col-xs-3 col-md-3 col-lg-3 ih-item square colored effect6 from_top_and_bottom">
-              <a href="#">
+              <a href="/landings/search_category/68">
                 <div class="img"><img src="/assets/images/meal-italian.jpg" alt="italian"></div>
                 <div class="info">
                   <h3>Italian</h3>
@@ -200,16 +200,16 @@
               </a>
             </div>
             <div class="col-xs-3 col-md-3 col-lg-3 ih-item square colored effect6 from_top_and_bottom">
-              <a href="#">
+              <a href="/landings/search_category/110">
                 <div class="img"><img src="/assets/images/meal-steak.jpg" alt="steak"></div>
                 <div class="info">
-                  <h3>Fine Dining</h3>
+                  <h3>Steakhouses</h3>
                   <p>Click to discover fine dining near you</p>
                 </div>
               </a>
             </div>
             <div class="col-xs-3 col-md-3 col-lg-3 ih-item square colored effect6 from_top_and_bottom">
-              <a href="#">
+              <a href="/landings/search_category/99">
                 <div class="img"><img src="/assets/images/meal-sandwich.jpeg" alt="sandwich"></div>
                 <div class="info">
                   <h3>Seafood</h3>
@@ -218,7 +218,7 @@
               </a>
             </div>
             <div class="col-xs-3 col-md-3 col-lg-3 ih-item square colored effect6 from_top_and_bottom">
-              <a href="#">
+              <a href="/landings/search_category/22">
                 <div class="img"><img src="/assets/images/meal-dessert.jpg" alt="dessert"></div>
                 <div class="info">
                   <h3>Sweets</h3>
@@ -227,7 +227,7 @@
             </a>
             </div>
             <div class="col-xs-3 col-md-3 col-lg-3 ih-item square colored effect6 from_top_and_bottom">
-              <a href="#">
+              <a href="/landings/search_category/126">
                 <div class="img"><img src="/assets/images/meal-vegetarian.jpg" alt="veggie"></div>
                 <div class="info">
                   <h3>Vegetarian</h3>
@@ -250,10 +250,10 @@
         <div class="background-bottom col-md-12 col-lg-12 col-sm-12">
           <div class="col-md-3 col-lg-3 col-sm-3"></div>
           <div class="background-bottom-form col-md-6 col-lg-6 col-sm-6">
-            <form action="" method="post">
+            <form action="/landings/search" method="post">
               <div class="form-group">
                 <label for="type" class="control-label">Cuisine:</label> 
-                <select class="chosen-select form-control" data-placeholder="Search for foods" style="width:200px;"  name="type" multiple>
+                <select class="chosen-select form-control" data-placeholder="Search for foods" style="width:200px;" name="type" multiple>
                   <option value></option>
                   <optgroup label="Asian">
                     <option value="1">Thai</option>
@@ -276,10 +276,14 @@
                 </select>
               </div>
               <div class="form-group">
-                <label for="type" class="control-label">Date:</label>
-                <input type="date" name="date_of_meal" tabindex="1" class="form-control" value="" style="width: 200px;">
-            </div>
-            <input class="btn btn-default" type="submit" value="Find meals">
+                <label for="type" class="control-label">From date:</label>
+                <input type="date" name="from_date" tabindex="1" class="form-control" value="" style="width: 200px;">
+              </div>
+              <div class="form-group">
+                <label for="type" class="control-label">To date:</label>
+                <input type="date" name="to_date" tabindex="2" class="form-control" value="" style="width: 200px;">
+              </div>
+              <input class="btn btn-default" type="submit" value="Find meals">
             </form>
           </div> <!-- /.background-bottom-form -->
           <div class="col-md-3 col-lg-3 col-sm-3"></div>
