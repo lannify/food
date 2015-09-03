@@ -92,13 +92,13 @@ class User extends CI_Model {
     
     function get_user_by_id($id)
     {
-        $query = "SELECT id, name, alias, email FROM users WHERE id = ?";
+        $query = "SELECT user_id, name, email FROM users WHERE user_id = ?";
         return $this->db->query($query, $id)->row_array();
     }
 
     function get_all_users()
     {
-        $query = "SELECT id, name, alias, email FROM users";
+        $query = "SELECT user_id, name, email FROM users";
         return $this->db->query($query)->result_array();
     }
 
