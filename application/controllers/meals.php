@@ -27,7 +27,7 @@ class Meals extends CI_Controller {
 			$meal = $this->Meal->create($this->input->post());
 			if ($meal)
 			{
-				// redirect('views/chef');
+				redirect('views/chef');
 			}
 			else
 			{
@@ -36,7 +36,6 @@ class Meals extends CI_Controller {
 		}
 		else
 		{
-
 			$this->session->set_flashdata('errors',$validate[1]);
 			redirect('/meals/new_meal');
 		}
