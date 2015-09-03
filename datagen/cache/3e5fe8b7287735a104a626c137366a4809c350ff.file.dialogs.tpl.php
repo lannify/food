@@ -1,6 +1,6 @@
-<?php /* Smarty version Smarty-3.1.8, created on 2015-09-02 19:57:03
+<?php /* Smarty version Smarty-3.1.8, created on 2015-09-03 01:16:14
          compiled from "/Users/ike/Desktop/dojo/food/datagen/resources/templates/dialogs.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:83741480255e7386f28b768-64446779%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:86960750255e7833e6a4b36-19942935%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
@@ -11,7 +11,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '83741480255e7386f28b768-64446779',
+  'nocache_hash' => '86960750255e7833e6a4b36-19942935',
   'function' => 
   array (
   ),
@@ -21,9 +21,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.8',
-  'unifunc' => 'content_55e7386f466e52_11802599',
+  'unifunc' => 'content_55e7833e88dfe8_69291751',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_55e7386f466e52_11802599')) {function content_55e7386f466e52_11802599($_smarty_tpl) {?><?php if (!is_callable('smarty_function_data_types_list')) include '/Users/ike/Desktop/dojo/food/datagen/resources/libs/smarty/plugins/function.data_types_list.php';
+<?php if ($_valid && !is_callable('content_55e7833e88dfe8_69291751')) {function content_55e7833e88dfe8_69291751($_smarty_tpl) {?><?php if (!is_callable('smarty_function_data_types_list')) include '/Users/ike/Desktop/dojo/food/datagen/resources/libs/smarty/plugins/function.data_types_list.php';
 if (!is_callable('smarty_function_data_type_help')) include '/Users/ike/Desktop/dojo/food/datagen/resources/libs/smarty/plugins/function.data_type_help.php';
 ?><div id="gdEmptyFormDialog"></div>
 

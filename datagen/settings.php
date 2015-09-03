@@ -1,8 +1,8 @@
 <?php
 
 $dbHostname     = 'localhost';
-$dbName         = 'food';
+$dbName         = 'datagen';
 $dbUsername     = 'root';
 $dbPassword     = 'root';
-$dbTablePrefix  = '';
-$encryptionSalt = 'GSU';
+$dbTablePrefix  = 'gd_';
+$encryptionSalt = 'pjk';
