@@ -68,7 +68,7 @@ class Meal extends CI_Model {
 	}
 	public function get_past_meals_by_user_id($id)
 	{
-		return $this->db->query("SELECT * FROM meals WHERE user_id = ? AND date(date_of_meal) < CURRENT_DATE ORDER BY meal_id DESC LIMIT 1", array($id))->row_array();
+		return $this->db->query("SELECT * FROM meals WHERE user_id = ? AND date(meal_date) < CURRENT_DATE ORDER BY meal_id DESC LIMIT 1", array($id))->row_array();
 	}
 	public function all_categories()
 	{

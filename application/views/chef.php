@@ -97,9 +97,15 @@
                 <div class="view">  
                    <img class="photo" src="/assets/images/japanese1.jpeg">
                    <div class="mask">  
+
                    <h2>Title</h2>  
                    <p>Sushi Nom Nom Nom</p>  
                        <a href="#" class="info">Read More</a>  
+
+                   <h2><?= $latest_meal['name']?></h2>  
+                   <p><?= $latest_meal['description']?></p>  
+                       <a href="#" class="info"><?= date('M d y',strtotime($latest_meal['meal_date']))?></a>  
+
                    </div>  
                 </div> 
               </div>
@@ -107,7 +113,9 @@
                 <div class="view">  
                    <img class="photo" src="/assets/images/ramen.jpeg">
                    <div class="mask">  
+
                    <h2>Title</h2>  
+
                    <p>Tonkotsu Ramen</p>  
                        <a href="#" class="info">Read More</a>  
                    </div>  
@@ -157,20 +165,6 @@
               </div>
           </div>        
       </div>
-    </div>
-    <div class="footer">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-4">
-            <p>Link</p>
-          </div>
-          <div class="col-md-4">
-            <p>Link</p>
-          </div>
-          <div class="col-md-4">
-            <p>Link</p>
-          </div>
-        </div>
     </div>
   
 
