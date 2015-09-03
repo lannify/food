@@ -6,7 +6,7 @@ class Views extends CI_Controller {
 	{
 		parent::__construct();
 		// $this->output->enable_profiler();
-		$this->load->model('user');
+		$this->load->model('User');
 		$this->load->model('Meal');
 	}
 	
@@ -35,10 +35,11 @@ class Views extends CI_Controller {
 		$this->load->view('results');
 	}
 
-	public function chef()
+	public function chef($id)
 	{
-
-		$this->load->view('chef');
+		$chef = $this->User->get_user_by_id($id);
+		$latest_meal = $this->Meal->get_latest_meal_by_user_id($id);
+		$this->load->view('chef', array("chef"=> $chef, "latest_meal"=>$latest_meal));
 	}
 
 	public function customer()
