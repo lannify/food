@@ -74,6 +74,8 @@ class Views extends CI_Controller {
 	{
 		$this->load->view('how_it_works');
 
+	}
+
 	public function checkout()
 	{
 		$this->load->view('checkout');

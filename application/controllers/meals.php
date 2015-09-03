@@ -22,7 +22,7 @@ class Meals extends CI_Controller {
 	}
 	public function create()
 	{	
-		
+
 		$config = array(
 
 			'upload_path' => "./assets/uploads/",
@@ -34,14 +34,14 @@ class Meals extends CI_Controller {
 		);
 
 		$this->load->library('upload', $config);
-		
+
 		$validate = $this->Meal->validate($this->input->post());
 		if ($validate[0]=== TRUE)
 		{
 			$meal = $this->Meal->create($this->input->post());
 			if ($meal)
 			{
-				redirect('views/chef');
+				redirect('views/chef/' . $this->session->userdata('user_id'));
 			}
 			else
 			{
