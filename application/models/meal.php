@@ -30,7 +30,7 @@ class Meal extends CI_Model {
 
 	public function create($meal)
 	{
-		$query = "INSERT INTO meals (name, description,location, date_of_meal, price, quantity, created_at, updated_at) VALUES (?,?,?,?,?,?, NOW(), NOW())";
+		$query = "INSERT INTO meals (name, description,location, meal_date, price, quantity, created_at, updated_at) VALUES (?,?,?,?,?,?, NOW(), NOW())";
 		$values = array($meal['name'],$meal['description'],$meal['location'],$meal['date_of_meal'],$meal['price'],$meal['quantity']);
 		$this->db->query($query, $values);
 		$meal_id = $this->db->insert_id();
