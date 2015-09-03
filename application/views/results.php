@@ -68,20 +68,60 @@
                 </ul>
                 <ul class="nav nav-sidebar">
                     <li class="active"><a href="">Type of Cuisine</a></li>
-                    <li><a href="">Thai</a></li>
-                    <li><a href="">Fine Dining</a></li>
-                    <li><a href="">Italian</a></li>
-                    <li><a href="">Vegetarian</a></li>
-                    <li><a href="">Indian</a></li>
+                    <li><div class="checkbox">
+                      <label>
+                        <input type="checkbox" value=""><a href="/landings/search_category/119">Thai</a>
+                      </label>
+                    </div></li>
+                    <li><div class="checkbox">
+                      <label>
+                        <input type="checkbox" value=""><a href="/landings/search_category/91">Ramen</a>
+                      </label>
+                    </div></li>
+                    <li><div class="checkbox">
+                      <label>
+                        <input type="checkbox" value=""><a href="/landings/search_category/68">Italian</a>
+                      </label>
+                    </div></li>
+                    <li><div class="checkbox">
+                      <label>
+                        <input type="checkbox" value=""><a href="/landings/search_category/126">Vegetarian</a>
+                      </label>
+                    </div></li>
+                    <li><div class="checkbox">
+                      <label>
+                        <input type="checkbox" value=""><a href="/landings/search_category/65">Indian</a>
+                      </label>
+                    </div></li>
                     <li role="separator" class="divider"></li>
                 </ul>
                 <ul class="nav nav-sidebar">
                     <li class="active"><a href="">Dietary Options</a></li>
-                    <li><a href="">Low Carb</a></li>
-                    <li><a href="">Vegetarian/Vegan</a></li>
-                    <li><a href="">Gluten-Free</a></li>
-                    <li><a href="">Allergies</a></li>
-                    <li><a href="">Calorie Restrictions</a></li>
+                    <li><div class="checkbox">
+                      <label>
+                        <input type="checkbox" value=""><a href="/views/results">Low Carb</a>
+                      </label>
+                    </div></li>
+                    <li><div class="checkbox">
+                      <label>
+                        <input type="checkbox" value=""><a href="/views/results">Vegetarian/Vegan</a>
+                      </label>
+                    </div></li>
+                    <li><div class="checkbox">
+                      <label>
+                        <input type="checkbox" value=""><a href="/views/results">Gluten-Free</a>
+                      </label>
+                    </div></li>
+                    <li><div class="checkbox">
+                      <label>
+                        <input type="checkbox" value=""><a href="/views/results">Allergies</a>
+                      </label>
+                    </div></li>
+                    <li><div class="checkbox">
+                      <label>
+                        <input type="checkbox" value=""><a href="/views/results">Caloric Restrictions</a>
+                      </label>
+                    </div></li>
                     <li role="separator" class="divider"></li>
                 </ul>
                 <ul class="nav nav-sidebar">
@@ -229,39 +269,43 @@
   
                 </div>
                 <div class="row">
-                    <div class="col-sm-6 col-md-4">
-                        <div class="thumbnail">
-                          <img src="/assets/images/meal-japanese.jpg" alt="1" style="position: relative; top: 0; left: 0;">
-                          <img class="small-chef-picture" src="/assets/images/chef-results-2.jpeg" alt="chef1"/>
-                          <div class="caption">
-                            <h3>Ennui</h3>
-                            <p>...</p>
-                            <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
-                          </div>
-                        </div>
+<?php
+          // search_results[0] will be set to false if no meals were found from landings controller
+          if($this->session->userdata('search_results')[0])
+          {
+?>
+              <div class="page-header">
+                <h3><?=count($this->session->userdata('search_results'));?> Result(s) Found!</h3>
+              </div>
+<?php
+            foreach($this->session->userdata('search_results') as $search_result)
+            {
+?>
+              <div class="col-sm-6 col-md-4">
+                  <div class="thumbnail">
+                    <img src="/assets/images/meal-japanese.jpg" alt="1" style="position: relative; top: 0; left: 0;">
+                    <img class="small-chef-picture" src="/assets/images/chef-results-2.jpeg" alt="chef1"/>
+                    <div class="caption">
+<?php
+                    echo "<h3>".$search_result['name']."</h3>";
+                    echo "<p>".$search_result['description']."</p>";
+?>
+                      <p><a href=<?="/meals/meal/".$search_result['meal_id']?> class="btn btn-primary" role="button">Book this meal!</a></p>
                     </div>
-                    <div class="col-sm-6 col-md-4">
-                        <div class="thumbnail">
-                          <img src="/assets/images/meal-viet.jpg" alt="1" style="position: relative; top: 0; left: 0;">
-                          <img class="small-chef-picture" src="/assets/images/chef-results-3.jpeg" alt="chef1"/>
-                          <div class="caption">
-                            <h3>Homemade Vietnamese</h3>
-                            <p>...</p>
-                            <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
-                          </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-md-4">
-                        <div class="thumbnail">
-                          <img src="/assets/images/meal-steak-home.jpg" alt="1" style="position: relative; top: 0; left: 0;">
-                          <img class="small-chef-picture" src="/assets/images/chef-results-4.jpg" alt="chef1"/>
-                          <div class="caption">
-                            <h3>Steak and Potatoes</h3>
-                            <p>...</p>
-                            <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
-                          </div>
-                        </div>
-                    </div>
+                  </div>
+              </div>              
+<?php
+            }
+          }
+          else
+          {
+?>
+                  <div class="row">
+                    <h4>No search results found! Try removing some filters on the left.</h4>
+                  </div>
+<?php
+          }
+?>
                 </div><!-- row -->
             </div><!-- main content -->
         </div><!-- row -->
