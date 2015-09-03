@@ -64,87 +64,78 @@
               <div class="col-md-8">
                 <div class="description">                 
                   <h3><?= $chef['name'] ?>'s Intro</h3>
-                  <button class="form-inline">Edit</button>
-                  <hr>
                   <p><?= $chef['description'] ?></p>
                 </div>
               </div>
           </div>
       </div>
     </div> <!-- End Profile header -->
-   
+
     <div class="main-content text-center">
       <div class ="container">
           <div class="row">
-              <div class="col-md-4">
-                <div class="view">  
-                   <img class="photo" src="/assets/images/japanese1.jpeg">
-                   <div class="mask">  
-                      <h2><?= $latest_meal['name'] ?></h2>  
-                      <p><?= $latest_meal['description']?></p>  
-                         <a href="#" class="info"><?= date('M d, Y',strtotime($latest_meal['meal_date']))?></a>  
-                   </div>  
-                </div> 
-              </div>
+
+
+<?
+    foreach($future_meals as $meal)
+    {
+?>
+      <div class="col-md-4">
+        <div class="view">  
+           <img class="photo" src="/assets/images/japanese1.jpeg">
+           <div class="mask">  
+           <h2><?= $meal['name'] ?></h2>  
+           <p><?= $meal['description']?></p>  
+               <a href="#" class="info"><?= date('M d, Y',strtotime($meal['meal_date']))?></a>  
+           </div>  
+        </div> 
+      </div>
+<?      
+    }
+
+
+?>
+             
+<!-- If there are past meals   -->   
+<?
+    if(count($past_meal)>0)
+    {
+?>
               <div class="col-md-4">
                 <div class="view">  
                    <img class="photo" src="/assets/images/ramen.jpeg">
                    <div class="mask">  
-
-                   <h2>Title</h2>  
-
-                   <p>Tonkotsu Ramen</p>  
-                       <a href="#" class="info">Read More</a>  
+                   <h2><?= $past_meal['name'] ?></h2>  
+                   <p><?= $past_meal['description']?></p>  
+                       <a href="#" class="info"><?= date('M d, Y',strtotime($past_meal['meal_date']))?></a>  
                    </div>  
                 </div> 
               </div>
-              <div class="col-md-4">
-                <div class="view">  
-                   <img class="photo" src="/assets/images/japanese3.jpeg">
-                   <div class="mask">  
-                   <h2>Title</h2>  
-                   <p>Sushi Feast</p>  
-                       <a href="#" class="info">Read More</a>  
-                   </div>  
-                </div> 
-              </div>
-          </div>
+<?      
+    }
+?>                                    
+          </div> 
           <div class="row">
-              <div class="col-md-4">
-                <div class="view">  
-                   <img class="photo" src="/assets/images/dining_table.jpg">
-                   <div class="mask">  
-                   <h2>Title</h2>  
-                   <p>My dinning table</p>  
-                       <a href="#" class="info">Read More</a>  
-                   </div>  
-                </div> 
-              </div>
-              <div class="col-md-4">
-                <div class="view">  
-                   <img class="photo" src="/assets/images/japanese1.jpeg">
-                   <div class="mask">  
-                   <h2>Title</h2>  
-                   <p>Your Text</p>  
-                       <a href="#" class="info">Read More</a>  
-                   </div>  
-                </div> 
-              </div>
-              <div class="col-md-4">
-                <div class="view">  
-                   <img class="photo" src="/assets/images/japanese1.jpeg">
-                   <div class="mask">  
-                   <h2>LOCATION</h2>  
-                   <p>My Location</p>  
-                       <a href="#" class="info">Read More</a>  
-                   </div>  
-                </div> 
-              </div>
-          </div>        
+            <div class="col-md-12 profile">
+              Meal Locations on Map go here   
+            </div>      
+          </div> 
+          <div class="row">
+            <div class="col-md-4">
+              <h2>Review 1</h2>          
+            </div>
+            <div class="col-md-4">
+              <h2>Review 1</h2>          
+            </div>
+            <div class="col-md-4">
+              <h2>Review 1</h2>          
+            </div>
+          </div>       
       </div>
     </div>
   
-
+    <hr>
+    <hr>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
