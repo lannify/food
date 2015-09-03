@@ -310,6 +310,10 @@
 	left: 80px;
 	overflow: hidden;
 }
+.checkbox {
+  margin-left: 10px;
+}
+
 .form-meal {
 	width: 60%;
 	margin: 20px auto;
@@ -332,6 +336,11 @@ th {
 .yellow-bg {
   background-color: #fadd96;
 }
+
+table tbody td {
+  padding: 10px 20px;
+}
+
 
 .meal_list_left {
   display: inline-block;

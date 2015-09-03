@@ -72,11 +72,11 @@
                 <p>Servings: <?= $meal['quantity']?></p>
                 <p>Location: <?= $meal['location']?></p>
                 <p>Price per Person: $<?= $meal['price']?></p>
+
                 <p>Date: <?= date('M d y h:i A',strtotime($meal['meal_date']))?></p>
 
                <!--  <img src="/assets/images/<?= $meal['photo']?>"> -->
-        
-                
+               
                 <a href="/buy/<?= $meal['meal_id']?>"><button class="btn btn-default">Buy this meal</button></a>
 
                 <br />
