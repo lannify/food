@@ -26,18 +26,32 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">      
           
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="#">How It Works</a></li>     
+            <li><a href="#">How It Works</a></li>
+
+            <li><a href="/views/chef">Chef</a></li>
+
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Foods<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Italian</a></li>
+                <li><a href="#">Japanese</a></li>
+                <li><a href="#">Korean</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="#">Vegan</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Locations<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">San Jose</a></li>
+                <li><a href="#">San Francisco</a></li>
+                <li><a href="#">New York</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="#">Paris</a></li>
+              </ul>
+            </li>
             <li><a href="#">Your Cart <span class= "glyphicon glyphicon-shopping-cart"></span></a></li>
             <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Your Account<span class="caret"></span></a>
-                <ul class="dropdown-menu">
-                  <li><a href="#">Dashboard</a></li>
-                  <li><a href="#">Profile</a></li>
-                  <li><a href="#">Orders</a></li>              
-                  <li role="separator" class="divider"></li>
-                  <li><a href="/users/logoff">Sign Out</a></li>              
-                </ul>
-              </li>
           </ul>
 
         </div><!-- /.navbar-collapse -->
@@ -49,13 +63,13 @@
         <div class="row">
               <div class="col-md-4">
                 <div class="profile_photo">
-                  <h3><?= $chef['name']?></h3>
+                  <h3>Chef Photo</h3>
                   <img class = "user_photo" src = "/assets/images/chef1.jpg" alt="chef photo">
                 </div>
               </div>
               <div class="col-md-8">
                 <div class="description">                 
-                  <h3><?= $chef['name']?>'s Story</h3>
+                  <h3>Intro</h3>
                   <button class="form-inline">Edit</button>
                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                   tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
@@ -75,9 +89,7 @@
           </div>
       </div>
     </div> <!-- End Profile header -->
-
-<!-- Get Meals Info/Photo and output them in each div.col-md-4 below -->
-  
+   
     <div class="main-content text-center">
       <div class ="container">
           <div class="row">
@@ -85,9 +97,9 @@
                 <div class="view">  
                    <img class="photo" src="/assets/images/japanese1.jpeg">
                    <div class="mask">  
-                   <h2><?= $latest_meal['name']?></h2>  
-                   <p><?= $latest_meal['description']?></p>  
-                       <a href="#" class="info"><?= date('M d y',strtotime($latest_meal['date_of_meal']))?></a>  
+                   <h2>Title</h2>  
+                   <p>Sushi Nom Nom Nom</p>  
+                       <a href="#" class="info">Read More</a>  
                    </div>  
                 </div> 
               </div>
@@ -95,7 +107,7 @@
                 <div class="view">  
                    <img class="photo" src="/assets/images/ramen.jpeg">
                    <div class="mask">  
-                   <h2><?= $past_meals['name']?></h2>  
+                   <h2>Title</h2>  
                    <p>Tonkotsu Ramen</p>  
                        <a href="#" class="info">Read More</a>  
                    </div>  
@@ -163,19 +175,9 @@
   
 
 
- 
-     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBYVbHcKksus8bLiG3R8ZKoxd1oqpBRaTg&sesnsor=false"
-  type="text/javascript"></script>
-  
-
-
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="/assets/js/bootstrap.min.js"></script>
     <script src="/assets/js/main.js"></script>
-    <script type="text/javascript">
-
-
-</script>
   </body>
 </html>

@@ -194,9 +194,10 @@
 	background-color: #F7F7F9;
 /*	background-color: #FFEAEA;*/
 }
-.landing{
+.page-header {
 	text-align: center;
 }
+<<<<<<< HEAD
 
 /* Styles for Results page */
 .thumbnail .small-chef-picture {
@@ -209,23 +210,6 @@
 	top: -20px;
 	left: 80px;
 	overflow: hidden;
-}
-/* Responsive Google Map */
-.flexible-container {
-    position: relative;
-    padding-bottom: 37.25%;
-    padding-top: 30px;
-    height: 0;
-    overflow: hidden;
-}
-.flexible-container iframe,   
-.flexible-container object,  
-.flexible-container embed {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
 
 .form-meal {
 	width: 60%;

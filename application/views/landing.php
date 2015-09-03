@@ -129,7 +129,7 @@
       </div>
 
       <div class="row">
-        <div class="landing page-header">
+        <div class="page-header">
           <h3>Made for you</h3>
           <h4>Discover gourmet meals at home-cooked prices</h4>
         </div>
@@ -198,7 +198,7 @@
 
 
       <div class="row">
-        <div class="landing page-header">
+        <div class="page-header">
           <h3>Or search by type and/or date</h3>
         </div>
         <div class="background-bottom col-md-12 col-lg-12 col-sm-12">
