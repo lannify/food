@@ -21,7 +21,20 @@ class Meals extends CI_Controller {
 		$this->load->view('new_meal', array("categories"=> $categories));
 	}
 	public function create()
-	{
+	{	
+		
+		$config = array(
+
+			'upload_path' => "./assets/uploads/",
+			'allowed_types'   => "gif|jpg|png|jpeg|pdf",
+			'overwrite'       => TRUE,
+			'max_size'        => "2048000",  
+			'max_height'      => "768",
+			'max_width'       => "1024"  
+		);
+
+		$this->load->library('upload', $config);
+		
 		$validate = $this->Meal->validate($this->input->post());
 		if ($validate[0]=== TRUE)
 		{

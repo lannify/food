@@ -107,7 +107,7 @@
                             <div class="form-group">
                               <label class="col-sm-3 control-label">Or add a Category</label>
                               <div class="col-sm-4">
-                                <input type="text" class="form-control" name = "category" placeholder="e.g. Italian" required>
+                                <input type="text" class="form-control" name = "category" placeholder="e.g. Italian">
                               </div>
                             </div>
                             <div class="form-group">
@@ -119,7 +119,7 @@
                              <div class="form-group">
                               <label class="col-sm-3 control-label">Photos</label>
                               <div class="col-sm-6">
-                                <input type="file" class="form-control" name = "meal_images" placeholder="" required>
+                                <input type="file" size="20" id="file" class="form-control" name="meal_images" placeholder="" required>
                               </div>
                             </div>
                             <div class="form-group">
