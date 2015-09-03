@@ -38,8 +38,9 @@ class Views extends CI_Controller {
 	public function chef($id)
 	{
 		$chef = $this->User->get_user_by_id($id);
-		$latest_meal = $this->Meal->get_latest_meal_by_user_id($id);
-		$this->load->view('chef', array("chef"=> $chef, "latest_meal"=>$latest_meal));
+		$future_meals = $this->Meal->get_future_meals_by_user_id($id);
+		$past_meal = $this->Meal->get_past_meal_by_user_id($id);
+		$this->load->view('chef', array("chef"=> $chef, "future_meals"=>$future_meals, "past_meal"=>$past_meal));
 	}
 
 	public function customer()
