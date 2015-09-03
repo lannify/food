@@ -278,8 +278,10 @@
                 <h3><?=count($this->session->userdata('search_results'));?> Result(s) Found!</h3>
               </div>
 <?php
-            foreach($this->session->userdata('search_results') as $search_result)
+            foreach($this->session->userdata('search_results') as $category)
             {
+              foreach($category as $search_result)
+              {
 ?>
               <div class="col-sm-6 col-md-4">
                   <div class="thumbnail">
@@ -295,6 +297,7 @@
                   </div>
               </div>              
 <?php
+              }
             }
           }
           else

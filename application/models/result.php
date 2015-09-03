@@ -9,17 +9,27 @@ class Result extends CI_Model {
 
 	public function get_meals_by_category($category)
 	{
-    $query = "SELECT * FROM meals_categories c LEFT JOIN meals ON c.meal_id = meals.meal_id WHERE category_id = ?";
-    $meals = $this->db->query($query, $category)->result_array();
+    $meals = array();
+
+    // Check if multiple categories passed in
+    if(! is_array($category))
+    {
+      $query = "SELECT * FROM meals_categories c LEFT JOIN meals ON c.meal_id = meals.meal_id WHERE category_id = ?";
+      $meals[] = $this->db->query($query, $category)->result_array();
+    }
+    else
+    {
+      foreach($category as $id)
+      {
+        $query = "SELECT * FROM meals_categories c LEFT JOIN meals ON c.meal_id = meals.meal_id WHERE category_id = ?";
+        $meals[] = $this->db->query($query, $id)->result_array();
+      }
+    }
 
     // Check if any meals exist
-    if(count($meals) > 0) {
-      return $meals;
-    }
-    else 
-    {
+    if(! count($meals) > 0) {
       $meals[] = false;
-      $meals[] = "No meals in this category!"; 
+      $meals[] = "No results found! Please try your search again."; 
     }
 	  return $meals;
 	}
