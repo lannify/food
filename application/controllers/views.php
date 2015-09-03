@@ -8,6 +8,7 @@ class Views extends CI_Controller {
 		// $this->output->enable_profiler();
 		$this->load->model('User');
 		$this->load->model('Meal');
+		$this->load->library('cart');
 	}
 	
 	public function index()

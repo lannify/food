@@ -8,6 +8,7 @@ class Meals extends CI_Controller {
 		$this->output->enable_profiler();
 		$this->load->model('Meal');
 		$this->load->library('Session');
+		$this->load->library('cart');
 	}
 
 	public function index()
