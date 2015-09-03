@@ -7,11 +7,12 @@ class Items extends CI_Controller {
 		parent::__construct();
 		// $this->output->enable_profiler();
 		$this->load->model('Item');
+		$this->load->library('cart');
 	}
 
-	public function index()
+	public function add_to_cart()
 	{
-		$this->load->view('cart');
+		$this->Item->add_to_cart($this->input->post());
 	}
 	
 
