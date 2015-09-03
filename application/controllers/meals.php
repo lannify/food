@@ -16,7 +16,8 @@ class Meals extends CI_Controller {
 	}
 	public function new_meal()
 	{
-		$this->load->view('new_meal');
+		$categories = $this->Meal->all_categories();
+		$this->load->view('new_meal', array("categories"=> $categories));
 	}
 	public function create()
 	{
@@ -35,7 +36,6 @@ class Meals extends CI_Controller {
 		}
 		else
 		{
-
 			$this->session->set_flashdata('errors',$validate[1]);
 			redirect('/meals/new_meal');
 		}

@@ -36,5 +36,6 @@
 ehthumbs.db
 Thumbs.db
 
+=======
 # Ignore Data Generator project
 /datagen

@@ -12,7 +12,7 @@ class Meal extends CI_Model {
 		// Have changed min length of description to be 10 for ease of testing
 		$this->form_validation->set_rules("description", "Description", "trim|min_length[10]|required");
 		$this->form_validation->set_rules("location", "Location", "trim|required");
-		$this->form_validation->set_rules("date_of_meal", "Date of Meal", "required");
+		$this->form_validation->set_rules("meal_date", "Date of Meal", "required");
 		$this->form_validation->set_rules("quantity", "Quantity/Serving", "required|greater_than[1]");
 		$result = array();
 		if($this->form_validation->run() === FALSE)
@@ -32,9 +32,20 @@ class Meal extends CI_Model {
 
 	public function create($meal)
 	{
-		$query = "INSERT INTO meals (name, description,location, price, quantity, date_of_meal,meal_images,created_at, updated_at) VALUES (?,?,?,?,?,?,?, NOW(), NOW())";
-		$values = array($meal['name'],$meal['description'],$meal['location'],$meal['price'],$meal['quantity'],$meal['date_of_meal'],$meal['meal_images']);
+
+
+		$query = "INSERT INTO meals (name, description,location, price, quantity, meal_date,meal_images,created_at, updated_at) VALUES (?,?,?,?,?,?,?, NOW(), NOW())";
+		$values = array($meal['name'],$meal['description'],$meal['location'],$meal['price'],$meal['quantity'],$meal['meal_date'],$meal['meal_images']);
+
 		return $this->db->query($query, $values);
+		$this->db->query($query, $values);
+		$meal_id = $this->db->insert_id();
+		$query2 = "INSERT INTO categories(name) VALUES(?)";
+		$values2 = array($meal['category']);
+		$this->db->query($query2, $values2);
+		return TRUE;
+
+
 	}
 	
 	public function delete($id)
@@ -42,5 +53,27 @@ class Meal extends CI_Model {
 		$this->db->where('meal_id', $id);
 		$this->db->delete('meals');
 	}
+
+	public function find($id)
+	{
+		return $this->db->query("SELECT * FROM meals WHERE meal_id = ?", array($id))->row_array();
+	}
+	public function get_meals_by_user_id($id)
+	{
+		return $this->db->query("SELECT * FROM meals WHERE user_id = ?", array($id))->result_array();
+	}
+	public function get_future_meals_by_user_id($id)
+	{
+		return $this->db->query("SELECT * FROM meals WHERE user_id = ? ORDER BY meal_id AND date(meal_date) > CURRENT_DATE", array($id))->result_array();
+	}
+	public function get_past_meal_by_user_id($id)
+	{
+		return $this->db->query("SELECT * FROM meals WHERE user_id = ? AND date(meal_date) < CURRENT_DATE ORDER BY meal_id DESC LIMIT 1", array($id))->row_array();
+	}
+	public function all_categories()
+	{
+		return $this->db->query("SELECT * FROM categories")->result_array();
+	}
+
 
 }
