@@ -47,15 +47,13 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Home</a>
+          <a class="navbar-brand" href="/views/index/">Home</a>
 <?php 
 		if($this->session->userdata("current_user")['level'] == 3){ ?>
-			<a class="navbar-brand" href="#">Book a Meal</a>
-            <a class="navbar-brand" href="#">Profile</a>    
+			<a class="navbar-brand" href="/views/results/">Book a Meal</a> 
 <?php } else{ ?>
-			<a class="navbar-brand" href="/meals/new_meal ">Add New Meal</a>
-			<a class="navbar-brand" href="#">Book a Meal!</a>
-            <a class="navbar-brand" href="#">Profile</a>
+			<a class="navbar-brand" href="/meals/new_meal/">Add New Meal</a>
+			<a class="navbar-brand" href="/views/results/">Book a Meal!</a>
 		<?php }
 ?>
         </div>
