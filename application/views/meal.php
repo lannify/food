@@ -51,21 +51,7 @@
 
       <div class ="container">
         <div class="row">
-          <div class="col-md-8">
-            <div class="meal_profile">
-             <!--  <h3><?= $meal['name']?></h3> -->
-              <img class = "meal_photo" src = "/assets/images/japanese3.jpeg" alt="meal photo">
-              <div class="row">
-                <div class="col-md-3">
-                  <img class = "meal_photo" src = "/assets/images/japanese3.jpeg" alt="meal photo" >
-                </div>
-                <div class="col-md-3">
-                  <img class = "meal_photo" src = "/assets/images/japanese3.jpeg" alt="meal photo" >
-                </div>
-                <div class="col-md-3">
-                  <img class = "meal_photo" src = "/assets/images/japanese3.jpeg" alt="meal photo" >
-                </div>
-              </div>
+          
 
               <div class="description">                 
                 <h3>Description:</h3>
