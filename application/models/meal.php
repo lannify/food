@@ -43,4 +43,22 @@ class Meal extends CI_Model {
 		$this->db->delete('meals');
 	}
 
+	public function find($id)
+	{
+		return $this->db->query("SELECT * FROM meals WHERE meal_id = ?", array($id))->row_array();
+	}
+	public function get_meals_by_user_id($id)
+	{
+		return $this->db->query("SELECT * FROM meals WHERE user_id = ?", array($id))->result_array();
+	}
+	public function get_latest_meal_by_user_id($id)
+	{
+		return $this->db->query("SELECT * FROM meals WHERE user_id = ? ORDER BY meal_id DESC LIMIT 1", array($id))->row_array();
+	}
+	public function get_past_meals_by_user_id($id)
+	{
+		return $this->db->query("SELECT * FROM meals WHERE user_id = ? AND date(date_of_meal) < CURRENT_DATE ORDER BY meal_id DESC LIMIT 1", array($id))->row_array();
+	}
+
+
 }
