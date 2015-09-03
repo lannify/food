@@ -14,6 +14,11 @@ class Views extends CI_Controller {
 		$this->load->view('landing');
 	}
 
+	public function mockup()
+	{
+		$this->load->view('mockup');
+	}
+
 	public function landing()
 	{
 		$this->load->view('landing');
@@ -52,6 +57,11 @@ class Views extends CI_Controller {
 	public function dashboard()
 	{
 		$this->load->view('dashboard');
+	}
+
+	public function new_meal()
+	{
+		$this->load->view('new_meal');
 	}
 }
 
