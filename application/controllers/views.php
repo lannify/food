@@ -69,6 +69,10 @@ class Views extends CI_Controller {
 	{
 		$this->load->view('new_meal');
 	}
+	public function checkout()
+	{
+		$this->load->view('checkout');
+	}
 }
 
 //end of main controller

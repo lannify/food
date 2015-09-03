@@ -45,39 +45,52 @@
       </div><!-- /.container-fluid -->
     </nav>
            
-    <div class="conatiner-fluid">
+    <div class="container-fluid">
       <div class="container">
         <div class="row">
-        <div class="col-md-7">
-          <h1>Check Out</h1>
+          <div class="col-md-8">
+            <h1>Check Out</h1>
+            <p>Your Address</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae, aliquam laboriosam numquam delectus corporis vero odit facilis reprehenderit voluptatum, id impedit fuga, pariatur accusamus dicta quo doloribus? Nulla, labore, totam!</p>
+            <p>Your Total</p>
+            <script
+              src="https://checkout.stripe.com/checkout.js"
+              class="stripe-button"
+              data-key="pk_test_6pRNASCoBOKtIshFeQd4XMUh"
+           
+              data-name="Demo Site"
+              data-description="2 widgets ($20.00)"
+              data-amount="2000">
+            </script>
           </div>
-            <form id = "checkout" action="/views/thankyou" method="POST">
-              <div class="form-group">
-                <input type="text" name="name" class="form-control" placeholder="Name" value="">
-              </div>
-              <div class="form-group">
-                <input type="number" name="phone" class="form-control" placeholder="Phone number" value="">
-              </div>
-              <div class="form-group">
-                <input type="text" name="street_address" class="form-control" placeholder="Street Address" value="">
-              </div>
-              <div class="form-group">
-                <input type="text" name="city" class="form-control" placeholder="City" value="">
-              </div>
-              <div class="form-group">
-                <input type="number" name="zipcode" class="form-control" placeholder="Zipcode" value="">
-              </div>
-              <script
-                src="https://checkout.stripe.com/checkout.js"
-                class="stripe-button"
-                data-key="pk_test_6pRNASCoBOKtIshFeQd4XMUh"
-             
-                data-name="Demo Site"
-                data-description="2 widgets ($20.00)"
-                data-amount="2000">
-              </script>
-            </form>
+          <div class="col-md-4">
+            <hr>
+            <hr>
+            <table class="table">
+              <thead>
+                <th>Item</th>
+                <th>Price</th>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Item</td>
+                  <td>Price</td>
+                </tr>
+                <tr>
+                  <td>Order Sub Total:</td>
+                  <td>Price</td>
+                </tr>
+                <tr>
+                  <td>Tax:</td>
+                  <td>Price</td>
+                </tr>
+              </tbody>
+            </table>
+
+            
+
           </div>
+        </div>
       </div>
     </div>
     

@@ -120,7 +120,7 @@
                              <div class="form-group">
                               <label class="col-sm-3 control-label">Photos</label>
                               <div class="col-sm-6">
-                                <input type="file" class="form-control" name = "photo" placeholder="" required>
+                                <input type="file" class="form-control" name = "meal_images" placeholder="" required>
                               </div>
                             </div>
                             <div class="form-group">
