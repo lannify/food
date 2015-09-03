@@ -51,16 +51,12 @@
 
       <div class="container">
         <div class="row">
-          
-
-          <div class="meal_list_left description"> 
+         
+          <div class="meal_list_left description">
+                <h3>Chef</h3> 
                 <p><?= $meal['user_name']?></p>
-                <p><?= $meal['user_description']?></p>
-
-                <a href="/buy/<?= $meal['meal_id']?>"><button class="btn btn-default">Buy this meal</button></a>
+                <p><?= $meal['user_description']?></p>             
             </div>
-
-
           <div class="meal_list_right description">                 
                 <img src="/assets/images/meal-dessert.jpg">
                 <h3><?= $meal['meal_name']?></h3>
@@ -75,22 +71,12 @@
 
                <!--  <img src="/assets/images/<?= $meal['photo']?>"> -->
                
-                <a href="/buy/<?= $meal['meal_id']?>"><button class="btn btn-default">Buy this meal</button></a>
+                <a href="/buy/<?= $meal['meal_id']?>"><button class="btn btn-default">Add to Cart</button></a>
 
                 <br />
-
             </div>
-
-
-
-
-              
-            
-             
-   
         </div>
       </div>
-
        <div class ="container" display="inline-block">
         <div class="row">
           <div class="col-md-4">
