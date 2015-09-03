@@ -46,7 +46,7 @@
         <div class="row">
           <div class= "form-content col-md-8">
               <div class="panel-body">
-            <h2>Add A New Meal</h2>            
+               
               <div class="row">
                 <div class="col-lg-8">
 <? 
@@ -55,44 +55,75 @@
                      echo "<div class = 'red'>".$this->session->flashdata('errors')."</div>";
                   }           
 ?>
-                  <form action="/meals/create" method="post" role="form" style="display: block;">
-                    <div class="form-group">
-                      <input type="text" name="name" class="form-control" placeholder="Name of Meal" value="">
-                    </div>
-                    <div class="form-group">
-                      <input type="text" name="description" class="form-control" placeholder="Description" value="">
-                    </div>
-                    <div class="form-group">
-                    <label>Select Meal Category</label>
-                      <select name= "category">
-                        <option value="Chinese" class="form-control">Chinese</option>
-                      </select>
-                      <input type="text" name="category" class="form-inline" placeholder="Or add new Category" value="">
-                    </div>
-                    <div class="form-group">
-                      <input type="file" name="photo" placeholder="Photos"  data-icon="false">
-                    </div>
-                    <div class="form-group">
-                      <input type="text" name="location" class="form-control" placeholder="Location" value="">
-                    </div>
-                    <div class="form-group">
-                      <input type="date" name="date_of_meal" class="form-control" placeholder="Date of Meal" value="">
-                    </div>
-                    <div class="form-group">
-                      <input type="number" name="quantity" class="form-control" placeholder="Serving(s)" value="">
-                    </div>
-                    <div class="form-group">
-                      <input type="text" name="price" class="form-control" placeholder="Price" value="">
-                    </div>
-                    <div class="form-group">
-                      <div class="row">
-                        <div class="col-sm-6 col-sm-offset-3">
-                          <input type="hidden" name="user_id" value="<?= $this->session->userdata('user_id') ?>">
-                          <input type="submit"  class="form-control btn btn-default" value="Create New Meal">
-                        </div>
-                      </div>
-                    </div>      
-                  </form>
+                 <div class="page-content">
+    <div class="container">
+      <div class="row confirm">
+        <div class="col-md-12">
+          <form class="form-horizontal" role="form" action = "/meals/create" method = "post">
+              <h3 class="text-center">Add A Meal</h3>
+              <hr>
+            <div class="form-group">
+              <label class="col-sm-3 control-label">Meal Name</label>
+              <div class="col-sm-4">
+                <input type="text" class="form-control" placeholder="e.g. Amazing Italian Dinner" required>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="col-sm-3 control-label">Quantity</label>
+              <div class="col-sm-4">
+                <input type="text" class="form-control" placeholder="How many servings " required>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="col-sm-3 control-label">Date of Meal</label>
+              <div class="col-sm-6">
+                <input type="date" class="form-control" placeholder="" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="col-sm-3 control-label">Category</label>
+              <div class="col-sm-6">
+                <!--   Foreach loop for Categories -->
+                <select class="form-control" required>
+                <option value="Italian">Italian</option>
+                <option value="Japanese">Japanese</option>
+                <option value="Mexican">Mexican</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="col-sm-3 control-label">Description</label>
+              <div class="col-sm-6">
+                <textarea class="form-control" rows="8" placeholder="Detail of meal" required></textarea>
+              </div>
+            </div>
+             <div class="form-group">
+              <label class="col-sm-3 control-label">Photos</label>
+              <div class="col-sm-6">
+                <input type="file" class="form-control" placeholder="" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="col-sm-3 control-label">Location</label>
+              <div class="col-sm-6">
+                <textarea class="form-control" rows="8" placeholder="e.g. 1980 Zanker Road San Jose CA 95111" required></textarea>
+              </div>
+            </div>
+
+            
+
+            <div class="form-group">
+                <div class="col-sm-offset-3 col-sm-10">
+                  <button type="submit" class="btn btn-warning">Order Now</button>
+                </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
                 </div>
               </div>
             </div>
