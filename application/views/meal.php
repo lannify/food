@@ -49,24 +49,45 @@
     </nav>
 
 
-      <div class ="container">
+      <div class="container">
         <div class="row">
           
 
-              <div class="description">                 
-                <h3>Description:</h3>
+          <div class="meal_list_left description"> 
+                <p><?= $meal['user_name']?></p>
+                <p><?= $meal['user_description']?></p>
 
-               <!--  <p><?= $meal['description']?></p>
+                <a href="/buy/<?= $meal['meal_id']?>"><button class="btn btn-default">Buy this meal</button></a>
+            </div>
+
+
+          <div class="meal_list_right description">                 
+                <img src="/assets/images/meal-dessert.jpg">
+                <h3><?= $meal['meal_name']?></h3>
+
+                <p><?= $meal['meal_description']?></p>
                 <p>Ingredients:</p>
                 <p>Servings: <?= $meal['quantity']?></p>
                 <p>Location: <?= $meal['location']?></p>
                 <p>Price per Person: $<?= $meal['price']?></p>
-                <p>Date: <?= date('M d y h:i A',strtotime($meal['date_of_meal']))?></p> -->
-              </div>
-            
-              <button class="btn btn-default">Buy this meal</button> 
+                <p>Date: <?= date('M d y h:i A',strtotime($meal['meal_date']))?></p>
+
+               <!--  <img src="/assets/images/<?= $meal['photo']?>"> -->
+        
+                
+                <a href="/buy/<?= $meal['meal_id']?>"><button class="btn btn-default">Buy this meal</button></a>
+
+                <br />
+
             </div>
-          </div>
+
+
+
+
+              
+            
+             
+   
         </div>
       </div>
 
