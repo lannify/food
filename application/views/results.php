@@ -22,7 +22,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Home</a>
+          <a class="navbar-brand" href="/views/index/">Home</a>
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">      
           <form class="navbar-form navbar-right" role="search">
@@ -31,31 +31,17 @@
             </div>
 <!--             <button type="submit" class="btn btn-default">Search</button> -->
           </form>
-          <ul class="nav navbar-nav navbar-right">
-            <li><a href="#">How It Works</a></li>
-            <li><a href="#">Chefs</a></li>
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Foods<span class="caret"></span></a>
-              <ul class="dropdown-menu">
-                <li><a href="#">Italian</a></li>
-                <li><a href="#">Japanese</a></li>
-                <li><a href="#">Korean</a></li>
-                <li role="separator" class="divider"></li>
-                <li><a href="#">Vegan</a></li>
-              </ul>
-            </li>
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Locations<span class="caret"></span></a>
-              <ul class="dropdown-menu">
-                <li><a href="#">San Jose</a></li>
-                <li><a href="#">San Francisco</a></li>
-                <li><a href="#">New York</a></li>
-                <li role="separator" class="divider"></li>
-                <li><a href="#">Paris</a></li>
-              </ul>
-            </li>
-            <li><a href="#">Your Cart <span class= "glyphicon glyphicon-shopping-cart"></span></a></li>
-          </ul>
+            <ul class="nav navbar-nav navbar-right">
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Your Account<span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="/views/dashboard/">Dashboard</a></li>             
+                  <li role="separator" class="divider"></li>
+                  <li><a href="/users/logoff">Sign Out</a></li>              
+                </ul>
+                <li><a href="/views/cart/">Your Cart <span class= "glyphicon glyphicon-shopping-cart"></span></a></li>
+              </li>
+            </ul>
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container-fluid -->
     </nav>

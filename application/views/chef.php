@@ -21,30 +21,22 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Home</a>
+          <a class="navbar-brand" href="/views/index/">Home</a>
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">      
           
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="#">How It Works</a></li>
-
+            <li><a href="/views/how_it_works/">How It Works</a></li>
+            <li><a href="/views/chef">Chef</a></li>
+            <li><a href="/views/cart/">Your Cart <span class= "glyphicon glyphicon-shopping-cart"></span></a></li>
             <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Browse Meals<span class="caret"></span></a>
-              <ul class="dropdown-menu">
-                <li><a href="#">By Categories</a></li>
-                <li><a href="#">By Locations</a></li>
-              </ul>
-            </li>
-            <li><a href="#">Your Cart <span class= "glyphicon glyphicon-shopping-cart"></span></a></li>
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Your Account<span class="caret"></span></a>
-              <ul class="dropdown-menu">
-                <li><a href="#">Dashboard</a></li>
-                <li><a href="#">Profile</a></li>
-                <li role="separator" class="divider"></li>
-                <li><a href="#">Sign Out</a></li>
-              </ul>
-            </li>
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Your Account<span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="/views/dashboard/">Dashboard</a></li>             
+                  <li role="separator" class="divider"></li>
+                  <li><a href="/users/logoff">Sign Out</a></li>              
+                </ul>
+              </li>
           </ul>
 
         </div><!-- /.navbar-collapse -->
@@ -66,6 +58,12 @@
                   <h3><?= $chef['name'] ?>'s Intro</h3>
                   <p><?= $chef['description'] ?></p>
                 </div>
+                <div class="col-md-8">
+                <div class="description">
+                  <a href=""><h3>Leave a review</h3></a>
+
+              </div>
+              </div>
               </div>
           </div>
       </div>
