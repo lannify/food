@@ -80,7 +80,7 @@
                       <input type="text" name="location" class="form-control" placeholder="Location" value="">
                     </div>
                     <div class="form-group">
-                      <input type="date" name="date_of_meal" class="form-control" placeholder="Date of Meal" value="">
+                      <input type="date" name="meal_date" class="form-control" placeholder="Date of Meal" value="">
                     </div>
                     <div class="form-group">
                       <input type="number" name="quantity" class="form-control" placeholder="Serving(s)" value="">
