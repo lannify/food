@@ -91,11 +91,11 @@
                   <input type="submit" class="btn btn-info" value="Skip">
                 </form>
                 </div>
-          <?php }else{
-            echo "Hi Old User"; 
-          }
-
-
+          <?php }else{ ?>
+            <h3>Check existing Meals(IF user level 2)</h3>
+            <h3>Check existing bookings</h3>
+            <h3>Edit Profile</h3>
+          <?php }
            ?>
           </div>
 </body>

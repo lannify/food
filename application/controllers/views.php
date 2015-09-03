@@ -68,6 +68,10 @@ class Views extends CI_Controller {
 	{
 		$this->load->view('how_it_works');
 	}
+	public function reviews()
+	{
+		$this->load->view('reviews');
+	}
 }
 
 //end of main controller

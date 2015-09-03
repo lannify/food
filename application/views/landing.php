@@ -52,13 +52,14 @@
                   <li><a href="/users/logout">Sign Out</a></li>              
                 </ul>
               </li>
-            </ul>
-
+      
             <!-- Modal for Login & Register-->
-            <li class="dropdown">
+            
             <?php }else{?>
+            <li class="dropdown">
             <a class="dropdown-toggle" href="#" data-toggle="modal" data-target="#myModal">Sign In <strong class="caret"></strong></a>
             <?php }?>
+            </ul>
             <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
               <div class="panel panel-login">
                 <div class="panel-heading">        

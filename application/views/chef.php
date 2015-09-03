@@ -76,8 +76,7 @@
                 </div>
                 <div class="col-md-8">
                 <div class="description">
-                  <a href=""><h3>Leave a review</h3></a>
-
+                  <a href="/views/reviews/"><h3>Leave a review</h3></a>
               </div>
               </div>
               </div>
