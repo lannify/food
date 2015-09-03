@@ -5,11 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Meal page</title>
-        <link href="/assets/css/bootstrap.min.css" rel="stylesheet">
-    <link href="/assets/css/main.css" rel="stylesheet">
+    <link href="/assets/css/bootstrap.min.css" rel="stylesheet">   
     <link href="/assets/css/bootstrap-chosen.css" rel="stylesheet">
     <link href="/assets/css/chosen/chosen.css" rel="stylesheet">
     <link href="/assets/css/ihover.css" rel="stylesheet">
+    <link href="/assets/css/main.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="/assets/js/bootstrap.min.js"></script>
+    <script src="/assets/js/jquery-1.6.1.min.js"></script>
+    <script src="/assets/js/photo-gallery.js"></script>
   </head>
   <body>
     <nav class="navbar navbar-default">
@@ -44,62 +48,91 @@
       </div><!-- /.container-fluid -->
     </nav>
 
-    <div class="profile">
+
       <div class ="container">
         <div class="row">
-              <div class="col-md-6">
-                <div class="meal_photo">
-                  <h3><?= $meal['name']?></h3>
-                  <img class = "user_photo" src = "/assets/images/ramen.jpeg" alt="meal photo">
+          <div class="col-md-8">
+            <div class="meal_profile">
+             <!--  <h3><?= $meal['name']?></h3> -->
+              <img class = "meal_photo" src = "/assets/images/japanese3.jpeg" alt="meal photo">
+              <div class="row">
+                <div class="col-md-3">
+                  <img class = "meal_photo" src = "/assets/images/japanese3.jpeg" alt="meal photo" >
+                </div>
+                <div class="col-md-3">
+                  <img class = "meal_photo" src = "/assets/images/japanese3.jpeg" alt="meal photo" >
+                </div>
+                <div class="col-md-3">
+                  <img class = "meal_photo" src = "/assets/images/japanese3.jpeg" alt="meal photo" >
                 </div>
               </div>
-              <div class="col-md-6">
-                <!-- <div class="description">                 
-                  <h3>Description:</h3>
- 
-                  <p><?= $meal['description']?></p>
-                  <p>Ingredients:</p>
-                  <p>Servings: <?= $meal['quantity']?></p>
-                  <p>Location: <?= $meal['location']?></p>
-                  <p>Price per Person: $<?= $meal['price']?></p>
-                  <p>Date: <?= date('M d y h:i A',strtotime($meal['date_of_meal']))?></p>
-                </div>
-                
-                <button class="btn btn-default">Buy this meal</button> -->
-                <div class="col-md-1">
-              
-               
-                  <img class = "meal_thumbnail" src = "/assets/images/ramen.jpeg" alt="meal photo">
-          
-              </div>
-              </div>
-          </div>
 
+              <div class="description">                 
+                <h3>Description:</h3>
+
+               <!--  <p><?= $meal['description']?></p>
+                <p>Ingredients:</p>
+                <p>Servings: <?= $meal['quantity']?></p>
+                <p>Location: <?= $meal['location']?></p>
+                <p>Price per Person: $<?= $meal['price']?></p>
+                <p>Date: <?= date('M d y h:i A',strtotime($meal['date_of_meal']))?></p> -->
+              </div>
+            
+              <button class="btn btn-default">Buy this meal</button> 
+            </div>
+          </div>
+        </div>
       </div>
-    </div> <!-- End Profile header -->
+
+       <div class ="container" display="inline-block">
+        <div class="row">
+          <div class="col-md-4">
+            
+          </div>
+        </div>
+      </div>
+    
 
 <!-- Get Meals Info/Photo and output them in each div.col-md-4 below -->
   
     <div class="main-content text-center">
       <div class ="container">
           <div class="row">
-              
+              <ul class="row">
+
+                <li class="col-lg-2 col-md-2 col-sm-3 col-xs-4">
+
+                  <img class="img-responsive" src="/assets/images/japanese3.jpeg">
+
+                </li>
+
+                <li class="col-lg-2 col-md-2 col-sm-3 col-xs-4">
+
+                  <img class="img-responsive" src="/assets/images/japanese3.jpeg">
+
+                </li>
+
+              </ul>
+<div class="modal fade" id="my<a href="http://www.jqueryscript.net/tags.php?/Modal/">Modal</a>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-body"> </div>
+    </div>
+  </div>
+</div>
+
           </div>        
       </div>
     </div>
     
-     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBYVbHcKksus8bLiG3R8ZKoxd1oqpBRaTg&sesnsor=false"
-  type="text/javascript"></script>
-  
+     
 
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script src="/assets/js/bootstrap.min.js"></script>
+
+   
     <script src="/assets/js/main.js"></script>
-    <script type="text/javascript">
 
-
-</script>
+    
   </body>
 </html>

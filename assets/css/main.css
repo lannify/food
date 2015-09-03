@@ -1,7 +1,7 @@
 .profile {
 	margin-top: 30px;
 	padding: 30px 0;
-	background-color: #fadd96;
+	background-color: #efefef;
 	height: 400px;
 	overflow: hidden;
 }
@@ -211,6 +211,15 @@ th {
 .red {
 	color: red;
 }
-.meal_thumnail {
-	width: 100%;
+.meal_profile {
+  padding: 20px;
+}
+.img-thumbnail {
+  width: 100px;
+}
+.meal_photo {
+	width: 80%;
+}
+.yellow-bg {
+  background-color: #fadd96;
 }
