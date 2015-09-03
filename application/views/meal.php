@@ -61,7 +61,7 @@
                 <p>Servings: <?= $meal['quantity']?></p>
                 <p>Location: <?= $meal['location']?></p>
                 <p>Price per Person: $<?= $meal['price']?></p>
-                <p>Date: <?= date('M d y h:i A',strtotime($meal['date_of_meal']))?></p> -->
+                <p>Date: <?= date('M d y h:i A',strtotime($meal['meal_date']))?></p> -->
               </div>
             
               <button class="btn btn-default">Buy this meal</button> 

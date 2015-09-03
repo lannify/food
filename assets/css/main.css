@@ -332,3 +332,6 @@ th {
 .yellow-bg {
   background-color: #fadd96;
 }
+table tbody td {
+  padding: 10px 20px;
+}
