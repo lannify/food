@@ -32,9 +32,21 @@ class Meal extends CI_Model {
 
 	public function create($meal)
 	{
+
 		$query = "INSERT INTO meals (name, description,location, price, quantity, date_of_meal,meal_images,created_at, updated_at) VALUES (?,?,?,?,?,?,?, NOW(), NOW())";
 		$values = array($meal['name'],$meal['description'],$meal['location'],$meal['price'],$meal['quantity'],$meal['date_of_meal'],$meal['meal_images']);
 		return $this->db->query($query, $values);
+
+		$query = "INSERT INTO meals (name, description,location, date_of_meal, price, quantity, created_at, updated_at) VALUES (?,?,?,?,?,?, NOW(), NOW())";
+		$values = array($meal['name'],$meal['description'],$meal['location'],$meal['date_of_meal'],$meal['price'],$meal['quantity']);
+		$this->db->query($query, $values);
+		$meal_id = $this->db->insert_id();
+		$query2 = "INSERT INTO categories(name) VALUES(?)";
+		$values2 = array($meal['category']);
+		$this->db->query($query2, $values2);
+		return TRUE;
+
+
 	}
 	
 	public function delete($id)
@@ -42,5 +54,27 @@ class Meal extends CI_Model {
 		$this->db->where('meal_id', $id);
 		$this->db->delete('meals');
 	}
+
+	public function find($id)
+	{
+		return $this->db->query("SELECT * FROM meals WHERE meal_id = ?", array($id))->row_array();
+	}
+	public function get_meals_by_user_id($id)
+	{
+		return $this->db->query("SELECT * FROM meals WHERE user_id = ?", array($id))->result_array();
+	}
+	public function get_latest_meal_by_user_id($id)
+	{
+		return $this->db->query("SELECT * FROM meals WHERE user_id = ? ORDER BY meal_id DESC LIMIT 1", array($id))->row_array();
+	}
+	public function get_past_meals_by_user_id($id)
+	{
+		return $this->db->query("SELECT * FROM meals WHERE user_id = ? AND date(date_of_meal) < CURRENT_DATE ORDER BY meal_id DESC LIMIT 1", array($id))->row_array();
+	}
+	public function all_categories()
+	{
+		return $this->db->query("SELECT * FROM categories")->result_array();
+	}
+
 
 }
