@@ -71,19 +71,12 @@
 
                <!--  <img src="/assets/images/<?= $meal['photo']?>"> -->
                
-                <a href="/buy/<?= $meal['meal_id']?>"><button class="btn btn-default">Add to Cart</button></a>
-
+                <a href="/items/add_to_cart/<?= $meal['meal_id'] ?>"><button class="btn btn-default">Add to Cart</button></a>
+                <? var_dump($cart) ?>
                 <br />
             </div>
         </div>
-      </div>
-       <div class ="container" display="inline-block">
-        <div class="row">
-          <div class="col-md-4">
-            
-          </div>
-        </div>
-      </div>
+      
     
 
 <!-- Get Meals Info/Photo and output them in each div.col-md-4 below -->

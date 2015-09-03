@@ -5,14 +5,13 @@ class Item extends CI_Model {
 	{
 		$data = array(
 			'id'=> $meal['meal_id'],
-			'qty'	 => $meal['qty'],
+			'qty'	 => 1,
 			'price'	 => $meal['price'],
 			'name' 	=> $meal['name'],
 			'location' => $meal['location'],
-			'category' => $meal['category'],
 			'mead_date' => $meal['meal_date'],
 			'meal_images' => $meal['meal_images']
-			)
+			);
 		$this->cart->insert($data);
 	}
 	public function update_meal($meal_id)

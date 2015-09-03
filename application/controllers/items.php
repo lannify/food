@@ -8,11 +8,13 @@ class Items extends CI_Controller {
 		// $this->output->enable_profiler();
 		$this->load->model('Item');
 		$this->load->library('cart');
+		$this->load->model('Meal');
 	}
 
-	public function add_to_cart()
+	public function add_to_cart($id)
 	{
-		$this->Item->add_to_cart($this->input->post());
+		$meal = $this->Meal->get_meals_by_meal_id($id);
+		$this->Item->add_to_cart($meal);
 	}
 	
 
