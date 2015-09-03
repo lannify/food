@@ -92,7 +92,7 @@ class User extends CI_Model {
     
     function get_user_by_id($id)
     {
-        $query = "SELECT user_id, name, email, photo, description FROM users WHERE user_id = ?";
+        $query = "SELECT user_id, name, email, profile_photo, description FROM users WHERE user_id = ?";
         return $this->db->query($query, $id)->row_array();
     }
 

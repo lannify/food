@@ -58,7 +58,7 @@
                 <div class="profile_photo">
                   <h3><?= $chef['name'] ?></h3>
 
-                  <img class = "user_photo" src = "<?= $chef['photo'] ?>" alt="chef photo">
+                  <img class = "user_photo" src = "<?= $chef['profile_photo'] ?>" alt="chef photo">
                 </div>
               </div>
               <div class="col-md-8">
