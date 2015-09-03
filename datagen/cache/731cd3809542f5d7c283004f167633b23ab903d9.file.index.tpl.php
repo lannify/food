@@ -1,6 +1,6 @@
-<?php /* Smarty version Smarty-3.1.8, created on 2015-09-02 19:57:02
+<?php /* Smarty version Smarty-3.1.8, created on 2015-09-03 01:16:14
          compiled from "/Users/ike/Desktop/dojo/food/datagen/resources/templates/index.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:68263008255e7386ed02802-87326674%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:33082188255e7833e1fec10-15319162%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
@@ -11,7 +11,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '68263008255e7386ed02802-87326674',
+  'nocache_hash' => '33082188255e7833e1fec10-15319162',
   'function' => 
   array (
   ),
@@ -32,9 +32,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.8',
-  'unifunc' => 'content_55e7386f019123_19590593',
+  'unifunc' => 'content_55e7833e441a02_78116524',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_55e7386f019123_19590593')) {function content_55e7386f019123_19590593($_smarty_tpl) {?><?php if (!is_callable('smarty_function_language_dropdown')) include '/Users/ike/Desktop/dojo/food/datagen/resources/libs/smarty/plugins/function.language_dropdown.php';
+<?php if ($_valid && !is_callable('content_55e7833e441a02_78116524')) {function content_55e7833e441a02_78116524($_smarty_tpl) {?><?php if (!is_callable('smarty_function_language_dropdown')) include '/Users/ike/Desktop/dojo/food/datagen/resources/libs/smarty/plugins/function.language_dropdown.php';
 ?><!DOCTYPE html>
 <html>
 <head>
