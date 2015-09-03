@@ -65,6 +65,7 @@
                                  echo "<div class = 'red text-center'>".$this->session->flashdata('errors')."</div>";
                               }           
 ?>
+
                           <div class="form-group">
                               <label class="col-sm-3 control-label">Meal Name</label>
                               <div class="col-sm-6">
@@ -86,7 +87,7 @@
                             <div class="form-group">
                               <label class="col-sm-3 control-label">Date of Meal</label>
                               <div class="col-sm-6">
-                                <input type="date" class="form-control" name = "date_of_meal" placeholder="" required>
+                                <input type="date" class="form-control" name = "meal_date" placeholder="" required>
                               </div>
                             </div>
                             <div class="form-group">
