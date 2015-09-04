@@ -21,12 +21,12 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Home</a>
+          <a class="navbar-brand" href="/views/index/">Home</a>
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">      
           
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="#">How It Works</a></li>
+            <li><a href="/views/how_it_works/">How It Works</a></li>
 
             <li><a href="/views/chef">Chef</a></li>
 

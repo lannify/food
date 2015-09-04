@@ -25,19 +25,21 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Home</a>
+          <a class="navbar-brand" href="/views/index/">Home</a>
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">      
           
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="#">How It Works</a></li>     
-            <li><a href="#">Your Cart <span class= "glyphicon glyphicon-shopping-cart"></span></a></li>
+            <li><a href="/views/how_it_works/">How It Works</a></li>
+
+            <li><a href="/views/chef">Chef</a></li>
+
+          
+            <li><a href="/views/cart/">Your Cart <span class= "glyphicon glyphicon-shopping-cart"></span></a></li>
             <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Your Account<span class="caret"></span></a>
                 <ul class="dropdown-menu">
-                  <li><a href="#">Dashboard</a></li>
-                  <li><a href="#">Profile</a></li>
-                  <li><a href="#">Orders</a></li>              
+                  <li><a href="/views/dashboard/">Dashboard</a></li>             
                   <li role="separator" class="divider"></li>
                   <li><a href="/users/logoff">Sign Out</a></li>              
                 </ul>
@@ -49,81 +51,59 @@
     </nav>
 
 
-      <div class ="container">
+      <div class="container">
         <div class="row">
-          <div class="col-md-8">
-            <div class="meal_profile">
-             <!--  <h3><?= $meal['name']?></h3> -->
-              <img class = "meal_photo" src = "/assets/images/japanese3.jpeg" alt="meal photo">
-              <div class="row">
-                <div class="col-md-3">
-                  <img class = "meal_photo" src = "/assets/images/japanese3.jpeg" alt="meal photo" >
-                </div>
-                <div class="col-md-3">
-                  <img class = "meal_photo" src = "/assets/images/japanese3.jpeg" alt="meal photo" >
-                </div>
-                <div class="col-md-3">
-                  <img class = "meal_photo" src = "/assets/images/japanese3.jpeg" alt="meal photo" >
-                </div>
-              </div>
+         
+          <div class="meal_list_left description">
+                <h3>Chef</h3> 
+                <p><?= $meal['user_name']?></p>
+                <p><?= $meal['user_description']?></p> 
 
-              <div class="description">                 
-                <h3>Description:</h3>
+          </div>
+          <div class="meal_list_right description">                 
+                <img src="/assets/images/meal-dessert.jpg">
+                <h3><?= $meal['meal_name']?></h3>
 
-               <!--  <p><?= $meal['description']?></p>
+                <p><?= $meal['meal_description']?></p>
                 <p>Ingredients:</p>
                 <p>Servings: <?= $meal['quantity']?></p>
                 <p>Location: <?= $meal['location']?></p>
                 <p>Price per Person: $<?= $meal['price']?></p>
-                <p>Date: <?= date('M d y h:i A',strtotime($meal['date_of_meal']))?></p> -->
-              </div>
-            
-              <button class="btn btn-default">Buy this meal</button> 
-            </div>
-          </div>
-        </div>
-      </div>
 
-       <div class ="container" display="inline-block">
-        <div class="row">
-          <div class="col-md-4">
-            
-          </div>
+
+                <p>Date: <?= date('M d, Y',strtotime($meal['meal_date']))?></p>
+                <form action="/items/add_to_cart" method = "post">
+                  <div class="col-sm-8">
+                   <label class="col-sm-6 control-label">Select quantity</label>
+                    <select class="form-control" name = "quantity" required>
+<?
+                      for($i = 0; $i <=$meal['quantity']; $i++)
+                      {
+                        echo '<option value="{$i}">'.$i.'</option>';
+                      }
+?>                                
+                    </select>  
+                    <br>  
+                  </div>
+                  <div class="row">        
+                    <div class="form-group">
+                      <div class="col-sm-8">                   
+                        <input type ="hidden" name = "meal_id" value = "<?= $meal['meal_id']?>">
+                        <button type="submit" class="btn btn-warning" >Add to Cart</button>              
+                      </div> 
+                    </div>
+                  </div>               
+                </form>
+              </div>
+
+            </div>
         </div>
-      </div>
+      
     
 
 <!-- Get Meals Info/Photo and output them in each div.col-md-4 below -->
   
-    <div class="main-content text-center">
-      <div class ="container">
-          <div class="row">
-              <ul class="row">
-
-                <li class="col-lg-2 col-md-2 col-sm-3 col-xs-4">
-
-                  <img class="img-responsive" src="/assets/images/japanese3.jpeg">
-
-                </li>
-
-                <li class="col-lg-2 col-md-2 col-sm-3 col-xs-4">
-
-                  <img class="img-responsive" src="/assets/images/japanese3.jpeg">
-
-                </li>
-
-              </ul>
-<div class="modal fade" id="my<a href="http://www.jqueryscript.net/tags.php?/Modal/">Modal</a>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-body"> </div>
-    </div>
-  </div>
-</div>
-
-          </div>        
-      </div>
-    </div>
+   
     
      
 

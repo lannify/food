@@ -21,7 +21,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Home</a>
+          <a class="navbar-brand" href="/views/index/">Home</a>
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">      
           <form class="navbar-form navbar-right" role="search">
@@ -31,26 +31,26 @@
 <!--             <button type="submit" class="btn btn-default">Search</button> -->
           </form>
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="#">How It Works</a></li>
-            <li><a href="#">Chefs</a></li>
+            <li><a href="/views/how_it_works/">How It Works</a></li>
+            <li><a href="/views/chef">Chefs</a></li>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Foods<span class="caret"></span></a>
               <ul class="dropdown-menu">
-                <li><a href="#">Italian</a></li>
-                <li><a href="#">Japanese</a></li>
-                <li><a href="#">Korean</a></li>
+                <li><a href="/views/results/<?="italian"?>">Italian</a></li>
+                <li><a href="/views/results/<?="japanese"?>">Japanese</a></li>
+                <li><a href="/views/results/<?="korean"?>">Korean</a></li>
                 <li role="separator" class="divider"></li>
-                <li><a href="#">Vegan</a></li>
+                <li><a href="/views/results/<?="vegan"?>">Vegan</a></li>
               </ul>
             </li>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Locations<span class="caret"></span></a>
               <ul class="dropdown-menu">
-                <li><a href="#">San Jose</a></li>
-                <li><a href="#">San Francisco</a></li>
-                <li><a href="#">New York</a></li>
+                <li><a href="/views/results/<?="san_jose"?>">San Jose</a></li>
+                <li><a href="/views/results/<?="san_francisco"?>">San Francisco</a></li>
+                <li><a href="/views/results/<?="new_york"?>">New York</a></li>
                 <li role="separator" class="divider"></li>
-                <li><a href="#">Paris</a></li>
+                <li><a href="/views/results/<?="paris"?>">Paris</a></li>
               </ul>
             </li>
             <li><a href="#">Your Cart <span class= "glyphicon glyphicon-shopping-cart"></span></a></li>

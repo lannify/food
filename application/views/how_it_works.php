@@ -39,7 +39,7 @@
           
           <ul class="nav navbar-nav navbar-right">
             <li><a href="/views/how_it_works/">How It Works</a></li>
-            <li><a href="/views/results">Browse</a></li>
+            <li><a href="/views/chef">Chef</a></li>
             <?php
                 if($this->session->userdata('logged_in') === TRUE){
              ?>
@@ -55,14 +55,10 @@
       
             <!-- Modal for Login & Register-->
             
-            <?php 
-              } else {
-            ?>
+            <?php }else{?>
             <li class="dropdown">
             <a class="dropdown-toggle" href="#" data-toggle="modal" data-target="#myModal">Sign In <strong class="caret"></strong></a>
-            <?php 
-              }
-            ?>
+            <?php }?>
             </ul>
             <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
               <div class="panel panel-login">
@@ -165,129 +161,6 @@
       </div><!-- /.container-fluid -->
     </nav>
 
-    <div class="container-fluid">
-      <div class="row">
-        <div class="background-top col-md-12 col-lg-12 col-sm-12">
-          <p>Dine. Together.</p>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="page-header">
-          <h3>Made for you</h3>
-          <h4>Discover gourmet meals at home-cooked prices</h4>
-        </div>
-        <div class="meals-mid col-md-2 col-lg-2 col-sm-2">
-        </div>
-        <div class="meals-mid col-md-9 col-lg-9 col-sm-9">
-          <div class="col-xs-3 col-md-3 col-lg-3 ih-item square colored effect6 from_top_and_bottom">
-            <a href="/landings/search_category/70">
-              <div class="img"><img src="/assets/images/meal-korean.jpg" alt="umsik"></div>
-              <div class="info">
-                <h3>Korean</h3>
-                <p>Click to discover Korean food near you</p>
-            </div></a>
-          </div>
-          <div class="col-xs-3 col-md-3 col-lg-3 ih-item square colored effect6 from_top_and_bottom">
-            <a href="/landings/search_category/68">
-              <div class="img"><img src="/assets/images/meal-italian.jpg" alt="italian"></div>
-              <div class="info">
-                <h3>Italian</h3>
-                <p>Click to discover Italian food near you</p>
-              </div>
-            </a>
-          </div>
-          <div class="col-xs-3 col-md-3 col-lg-3 ih-item square colored effect6 from_top_and_bottom">
-            <a href="/landings/search_category/110">
-              <div class="img"><img src="/assets/images/meal-steak.jpg" alt="steak"></div>
-              <div class="info">
-                <h3>Steakhouses</h3>
-                <p>Click to discover fine dining near you</p>
-              </div>
-            </a>
-          </div>
-          <div class="col-xs-3 col-md-3 col-lg-3 ih-item square colored effect6 from_top_and_bottom">
-            <a href="/landings/search_category/99">
-              <div class="img"><img src="/assets/images/meal-sandwich.jpeg" alt="sandwich"></div>
-              <div class="info">
-                <h3>Seafood</h3>
-                <p>Click to discover Seafood food near you</p>
-              </div>
-            </a>
-          </div>
-          <div class="col-xs-3 col-md-3 col-lg-3 ih-item square colored effect6 from_top_and_bottom">
-            <a href="/landings/search_category/22">
-              <div class="img"><img src="/assets/images/meal-dessert.jpg" alt="dessert"></div>
-              <div class="info">
-                <h3>Sweets</h3>
-                <p>Click for delicious desserts</p>
-              </div>
-          </a>
-          </div>
-          <div class="col-xs-3 col-md-3 col-lg-3 ih-item square colored effect6 from_top_and_bottom">
-            <a href="/landings/search_category/126">
-              <div class="img"><img src="/assets/images/meal-vegetarian.jpg" alt="veggie"></div>
-              <div class="info">
-                <h3>Vegetarian</h3>
-                <p>Click for vegetarian options</p>
-              </div>
-            </a>
-          </div>
-
-        </div>
-        <div class="meals-mid col-md-1 col-lg-1 col-sm-1">
-        </div>
-      </div> <!-- end middle-row  -->
-
-
-
-      <div class="row">
-        <div class="page-header">
-          <h3>Or search by type and/or date</h3>
-        </div>
-        <div class="background-bottom col-md-12 col-lg-12 col-sm-12">
-          <div class="col-md-3 col-lg-3 col-sm-3"></div>
-          <div class="background-bottom-form col-md-6 col-lg-6 col-sm-6">
-            <form action="/landings/search" method="post">
-              <div class="form-group">
-                <label for="type" class="control-label">Cuisine:</label> 
-                <select class="chosen-select form-control" data-placeholder="Search for foods" style="width:200px;" name="type" multiple>
-                  <option value="0" default></option>
-                  <optgroup label="Asian">
-                    <option value="1">Thai</option>
-                    <option value="2">Korean</option>
-                    <option value="3">Chinese</option>
-                    <option value="4">Japanese</option>
-                  </optgroup>
-                  <optgroup label="Western">
-                    <option value="5">Burgers</option>
-                    <option value="6">Italian</option>
-                    <option value="7">Vegetarian</option>
-                    <option value="8">French</option>
-                  </optgroup>
-                  <optgroup label="Fine Dining">
-                    <option value="9">Seafood</option>
-                    <option value="10">Lobster</option>
-                    <option value="11">Steak</option>
-                    <option value="12">Fish</option>
-                  </optgroup>
-                </select>
-              </div>
-              <div class="form-group">
-                <label for="type" class="control-label">From date:</label>
-                <input type="date" name="from_date" tabindex="1" class="form-control" value="" style="width: 200px;">
-              </div>
-              <div class="form-group">
-                <label for="type" class="control-label">To date:</label>
-                <input type="date" name="to_date" tabindex="2" class="form-control" value="" style="width: 200px;">
-              </div>
-              <input class="btn btn-default" type="submit" value="Find meals">
-            </form>
-          </div> <!-- /.background-bottom-form -->
-          <div class="col-md-3 col-lg-3 col-sm-3"></div>
-        </div> <!-- /.background-bottom -->
-      </div> <!-- /.row -->
-    </div> <!-- /.container-fluid -->
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>

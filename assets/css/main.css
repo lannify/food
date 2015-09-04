@@ -309,6 +309,10 @@
 	top: -20px;
 	left: 80px;
 	overflow: hidden;
+}
+.checkbox {
+  margin-left: 10px;
+}
 
 .form-meal {
 	width: 60%;
@@ -332,3 +336,44 @@ th {
 .yellow-bg {
   background-color: #fadd96;
 }
+
+table tbody td {
+  padding: 10px 20px;
+}
+
+
+.meal_list_left {
+  display: inline-block;
+  width: 30%;
+  padding: 2%;
+  min-width: 200px;
+  vertical-align: top;
+  background-color: #F5F4F6;
+  border-radius: 4px;
+  border: 1px solid #d1d0d2;
+  margin-top: 50px;
+
+}
+
+
+.meal_list_right {
+
+  display: inline-block;
+  width: 60%;
+  padding: 3%;
+  min-width: 200px;
+  vertical-align: top;
+  /*background-color: #E7E6E8;*/
+
+}
+
+.meal_list_right img{
+
+  width: 100%;
+
+}
+
+
+
+
+

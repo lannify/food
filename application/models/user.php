@@ -92,19 +92,19 @@ class User extends CI_Model {
     
     function get_user_by_id($id)
     {
-        $query = "SELECT user_id, name, email FROM users WHERE user_id = ?";
+        $query = "SELECT user_id, name, email, profile_photo, description FROM users WHERE user_id = ?";
         return $this->db->query($query, $id)->row_array();
     }
 
     function get_all_users()
     {
-        $query = "SELECT user_id, name, email FROM users";
+        $query = "SELECT user_id, name, email, description FROM users";
         return $this->db->query($query)->result_array();
     }
 
     function add_details($post)
     {
-        $query = "UPDATE users SET description = ?, photo = ?, updated_at = NOW() WHERE user_id = ?";
+        $query = "UPDATE users SET description = ?, profile_photo = ?, updated_at = NOW() WHERE user_id = ?";
         $values = array($post['description'], $post['pic'], $post['id']);
         return $this->db->query($query,$values); 
     }

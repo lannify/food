@@ -8,6 +8,10 @@
 
 <ul>
 	<li><a href="/views/landing">Landing Page</a></li>
+
+
+
+
 	<li><a href="/views/chef">Chef Profile Page</a></li>
 	<li><a href="/views/results">Results Page</a></li>
 	<li><a href="/views/dashboard">Customer Dashboard</a></li>
