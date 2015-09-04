@@ -73,7 +73,7 @@
                   <div class="modal-header">
                     <div class="row">
                       <div class="text-center">
-                        <h4>Sign up or login for EatMe!</h4>          
+                        <h4>Sign up or login for FeedMe!</h4>          
                       </div>
                       <button type="button" class="close" data-dismiss="modal">
                         <span aria-hidden="true">&times;</span>
