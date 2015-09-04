@@ -8,6 +8,7 @@ class Meals extends CI_Controller {
 		// $this->output->enable_profiler();
 		$this->load->model('Meal');
 		$this->load->library('Session');
+		$this->load->helper(array('form', 'url'));
 	}
 
 	public function index()
@@ -23,25 +24,15 @@ class Meals extends CI_Controller {
 	public function create()
 	{	
 
-		$config = array(
-
-			'upload_path' => "./assets/uploads/",
-			'allowed_types'   => "gif|jpg|png|jpeg|pdf",
-			'overwrite'       => TRUE,
-			'max_size'        => "2048000",  
-			'max_height'      => "768",
-			'max_width'       => "1024"  
-		);
-
-		$this->load->library('upload', $config);
-
 		$validate = $this->Meal->validate($this->input->post());
+
+	
 		if ($validate[0]=== TRUE)
 		{
 			$meal = $this->Meal->create($this->input->post());
 			if ($meal)
 			{
-				redirect('views/chef/' . $this->session->userdata('user_id'));
+				redirect('views/add_meal_image');
 			}
 			else
 			{

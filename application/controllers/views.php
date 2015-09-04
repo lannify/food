@@ -40,6 +40,7 @@ class Views extends CI_Controller {
 	{
 		$chef = $this->User->get_user_by_id($id);
 		$future_meals = $this->Meal->get_future_meals_by_user_id($id);
+		$image_name = $this->Meal->image_name();
 		$past_meal = $this->Meal->get_past_meal_by_user_id($id);
 		$this->load->view('chef', array("chef"=> $chef, "future_meals"=>$future_meals, "past_meal"=>$past_meal));
 	}
@@ -53,6 +54,11 @@ class Views extends CI_Controller {
 	{
 		$meal = $this->Meal->find($id);
 		$this->load->view('meal', array('meal'=>$meal));
+	}
+
+	public function add_meal_image()
+	{
+		$this->load->view('add_meal_image');
 	}
 
 	public function cart()

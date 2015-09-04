@@ -6,9 +6,11 @@ class Upload_controller extends CI_Controller {
 	{
 		parent::__construct();
 		// $this->output->enable_profiler();
+		$this->load->model('Meal');
 	}
 
 	public function do_upload()	
+	{
 
 		$config = array(
 
@@ -21,19 +23,20 @@ class Upload_controller extends CI_Controller {
 			);
 
 		$this->load->library('upload', $config);
+		$image_name = $this->Meals->upload_image($this->input->post());
 
-		if($this->upload->do_upload())
+		if ( ! $this->upload->do_upload())
+		{
+			$error = array('error' => $this->upload->display_errors());
+
+			$this->load->view('upload_form', $error);
+		}
+		else
 		{
 			$data = array('upload_data' => $this->upload->data());
-			$this->load->view('upload_success', $data);
 
+			redirect('views/chef/' . $this->session->userdata('user_id'), $data);
 		}
-		else {
-
-			$error = array('error' => $this->upload->display_errors());
-			$this->load->view('new_meals', $error);
-		}
-
 	}
 }
 

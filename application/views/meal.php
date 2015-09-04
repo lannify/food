@@ -75,7 +75,7 @@
 
                 <p>Date: <?= date('M d y h:i A',strtotime($meal['meal_date']))?></p>
 
-               <!--  <img src="/assets/images/<?= $meal['photo']?>"> -->
+               <img src="/assets/uploads/<?= $meal['meal_images']?>">
                
                 <a href="/buy/<?= $meal['meal_id']?>"><button class="btn btn-default">Buy this meal</button></a>
 
