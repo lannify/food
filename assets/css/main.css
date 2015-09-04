@@ -380,7 +380,9 @@ table tbody td {
   width: 100%;
 
 }
-
+.green {
+  color: green;
+}
 
 
 
