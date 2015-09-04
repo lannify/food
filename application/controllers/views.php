@@ -8,6 +8,8 @@ class Views extends CI_Controller {
 		$this->load->model('User');
 		$this->load->model('Meal');
 		$this->load->library('cart');
+		$this->load->model('Item');
+		$this->output->enable_profiler();
 	}
 	
 	public function index()
@@ -46,8 +48,9 @@ class Views extends CI_Controller {
 	}
 	public function meal($id)
 	{
+		$cart = $this->cart->contents();	
 		$meal = $this->Meal->get_meals_by_meal_id($id);
-		$this->load->view('meal', array("meal"=> $meal));
+		$this->load->view('meal', array("meal"=> $meal, "cart"=>$cart));
 	}
 
 	public function customer()
@@ -56,13 +59,15 @@ class Views extends CI_Controller {
 	}
 
 	public function add_meal_image()
+
 	{
 		$this->load->view('add_meal_image');
 	}
 
 	public function cart()
 	{
-		$this->load->view('cart');
+		$cart = $this->cart->contents();	
+		$this->load->view('cart', array("cart"=>$cart));
 	}
 
 	public function dashboard()

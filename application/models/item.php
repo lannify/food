@@ -7,20 +7,32 @@ class Item extends CI_Model {
 			'id'=> $meal['meal_id'],
 			'qty'	 => $quantity,
 			'price'	 => $meal['price'],
-			'name' 	=> $meal['name'],
+			'name' 	=> $meal['meal_name'],
+			'chef' 	=> $meal['name'],
 			'location' => $meal['location'],
-			'mead_date' => $meal['meal_date'],
+			'meal_date' => $meal['meal_date'],
+			'meal_description' => $meal['meal_description'],
 			'meal_images' => $meal['meal_images']
 			);
 		$this->cart->insert($data);
+		return TRUE;
 	}
-	public function update_meal($meal_id)
+	public function update_meal($meal_id, $quantity)
 	{
-		
+		$data = array(
+			"rowid" => $id,
+			"qty"=> $quantity
+			);
+		$this->cart->update($data);
 	}
-	public function remove_meal($meal_id)
+	public function remove($id)
 	{
-		
+		$data = array(
+			"rowid" => $id,
+			"qty"=> 0
+			);
+		$this->cart->update($data);
 	}
+
 
 }
