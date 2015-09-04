@@ -177,9 +177,9 @@
           <h3>Made for you</h3>
           <h4>Discover gourmet meals at home-cooked prices</h4>
         </div>
-        <div class="meals-mid col-md-2 col-lg-2 col-sm-2">
+        <div class="meals-mid col-md-1 col-lg-1 col-sm-1">
         </div>
-        <div class="meals-mid col-md-8 col-lg-8 col-sm-8">
+        <div class="meals-mid col-md-10 col-lg-10 col-sm-10">
           <div class="col-xs-4 col-md-4 col-lg-4 ih-item square colored effect6 from_top_and_bottom">
             <a href="/landings/search_category/70">
               <div class="img"><img src="/assets/images/meal-korean.jpg" alt="umsik"></div>
@@ -235,7 +235,7 @@
           </div>
 
         </div>
-        <div class="meals-mid col-md-2 col-lg-2 col-sm-2">
+        <div class="meals-mid col-md-1 col-lg-1 col-sm-1">
         </div>
       </div> <!-- end middle-row  -->
 
