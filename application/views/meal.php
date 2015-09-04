@@ -55,8 +55,9 @@
           <div class="meal_list_left description">
                 <h3>Chef</h3> 
                 <p><?= $meal['user_name']?></p>
-                <p><?= $meal['user_description']?></p>             
-            </div>
+                <p><?= $meal['user_description']?></p> 
+
+          </div>
           <div class="meal_list_right description">                 
                 <img src="/assets/images/meal-dessert.jpg">
                 <h3><?= $meal['meal_name']?></h3>
@@ -68,12 +69,29 @@
                 <p>Price per Person: $<?= $meal['price']?></p>
 
                 <p>Date: <?= date('M d y h:i A',strtotime($meal['meal_date']))?></p>
-
-               <!--  <img src="/assets/images/<?= $meal['photo']?>"> -->
-               
-                <a href="/items/add_to_cart/<?= $meal['meal_id'] ?>"><button class="btn btn-default">Add to Cart</button></a>
-                <? var_dump($cart) ?>
-                <br />
+                <form action="/items/add_to_cart" method = "post">
+                  <div class="col-sm-8">
+                   <label class="col-sm-6 control-label">Select quantity</label>
+                    <select class="form-control" name = "quantity" required>
+<?
+                      for($i = 0; $i <=$meal['quantity']; $i++)
+                      {
+                        echo '<option value="{$i}">'.$i.'</option>';
+                      }
+?>                                
+                    </select>  
+                    <br>  
+                  </div>
+                  <div class="row">        
+                    <div class="form-group">
+                      <div class="col-sm-8">                   
+                        <input type ="hidden" name = "meal_id" value = "<?= $meal['meal_id']?>">
+                        <button type="submit" class="btn btn-warning" >Add to Cart</button>              
+                      </div> 
+                    </div>
+                  </div>               
+                </form>
+              </div>
             </div>
         </div>
       

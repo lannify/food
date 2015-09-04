@@ -11,10 +11,13 @@ class Items extends CI_Controller {
 		$this->load->model('Meal');
 	}
 
-	public function add_to_cart($id)
+	public function add_to_cart()
 	{
-		$meal = $this->Meal->get_meals_by_meal_id($id);
-		$this->Item->add_to_cart($meal);
+		$meal_id = $this->input->post('meal_id');
+		$quantity = $this->input->post('quantity');
+		$meal = $this->Meal->get_meals_by_meal_id($meal_id);
+		$this->Item->add_to_cart($meal, $quantity);
+		redirect('/views/meal/'. $meal_id);
 	}
 	
 
