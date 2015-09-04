@@ -58,7 +58,7 @@
           <div class="col-md-8">
             <h1>Check Out</h1>
             <hr>
-            <form id = "payment-form" class="form-horizontal" role="form" action = "/views/thankyou" method ="post">
+            <form id = "payment-form" class="form-horizontal" role="form" action = "/items/checkout" method ="post">
                 <div class="form-group">
                   <label class="col-sm-3 control-label">Name</label>
                   <div class="col-sm-8">
@@ -66,7 +66,7 @@
                   </div>
                 </div>
                 <div class="form-group">
-                  <label class="col-sm-3 control-label">Emal</label>
+                  <label class="col-sm-3 control-label">Email</label>
                   <div class="col-sm-8">
                     <input type="text" class="form-control" name = "email" placeholder="" required>
                   </div>
