@@ -22,8 +22,8 @@ class Landings extends CI_Controller {
 		// Search by either category or dates (for now) - implement both in the future
 		if(isset($search_array['type']))
 		{
-			$results_array = $this->result->get_meals_by_category($search_array['type']);
-			$this->session->set_userdata('search_results', $results_array);	
+			redirect('landings/search_category/'.$search_array['type']);
+			// $this->session->set_userdata('search_results', $results_array);	
 		}
 		else if(isset($search_array['from_date']) && isset($search_array['to_date']))
 		{

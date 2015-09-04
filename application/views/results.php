@@ -235,11 +235,11 @@
                     <img class="small-chef-picture" src="/assets/images/chef-results-2.jpeg" alt="chef1"/>
                     <div class="caption">
 <?php
-                    echo "<h3>".$search_result['name']."</h3>";
+                    echo "<h4>".$search_result['name']."</h4>";
                     echo "<p>".$search_result['description']."</p>";
                     echo "<p>".$search_result['meal_date']."</p>";
 ?>
-                      <p><a href=<?="/views/meal/".$search_result['meal_id']?> class="btn btn-primary" role="button">Book this meal!</a></p>
+                      <p><a href=<?="/views/meal/".$search_result['meal_id']?> class="btn btn-primary btn-xs" role="button">Book this meal!</a></p>
                     </div>
                   </div>
               </div>              

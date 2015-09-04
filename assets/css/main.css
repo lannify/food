@@ -244,8 +244,8 @@
 .background-top {
   background: 
     linear-gradient(
-      rgba(0, 0, 0, 0.3),
-      rgba(0, 0, 0, 0.3)
+      rgba(0, 0, 0, 0.2),
+      rgba(0, 0, 0, 0.2)
     ),
     url("/assets/images/meal-table-front-short.png");
   background-size: cover;
@@ -290,11 +290,6 @@
   font-weight: 400;
   font-size: 2rem;
 }
-.thumbnail img {
-	height: 200px; 
-	width: 220px; 
-	display: block;
-}
 .container-fluid {
 	background-color: #F7F7F9;
 /*	background-color: #FFEAEA;*/
@@ -304,6 +299,9 @@
 }
 
 /* Styles for Results page */
+.thumbnail {
+  height: 360px;
+}
 .thumbnail .small-chef-picture {
 	/* Round picture */
 	border-radius: 50%;
@@ -311,15 +309,25 @@
 	height: 60px;
 	width: 60px;
 	position: relative;
-	top: -20px;
+	top: -40px;
 	left: 80px;
 	overflow: hidden;
+}
+.thumbnail img {
+  height: 200px; 
+  width: 220px; 
+  display: block;
 }
 .checkbox {
   margin-left: 10px;
 }
 .form-inline {
   margin-left: 10px;  
+}
+/* Move caption body up */
+.caption {
+  position: relative;
+  top: -60px;
 }
 
 .form-meal {
