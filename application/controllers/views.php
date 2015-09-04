@@ -9,7 +9,7 @@ class Views extends CI_Controller {
 		$this->load->model('Meal');
 		$this->load->library('cart');
 		$this->load->model('Item');
-		$this->output->enable_profiler();
+		// $this->output->enable_profiler();
 	}
 	
 	public function index()
@@ -30,12 +30,14 @@ class Views extends CI_Controller {
 
 	public function chefs()
 	{
-		$this->load->view('chefs');
+		$cart = $this->cart->contents();	
+		$this->load->view('chefs', array("cart"=>$cart));
 	}
 
 	public function results()
 	{
-		$this->load->view('results');
+		$cart = $this->cart->contents();
+		$this->load->view('results', array("cart"=>$cart));
 	}
 
 	public function chef($id)
@@ -44,7 +46,8 @@ class Views extends CI_Controller {
 		$future_meals = $this->Meal->get_future_meals_by_user_id($id);
 		$image_name = $this->Meal->image_name();
 		$past_meal = $this->Meal->get_past_meal_by_user_id($id);
-		$this->load->view('chef', array("chef"=> $chef, "future_meals"=>$future_meals, "past_meal"=>$past_meal));
+		$cart = $this->cart->contents();
+		$this->load->view('chef', array("chef"=> $chef, "future_meals"=>$future_meals, "past_meal"=>$past_meal, "cart"=>$cart));
 	}
 	public function meal($id)
 	{
@@ -55,7 +58,8 @@ class Views extends CI_Controller {
 
 	public function customer()
 	{
-		$this->load->view('customer');
+		$cart = $this->cart->contents();
+		$this->load->view('customer', array ("cart" =>$cart));
 	}
 
 	public function add_meal_image()
@@ -72,7 +76,8 @@ class Views extends CI_Controller {
 
 	public function dashboard()
 	{
-		$this->load->view('dashboard');
+		$cart = $this->cart->contents();
+		$this->load->view('dashboard', array ("cart" =>$cart));
 	}
 
 	public function new_meal()
@@ -98,8 +103,9 @@ class Views extends CI_Controller {
 	}
 	public function chefs_all()
 	{
+		$cart = $this->cart->contents();
 		$chefs = $this->User->get_all_chefs();
-		$this->load->view('all_chefs', array("chefs"=>$chefs));
+		$this->load->view('all_chefs', array("chefs"=>$chefs, "cart"=>$cart));
 	}
 	public function thankyou()
 	{
