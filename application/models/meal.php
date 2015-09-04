@@ -81,7 +81,7 @@ class Meal extends CI_Model {
 		return $this->db->query("SELECT * FROM categories")->result_array();
 	}
 
-	public function upload_image($image)
+	public function upload_image($meal)
 	{
 		$query = "INSERT INTO meals(meal_images) VALUES (?)";
 		$values = array($meal['meal_images']);
