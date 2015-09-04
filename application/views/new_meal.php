@@ -55,6 +55,7 @@
                     <div class="container">
                       <div class="row confirm">
                         <div class="col-md-12">
+
                           <form class="form-horizontal" role="form" action = "/meals/create" method = "post">
                               <h3 class="text-center">Add A Meal</h3>
                               <hr>
@@ -64,7 +65,7 @@
                                  echo "<div class = 'red text-center'>".$this->session->flashdata('errors')."</div>";
                               }           
 ?>
-
+  
                           <div class="form-group">
                               <label class="col-sm-3 control-label">Meal Name</label>
                               <div class="col-sm-6">
@@ -107,19 +108,13 @@
                             <div class="form-group">
                               <label class="col-sm-3 control-label">Or add a Category</label>
                               <div class="col-sm-4">
-                                <input type="text" class="form-control" name = "category" placeholder="e.g. Italian" required>
+                                <input type="text" class="form-control" name = "category" placeholder="e.g. Italian">
                               </div>
                             </div>
                             <div class="form-group">
                               <label class="col-sm-3 control-label">Description</label>
                               <div class="col-sm-6">
                                 <textarea class="form-control" rows="8" name = "description" placeholder="Detail of meal" required></textarea>
-                              </div>
-                            </div>
-                             <div class="form-group">
-                              <label class="col-sm-3 control-label">Photos</label>
-                              <div class="col-sm-6">
-                                <input type="file" class="form-control" name = "meal_images" placeholder="" required>
                               </div>
                             </div>
                             <div class="form-group">
@@ -130,7 +125,7 @@
                             </div>
                             <div class="form-group">
                                 <div class="col-sm-offset-3 col-sm-10">
-                                  <button type="submit" class="btn btn-warning">Order Now</button>
+                                  <button type="submit" class="btn btn-warning">Add Meal</button>
                                 </div>
                             </div>
                           </form>
