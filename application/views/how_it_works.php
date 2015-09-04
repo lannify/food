@@ -39,7 +39,7 @@
           
           <ul class="nav navbar-nav navbar-right">
             <li><a href="/views/how_it_works/">How It Works</a></li>
-            <li><a href="/views/chef">Chef</a></li>
+            <li><a href="/views/chefs_all">Chef</a></li>
             <?php
                 if($this->session->userdata('logged_in') === TRUE){
              ?>

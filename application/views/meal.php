@@ -58,13 +58,13 @@
           </div>
           <div class="meal_list_right description">
 <?php
-                $directory = 'assets/uploads/meal/'.$meal['meal_id'];
-                $images = glob($directory . '*.{jpg,jpeg,png,gif}', GLOB_BRACE);
-                var_dump($images);
+                $directory = "assets/uploads/meal/".$meal['meal_id']."/";
+                $images = glob($directory . '*.{jpg,jpeg,png,gif,JPG,JPEG,PNG,GIF}', GLOB_BRACE);
+
                 if(count($images) > 0){
-                  echo "<img src='".$images[0]."' height='150' width='150' /> ";
+                  echo "<img src='/".$images[0]."' alt='Primary meal picture'/> ";
                 } else {
-                  echo "<img src='/assets/images/meal-dessert.jpg'>";
+                  echo "<img src='/assets/images/meal-dessert.jpg' alt='Primary meal picture'>";
                 }
 ?>
                 <h3><?= $meal['meal_name']?></h3>

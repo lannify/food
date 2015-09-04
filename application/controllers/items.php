@@ -9,6 +9,7 @@ class Items extends CI_Controller {
 		$this->load->model('Item');
 		$this->load->library('cart');
 		$this->load->library('session');
+		$this->load->library('checkouts');
 		$this->load->model('Meal');
 	}
 

@@ -96,6 +96,12 @@ class User extends CI_Model {
         return $this->db->query($query, $id)->row_array();
     }
 
+    function get_user_phone_by_id($id)
+    {
+        $query = "SELECT name, phone FROM users WHERE user_id =?";
+        return $this->db->query($query, $id)->row_array();
+    }
+
     function get_all_users()
     {
         $query = "SELECT user_id, name, email, description FROM users";
