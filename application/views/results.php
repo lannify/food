@@ -214,7 +214,9 @@
 ?>
               <div class="col-sm-6 col-md-4">
                   <div class="thumbnail">
-                    <img src="/assets/images/meal-japanese.jpg" alt="1" style="position: relative; top: 0; left: 0;">
+                    <a href=<?="/views/meal/".$search_result['meal_id']?>>
+                      <img src="/assets/images/meal-japanese.jpg" alt="1" style="position: relative; top: 0; left: 0;">
+                    </a>
                     <img class="small-chef-picture" src="/assets/images/chef-results-2.jpeg" alt="chef1"/>
                     <div class="caption">
 <?php
@@ -222,7 +224,7 @@
                     echo "<p>".$search_result['description']."</p>";
                     echo "<p>".$search_result['meal_date']."</p>";
 ?>
-                      <p><a href=<?="/meals/meal/".$search_result['meal_id']?> class="btn btn-primary" role="button">Book this meal!</a></p>
+                      <p><a href=<?="/views/meal/".$search_result['meal_id']?> class="btn btn-primary" role="button">Book this meal!</a></p>
                     </div>
                   </div>
               </div>              
@@ -233,9 +235,63 @@
           else
           {
 ?>
-                  <div class="row">
-                    <h4>No search results found! Try removing some filters on the left.</h4>
+                  <div class="row" style="text-align: center;">
+                    <h5>No search results found!</h5>
+                    <h4>Browse through some categories below to find meals that may interest you.</h4>
                   </div>
+                  <div class="col-xs-3 col-md-3 col-lg-3 ih-item square colored effect6 from_top_and_bottom">
+            <a href="/landings/search_category/70">
+              <div class="img"><img src="/assets/images/meal-korean.jpg" alt="umsik"></div>
+              <div class="info">
+                <h3>Korean</h3>
+                <p>Click to discover Korean food near you</p>
+            </div></a>
+          </div>
+          <div class="col-xs-3 col-md-3 col-lg-3 ih-item square colored effect6 from_top_and_bottom">
+            <a href="/landings/search_category/68">
+              <div class="img"><img src="/assets/images/meal-italian.jpg" alt="italian"></div>
+              <div class="info">
+                <h3>Italian</h3>
+                <p>Click to discover Italian food near you</p>
+              </div>
+            </a>
+          </div>
+          <div class="col-xs-3 col-md-3 col-lg-3 ih-item square colored effect6 from_top_and_bottom">
+            <a href="/landings/search_category/110">
+              <div class="img"><img src="/assets/images/meal-steak.jpg" alt="steak"></div>
+              <div class="info">
+                <h3>Steakhouses</h3>
+                <p>Click to discover fine dining near you</p>
+              </div>
+            </a>
+          </div>
+          <div class="col-xs-3 col-md-3 col-lg-3 ih-item square colored effect6 from_top_and_bottom">
+            <a href="/landings/search_category/99">
+              <div class="img"><img src="/assets/images/meal-sandwich.jpeg" alt="sandwich"></div>
+              <div class="info">
+                <h3>Seafood</h3>
+                <p>Click to discover Seafood food near you</p>
+              </div>
+            </a>
+          </div>
+          <div class="col-xs-3 col-md-3 col-lg-3 ih-item square colored effect6 from_top_and_bottom">
+            <a href="/landings/search_category/22">
+              <div class="img"><img src="/assets/images/meal-dessert.jpg" alt="dessert"></div>
+              <div class="info">
+                <h3>Sweets</h3>
+                <p>Click for delicious desserts</p>
+              </div>
+          </a>
+          </div>
+          <div class="col-xs-3 col-md-3 col-lg-3 ih-item square colored effect6 from_top_and_bottom">
+            <a href="/landings/search_category/126">
+              <div class="img"><img src="/assets/images/meal-vegetarian.jpg" alt="veggie"></div>
+              <div class="info">
+                <h3>Vegetarian</h3>
+                <p>Click for vegetarian options</p>
+              </div>
+            </a>
+          </div>
 <?php
           }
 ?>

@@ -44,6 +44,7 @@ class Landings extends CI_Controller {
 		$this->session->set_userdata('search_results', $results_array);
 		// Populate location JSON for Google Maps
 		$count = 0;
+		$data = array();
 		foreach($results_array as $category)
 		{
 			foreach($category as $result)
@@ -57,22 +58,4 @@ class Landings extends CI_Controller {
 
 		redirect('/views/results');
 	}
-
-	// public function results_locations_json()
-	// {
-	// 	$count = 0;
-	// 	if($this->session->userdata('search_results'))
-	// 	{
-	// 		foreach($this->session->userdata('search_results') as $category)
-	// 		{
-	// 			foreach($category as $result)
-	// 			{
-	// 				$data[$count]['lat'] = $result['lat'];
-	// 				$data[$count]['lng'] = $result['lng'];
-	// 				$count++;
-	// 			}
-	// 		}
-	// 	}
-	// 	echo json_encode($data);
-	// }
 }
