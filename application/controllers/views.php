@@ -9,7 +9,7 @@ class Views extends CI_Controller {
 		$this->load->model('Meal');
 		$this->load->library('cart');
 		$this->load->model('Item');
-		$this->output->enable_profiler();
+		// $this->output->enable_profiler();
 	}
 	
 	public function index()
@@ -53,9 +53,10 @@ class Views extends CI_Controller {
 		$this->load->view('meal', array("meal"=> $meal, "cart"=>$cart));
 	}
 
-	public function customer()
+	public function customer($id)
 	{
-		$this->load->view('customer');
+		$customer = $this->User->get_user_by_id($id);
+		$this->load->view('customer', array("customer"=>$customer));
 	}
 
 	public function add_meal_image()
@@ -104,6 +105,19 @@ class Views extends CI_Controller {
 	public function thankyou()
 	{
 		$this->load->view('thankyou');
+	}
+	public function user_profile()
+	{
+		$id = $this->session->userdata('user_id');
+		if($this->session->userdata('level')==2)
+		{
+			
+			redirect('/views/chef/'.$id);
+		}
+		else if($this->session->userdata('level')==3)
+		{
+			redirect('/views/csutomer/'.$id);
+		}
 	}
 }
 

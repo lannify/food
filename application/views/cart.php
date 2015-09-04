@@ -25,14 +25,10 @@
           <a class="navbar-brand" href="#">Home</a>
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">      
-          <form class="navbar-form navbar-right" role="search">
-            <div class="form-group">
-              <input type="text" class="form-control" placeholder="Search">
-            </div>
-          </form>
+          
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="/views/how_it_works/">How It Works</a></li>
-            <li><a href="/views/chef">Chef</a></li>
+            <li><a href="/views/results">Browse</a></li>
+            <li><a href="/views/chefs_all">Chefs</a></li>
             <?php
                 if($this->session->userdata('logged_in') === TRUE){
              ?>
@@ -73,7 +69,7 @@
           <div class="col-md-8 col-lg-8 col-sm-8">
             <div class="media">
               <div class="media-left">
-                <a href="#">
+                <a href="/views/meal/<?= $item['id']?>">
                   <img class="media-object" src="/assets/images/meal-burgers.jpg" alt="burgers" style="height: 80px; width: 100px;">
                 </a>
               </div>
