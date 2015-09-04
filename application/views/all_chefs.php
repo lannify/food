@@ -44,28 +44,7 @@
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container-fluid -->
     </nav>
-    <div class="profile">
-      <div class ="container">
-        <div class="row">
-              <div class="col-md-4">
-                <div class="profile_photo">
-                  <h3><?= $chef['name'] ?></h3>
-
-                  <img class = "user_photo" src = "<?= $chef['profile_photo'] ?>" alt="chef photo">
-                </div>
-              </div>
-              <div class="col-md-8">
-                <div class="description">                 
-
-                  <h3><?= $chef['name'] ?>'s Intro</h3>
-                  <p><?= $chef['description'] ?></p>
-                  <a href="/views/reviews"><h3>Reviews</h3></a>
-
-                </div>
-              </div>
-              </div>
-          </div>
-      </div>
+   
 
     </div> <!-- End Profile header -->   
     <div class="main-content text-center">
@@ -74,60 +53,23 @@
 
 
 <?
-    foreach($future_meals as $meal)
+    foreach($chefs as $chef)
     {
 ?>
       <div class="col-md-4">
         <div class="view">  
            <img class="photo" src="/assets/images/japanese1.jpeg">
            <div class="mask">  
-           <h2><?= $meal['name'] ?></h2>  
-           <p><?= $meal['description']?></p>  
-<!--            <p><?= date('M d, Y',strtotime($meal['meal_date']))?><p> -->
-               <a href="/views/meal/<?=$meal['meal_id'] ?>" class="info">VIEW MEAL</a>  
+           <h2><?= $chef['name'] ?></h2>  
+           <p><?= $chef['description']?></p>  
+
+               <a href="/views/chef/<?=$chef['user_id'] ?>" class="info">VIEW CHEF</a>  
            </div>  
         </div> 
       </div>
 <?      
     }
-
-
-?>
-             
-<!-- If there are past meals   -->   
-<?
-    if(count($past_meal)>0)
-    {
-?>
-              <div class="col-md-4">
-                <div class="view">  
-                   <img class="photo" src="/assets/images/ramen.jpeg">
-                   <div class="mask">  
-                   <h2><?= $past_meal['name'] ?></h2>  
-                   <p><?= $past_meal['description']?></p>  
-                       <a href="#" class="info"><?= date('M d, Y',strtotime($past_meal['meal_date']))?></a>  
-                   </div>  
-                </div> 
-              </div>
-<?      
-    }
-?>                                    
-          </div> 
-          <div class="row">
-            <div class="col-md-12 profile">
-              <div class="row">
-            <div class="col-md-4">
-              <h2>Review 1</h2>          
-            </div>
-            <div class="col-md-4">
-              <h2>Review 1</h2>          
-            </div>
-            <div class="col-md-4">
-              <h2>Review 1</h2>          
-            </div>
-          </div>       
-            </div>      
-          </div> 
+?> 
          
       </div>
     </div>

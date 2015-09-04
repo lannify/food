@@ -108,4 +108,8 @@ class User extends CI_Model {
         $values = array($post['description'], $post['pic'], $post['id']);
         return $this->db->query($query,$values); 
     }
+    function get_all_chefs()
+    {
+        return $this->db->query("SELECT * FROM users WHERE level = ?", array(2))->result_array();
+    }
 }
