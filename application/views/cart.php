@@ -64,7 +64,11 @@
 
     <div class="row">
       <div class="col-sm-10 col-md-10 col-lg-10">
+<?
 
+    foreach($cart as $item)
+    {
+?>
         <div class="row">
           <div class="col-md-8 col-lg-8 col-sm-8">
             <div class="media">
@@ -74,48 +78,28 @@
                 </a>
               </div>
               <div class="media-body">
-                <h4 class="media-heading">Classic American Fare</h4>
-                <h5>Chef Gordon Ramsay</h5>
-                Classic hamburgers, sweet potato fries, and american micro-brews.
+                <h4 class="media-heading"><?= $item['name'] ?></h4>
+                <h5>Chef <?= $item['chef'] ?></h5>
+                <p><?= $item['meal_description'] ?></p>
               </div>
             </div>
           </div>
           <div class="col-md-2 col-lg-2 col-sm-2">
-            <h6>Date: Saturday, September 15, 2015</h6>
-            <h6>Price per person: $8</h6>
+            <h6>Date: <?= date('M d, Y h:i A', strtotime($item['meal_date'])) ?></h6>
+            <h6>Price per person: $<?= $item['price'] ?></h6>
+            <h6>Quantity: <?= $item['qty'] ?></h6>
           </div>
           <div class="col-md-2 col-lg-2 col-sm-2">
-            <button type="button" class="btn btn-primary btn-xs">Edit</button>
-            <button type="button" class="btn btn-danger btn-xs">Remove</button>
+          <? $id = $item['rowid'];?>
+            <a href="/items/edit"><button type="button" class="btn btn-primary btn-xs">Edit</button></a>
+            <a href="/items/remove_from_cart/<?= $id?>"><button type="button" class="btn btn-danger btn-xs">Remove</button></a>
           </div>
         </div>
-        <hr>
-
-        <div class="row">
-          <div class="col-md-8 col-lg-8 col-sm-8">
-            <div class="media">
-              <div class="media-left">
-                <a href="#">
-                  <img src="/assets/images/meal-korean.jpg" alt="korean" class="img-rounded" style="height: 80px; width: 100px;">
-                </a>
-              </div>
-              <div class="media-body">
-                <h4 class="media-heading">Home Cooked Korean</h4>
-                <h5>Chef Bobby Flay</h5>
-                <p>Beef/veggie bibimbap with banchan sides and pork dumplings.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-2 col-lg-2 col-sm-2">
-            <h6>Date: Saturday, September 20, 2015</h6>
-            <h6>Price per person: $10</h6>
-          </div>
-          <div class="col-md-2 col-lg-2 col-sm-2">
-            <button type="button" class="btn btn-primary btn-xs">Edit</button>
-            <button type="button" class="btn btn-danger btn-xs">Remove</button>
-          </div>
-        </div>
-        <hr>
+<?
+    }
+?>
+<!-- 
+        
 
         <div class="row">
           <div class="col-md-8 col-lg-8 col-sm-8">
@@ -153,6 +137,7 @@
       <div class="col-md-7 col-lg-7 col-sm-7"></div>
       <div class="col-md-2 col-lg-2 col-sm-2">
         <h4>Total: $23.00</h4>
+        <a href="/views/checkout"><button type="button" class="btn btn-warning btn-md">Checkout</button></a>
       </div>
       <div class="col-md-3 col-lg-3 col-sm-3">
 

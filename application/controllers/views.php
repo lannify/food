@@ -48,8 +48,9 @@ class Views extends CI_Controller {
 	}
 	public function meal($id)
 	{
+		$cart = $this->cart->contents();	
 		$meal = $this->Meal->get_meals_by_meal_id($id);
-		$this->load->view('meal', array("meal"=> $meal));
+		$this->load->view('meal', array("meal"=> $meal, "cart"=>$cart));
 	}
 
 	public function customer()
@@ -65,7 +66,8 @@ class Views extends CI_Controller {
 
 	public function cart()
 	{
-		$this->load->view('cart');
+		$cart = $this->cart->contents();	
+		$this->load->view('cart', array("cart"=>$cart));
 	}
 
 	public function dashboard()
