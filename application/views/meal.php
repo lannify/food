@@ -56,8 +56,17 @@
                 <p><?= $meal['user_description']?></p> 
 
           </div>
-          <div class="meal_list_right description">                 
-                <img src="/assets/images/meal-dessert.jpg">
+          <div class="meal_list_right description">
+<?php
+                $directory = 'assets/uploads/meal/'.$meal['meal_id'];
+                $images = glob($directory . '*.{jpg,jpeg,png,gif}', GLOB_BRACE);
+                var_dump($images);
+                if(count($images) > 0){
+                  echo "<img src='".$images[0]."' height='150' width='150' /> ";
+                } else {
+                  echo "<img src='/assets/images/meal-dessert.jpg'>";
+                }
+?>
                 <h3><?= $meal['meal_name']?></h3>
 
                 <p><?= $meal['meal_description']?></p>

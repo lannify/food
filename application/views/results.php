@@ -32,12 +32,13 @@
 <!--             <button type="submit" class="btn btn-default">Search</button> -->
           </form>
             <ul class="nav navbar-nav navbar-right">
+              <li><a href="/views/how_it_works/">How It Works</a></li>
               <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Your Account<span class="caret"></span></a>
                 <ul class="dropdown-menu">
-                  <li><a href="/views/dashboard/">Dashboard</a></li>             
+                  <li><a href="/views/dashboard/">Dashboard</a></li>
                   <li role="separator" class="divider"></li>
-                  <li><a href="/users/logout">Sign Out</a></li>              
+                  <li><a href="/users/logout">Sign Out</a></li>       
                 </ul>
                 <li><a href="/views/cart/">Your Cart <span class= "glyphicon glyphicon-shopping-cart"></span></a></li>
               </li>
