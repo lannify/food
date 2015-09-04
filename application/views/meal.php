@@ -31,15 +31,15 @@
           <ul class="nav navbar-nav navbar-right">
             <li><a href="/views/dashboard/">Back to Dashboard</a></li>
             <li><a href="/views/results">Browse Meals</a></li> 
-            <li><a href="/views/cart/">Your Cart <span class= "glyphicon glyphicon-shopping-cart"></span><?= count($cart)?></a></li>
             <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Your Account<span class="caret"></span></a>
-                <ul class="dropdown-menu">
-                  <li><a href="/views/dashboard/">Meal Dashboard</a></li> 
-                  <li role="separator" class="divider"></li>
-                  <li><a href="/users/logout">Sign Out</a></li>
-                </ul>
-              </li>
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Your Account<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="/views/dashboard/">Meal Dashboard</a></li> 
+                <li role="separator" class="divider"></li>
+                <li><a href="/users/logout">Sign Out</a></li>
+              </ul>
+            </li>
+            <li><a href="/views/cart/">Your Cart <span class= "glyphicon glyphicon-shopping-cart"></span><?= count($cart)?></a></li>
           </ul>
 
         </div><!-- /.navbar-collapse -->

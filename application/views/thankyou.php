@@ -28,14 +28,12 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Home</a>
+          <a class="navbar-brand" href="/">Home</a>
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">      
           
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="#">How It Works</a></li>
-            <li><a href="/views/chef">Chefs</a></li>
-            <li><a href="#">Your Cart <span class= "glyphicon glyphicon-shopping-cart"></span></a></li>
+            <li><a href="/views/chefs_all">Chefs</a></li>
             <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Your Account<span class="caret"></span></a>
                 <ul class="dropdown-menu">
