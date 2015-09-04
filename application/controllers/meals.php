@@ -34,12 +34,13 @@ class Meals extends CI_Controller {
 		if ($validate[0]=== TRUE)
 		{
 			$meal_id = $this->Meal->create($this->input->post());
+			// We need this after the image is uploaded to load the appropriate meal page after
+			$this->session->set_userdata('meal_id', $meal_id);
+
 			if ($meal_id)
 			{
-
 				// redirect('views/meal/'.$meal_id);
 				$this->load->view('add_meal_image');
-
 			}
 			else
 			{

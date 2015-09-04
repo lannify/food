@@ -46,6 +46,11 @@
       </nav>
 
       <div class ="container-fluid">
+<?php 
+      if(isset($error)){
+        echo "<div class='alert alert-warning' role='alert'>".$error."</div>";        
+      }
+?>        
         <div class="row">
           <div class= "form-content col-md-8">
               <div class="panel-body">               
