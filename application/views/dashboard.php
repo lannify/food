@@ -55,7 +55,7 @@
 			<a class="navbar-brand" href="/views/results/">Book a Meal</a> 
 <?php } else{ ?>
 			<a class="navbar-brand" href="/meals/new_meal/">Add New Meal</a>
-			<a class="navbar-brand" href="/views/results/">Book a Meal!</a>
+			<a class="navbar-brand" href="/views/results/">Book a Meal</a>
 		<?php }
 ?>
         </div>

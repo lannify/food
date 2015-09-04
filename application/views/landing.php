@@ -39,7 +39,7 @@
           
           <ul class="nav navbar-nav navbar-right">
             <li><a href="/views/how_it_works/">How It Works</a></li>
-            <li><a href="/views/chef">Chef</a></li>
+            <li><a href="/views/results">Browse</a></li>
             <?php
                 if($this->session->userdata('logged_in') === TRUE){
              ?>
@@ -55,10 +55,14 @@
       
             <!-- Modal for Login & Register-->
             
-            <?php }else{?>
+            <?php 
+              } else {
+            ?>
             <li class="dropdown">
             <a class="dropdown-toggle" href="#" data-toggle="modal" data-target="#myModal">Sign In <strong class="caret"></strong></a>
-            <?php }?>
+            <?php 
+              }
+            ?>
             </ul>
             <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
               <div class="panel panel-login">
