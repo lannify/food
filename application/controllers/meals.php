@@ -10,7 +10,7 @@ class Meals extends CI_Controller {
 		$this->load->library('Session');
 
 		$this->load->helper(array('form', 'url'));
-
+		$this->load->model('Item');
 		$this->load->library('cart');
 
 	}

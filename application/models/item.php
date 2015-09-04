@@ -13,6 +13,7 @@ class Item extends CI_Model {
 			'meal_images' => $meal['meal_images']
 			);
 		$this->cart->insert($data);
+		return TRUE;
 	}
 	public function update_meal($meal_id)
 	{
@@ -22,5 +23,6 @@ class Item extends CI_Model {
 	{
 		
 	}
+
 
 }
