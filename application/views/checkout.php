@@ -58,31 +58,44 @@
           <div class="col-md-8">
             <h1>Check Out</h1>
             <hr>
-            <form id = "payment-form" class="form-horizontal" role="form" action = "" method ="post">
+            <form id = "payment-form" class="form-horizontal" role="form" action = "/views/thankyou" method ="post">
                 <div class="form-group">
                   <label class="col-sm-3 control-label">Name</label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control" name = "name" placeholder="">
+                    <input type="text" class="form-control" name = "name" placeholder="" required>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="col-sm-3 control-label">Emal</label>
+                  <div class="col-sm-8">
+                    <input type="text" class="form-control" name = "email" placeholder="" required>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="col-sm-3 control-label">Phone</label>
+                  <div class="col-sm-8">
+                    <input type="text" class="form-control" name = "phone" placeholder="" required>
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-3 control-label">Street Address</label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control" name = "street" placeholder="">
+                    <input type="text" class="form-control" name = "street" placeholder="" required>
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-3 control-label">City</label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control" name = "city" placeholder="">
+                    <input type="text" class="form-control" name = "city" placeholder="" required>
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-3 control-label">Zipcode</label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control" name = "zipcode" placeholder="">
+                    <input type="text" class="form-control" name = "zipcode" placeholder="" required>
                   </div>
                 </div>
+                <input type="hidden" id = "total" name = "total" value = "<?= $this->cart->total() ?>">
                 <div class="form-group">
                   <label class="col-sm-3 control-label"></label>
                   <div class="col-sm-8">                    
@@ -108,8 +121,8 @@
                 <th>Total</th>
               </thead>
               <tbody>
-                  <td id="count"><?= count($cart)?></td>
-                  <td id="total">Total: $<?= $this->cart->total() ?></td>
+                  <td id="count"><h2 class="green"><?= count($cart)?></h2></td>
+                  <td id="total"><h2 class="green">$<?= $this->cart->total() ?></h2></td>
                 </tr>           
               </tbody>
             </table>

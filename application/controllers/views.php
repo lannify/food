@@ -101,6 +101,10 @@ class Views extends CI_Controller {
 		$chefs = $this->User->get_all_chefs();
 		$this->load->view('all_chefs', array("chefs"=>$chefs));
 	}
+	public function thankyou()
+	{
+		$this->load->view('thankyou');
+	}
 }
 
 //end of main controller
