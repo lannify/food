@@ -117,12 +117,6 @@
                                 <textarea class="form-control" rows="8" name = "description" placeholder="Detail of meal" required></textarea>
                               </div>
                             </div>
-                 <!--             <div class="form-group">
-                              <label class="col-sm-3 control-label">Photos</label>
-                              <div class="col-sm-6">
-                                <input type="file" size="20" id="file" class="form-control" name="meal_images" placeholder="" required>
-                              </div>
-                            </div> -->
                             <div class="form-group">
                               <label class="col-sm-3 control-label">Location</label>
                               <div class="col-sm-6">

@@ -37,7 +37,8 @@ class Meals extends CI_Controller {
 			if ($meal_id)
 			{
 
-				redirect('views/meal/'.$meal_id);
+				// redirect('views/meal/'.$meal_id);
+				$this->load->view('add_meal_image');
 
 			}
 			else
