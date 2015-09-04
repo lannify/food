@@ -8,6 +8,7 @@ class Views extends CI_Controller {
 		$this->output->enable_profiler();
 		$this->load->model('User');
 		$this->load->model('Meal');
+		$this->load->library('cart');
 	}
 	
 	public function index()
@@ -44,16 +45,15 @@ class Views extends CI_Controller {
 		$past_meal = $this->Meal->get_past_meal_by_user_id($id);
 		$this->load->view('chef', array("chef"=> $chef, "future_meals"=>$future_meals, "past_meal"=>$past_meal));
 	}
+	public function meal($id)
+	{
+		$meal = $this->Meal->get_meals_by_meal_id($id);
+		$this->load->view('meal', array("meal"=> $meal));
+	}
 
 	public function customer()
 	{
 		$this->load->view('customer');
-	}
-
-	public function meal($id)
-	{
-		$meal = $this->Meal->find($id);
-		$this->load->view('meal', array('meal'=>$meal));
 	}
 
 	public function add_meal_image()
@@ -73,7 +73,8 @@ class Views extends CI_Controller {
 
 	public function new_meal()
 	{
-		$this->load->view('new_meal');
+		$categories = $this->Meal->all_categories();
+		$this->load->view('new_meal', array("categories"=>$categories));
 	}
 
 	public function how_it_works()
@@ -84,7 +85,9 @@ class Views extends CI_Controller {
 
 	public function checkout()
 	{
-		$this->load->view('checkout');
+
+		$cart = $this->cart->contents();	
+		$this->load->view('checkout', array ("cart" =>$cart));
 
 	}
 }

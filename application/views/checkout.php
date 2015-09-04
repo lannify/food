@@ -87,7 +87,7 @@
               </tbody>
             </table>
 
-            
+        <? var_dump($cart)?>
 
           </div>
         </div>

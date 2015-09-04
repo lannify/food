@@ -53,16 +53,13 @@
 
       <div class="container">
         <div class="row">
-          
-
-          <div class="meal_list_left description"> 
+         
+          <div class="meal_list_left description">
+                <h3>Chef</h3> 
                 <p><?= $meal['user_name']?></p>
-                <p><?= $meal['user_description']?></p>
+                <p><?= $meal['user_description']?></p> 
 
-                <a href="/buy/<?= $meal['meal_id']?>"><button class="btn btn-default">Buy this meal</button></a>
-            </div>
-
-
+          </div>
           <div class="meal_list_right description">                 
                 <img src="/assets/images/meal-dessert.jpg">
                 <h3><?= $meal['meal_name']?></h3>
@@ -73,33 +70,35 @@
                 <p>Location: <?= $meal['location']?></p>
                 <p>Price per Person: $<?= $meal['price']?></p>
 
-                <p>Date: <?= date('M d y h:i A',strtotime($meal['meal_date']))?></p>
 
-               <img src="/assets/uploads/<?= $meal['meal_images']?>">
-               
-                <a href="/buy/<?= $meal['meal_id']?>"><button class="btn btn-default">Buy this meal</button></a>
-
-                <br />
+                <p>Date: <?= date('M d, Y',strtotime($meal['meal_date']))?></p>
+                <form action="/items/add_to_cart" method = "post">
+                  <div class="col-sm-8">
+                   <label class="col-sm-6 control-label">Select quantity</label>
+                    <select class="form-control" name = "quantity" required>
+<?
+                      for($i = 0; $i <=$meal['quantity']; $i++)
+                      {
+                        echo '<option value="{$i}">'.$i.'</option>';
+                      }
+?>                                
+                    </select>  
+                    <br>  
+                  </div>
+                  <div class="row">        
+                    <div class="form-group">
+                      <div class="col-sm-8">                   
+                        <input type ="hidden" name = "meal_id" value = "<?= $meal['meal_id']?>">
+                        <button type="submit" class="btn btn-warning" >Add to Cart</button>              
+                      </div> 
+                    </div>
+                  </div>               
+                </form>
+              </div>
 
             </div>
-
-
-
-
-              
-            
-             
-   
         </div>
-      </div>
-
-       <div class ="container" display="inline-block">
-        <div class="row">
-          <div class="col-md-4">
-            
-          </div>
-        </div>
-      </div>
+      
     
 
 <!-- Get Meals Info/Photo and output them in each div.col-md-4 below -->

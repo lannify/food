@@ -90,7 +90,8 @@
            <div class="mask">  
            <h2><?= $meal['name'] ?></h2>  
            <p><?= $meal['description']?></p>  
-               <a href="#" class="info"><?= date('M d, Y',strtotime($meal['meal_date']))?></a>  
+<!--            <p><?= date('M d, Y',strtotime($meal['meal_date']))?><p> -->
+               <a href="/views/meal/<?=$meal['meal_id'] ?>" class="info">VIEW MEAL</a>  
            </div>  
         </div> 
       </div>
@@ -121,10 +122,7 @@
           </div> 
           <div class="row">
             <div class="col-md-12 profile">
-              Meal Locations on Map go here   
-            </div>      
-          </div> 
-          <div class="row">
+              <div class="row">
             <div class="col-md-4">
               <h2>Review 1</h2>          
             </div>
@@ -135,6 +133,9 @@
               <h2>Review 1</h2>          
             </div>
           </div>       
+            </div>      
+          </div> 
+         
       </div>
     </div>
   

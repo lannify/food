@@ -8,7 +8,11 @@ class Meals extends CI_Controller {
 		// $this->output->enable_profiler();
 		$this->load->model('Meal');
 		$this->load->library('Session');
+
 		$this->load->helper(array('form', 'url'));
+
+		$this->load->library('cart');
+
 	}
 
 	public function index()
@@ -29,10 +33,12 @@ class Meals extends CI_Controller {
 	
 		if ($validate[0]=== TRUE)
 		{
-			$meal = $this->Meal->create($this->input->post());
-			if ($meal)
+			$meal_id = $this->Meal->create($this->input->post());
+			if ($meal_id)
 			{
-				redirect('views/add_meal_image');
+
+				redirect('views/meal/'.$meal_id);
+
 			}
 			else
 			{
