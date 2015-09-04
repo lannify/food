@@ -15,7 +15,7 @@
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
   </head>
   <body>
-    <nav class="navbar navbar-default">
+   <nav class="navbar navbar-default">
       <div class="container-fluid">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -24,12 +24,16 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="/">Home</a>
+          <a class="navbar-brand" href="#">Home</a>
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">      
+          
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="/views/how_it_works/">How It Works</a></li>
-            <li><a href="/views/chef">Chef</a></li>
+            <li><a href="/views/results">Browse</a></li>
+            <li><a href="/views/chefs_all">Chefs</a></li>
+            <?php
+                if($this->session->userdata('logged_in') === TRUE){
+             ?>
             <li><a href="/views/cart/">Your Cart <span class= "glyphicon glyphicon-shopping-cart"></span></a></li>
             <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Your Account<span class="caret"></span></a>
@@ -39,7 +43,13 @@
                   <li><a href="/users/logout">Sign Out</a></li>              
                 </ul>
               </li>
-
+      
+            <!-- Modal for Login & Register-->
+            
+            <?php }else{?>
+            <li class="dropdown">
+            <a class="dropdown-toggle" href="#" data-toggle="modal" data-target="#myModal">Sign In <strong class="caret"></strong></a>
+            <?php }?>
           </ul>
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container-fluid -->

@@ -52,7 +52,7 @@
          
           <div class="meal_list_left description">
                 <h3>Chef</h3> 
-                <p><?= $meal['user_name']?></p>
+                <a href="/views/chef/<?= $meal['user_id']?>"><p><?= $meal['user_name']?></p></a>
                 <p><?= $meal['user_description']?></p> 
 
           </div>

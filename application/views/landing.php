@@ -38,7 +38,7 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">      
           
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="/views/how_it_works/">How It Works</a></li>
+        <!--     <li><a href="/views/how_it_works/">How It Works</a></li> -->
             <li><a href="/views/results">Browse</a></li>
             <?php
                 if($this->session->userdata('logged_in') === TRUE){

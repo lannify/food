@@ -123,7 +123,7 @@
         </h4>
       </div>
       <div id="collapse3" class="panel-collapse collapse">
-        <div class="panel-body">Form for Edit user profile</div>
+        <div class="panel-body"><a href="/views/user_profile">My Profile</a></div>
       </div>
     </div>
   </div> 
