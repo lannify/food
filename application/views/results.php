@@ -32,7 +32,6 @@
 <!--             <button type="submit" class="btn btn-default">Search</button> -->
           </form>
             <ul class="nav navbar-nav navbar-right">
-              <li id="clickme">Click me to populate points</li>
               <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Your Account<span class="caret"></span></a>
                 <ul class="dropdown-menu">
