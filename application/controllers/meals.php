@@ -39,8 +39,8 @@ class Meals extends CI_Controller {
 			$this->session->set_flashdata('errors',$validate[1]);
 			redirect('/meals/new_meal');
 		}
-		
 	}
+	
 	
 
 

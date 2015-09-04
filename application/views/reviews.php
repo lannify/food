@@ -13,6 +13,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="/assets/js/bootstrap.min.js"></script>
     <script src="/assets/js/main.js"></script>
+    <script src="bootstrap-rating-input.min.js"></script>
+
   </head>
   <body>
     <nav class="navbar navbar-default">
@@ -43,6 +45,47 @@
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container-fluid -->
     </nav>
-      <h4>Show reviews</h4>
-      <h4>Add form for review</h4>
+    <div class="container">
+        <h2>Reviews</h2>
+      <div class="panel-group">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h4 class="panel-title">
+              <a data-toggle="collapse" href="#collapse1">Show</a>
+            </h4>
+          </div>
+          <div id="collapse1" class="panel-collapse collapse">
+            <div class="panel-body">Show reviews</div>
+            <div class="panel-footer"><button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Leave Review</button>
+          </div>
+        </div>
+          <div id="myModal" class="modal fade" role="dialog">
+          <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Your Review</h4>
+              </div>
+              <div class="modal-body">
+                <div class="form-group">
+                  <label for="usr">Name:</label>
+                  <input type="text" class="form-control" id="usr">
+                </div>
+                <div class="form-group">
+                  <label for="comment">Review:</label>
+                      <textarea class="form-control" rows="5" id="comment"></textarea>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
   </body>

@@ -31,29 +31,27 @@
             </div>
           </form>
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="#">How It Works</a></li>
-            <li><a href="#">Chefs</a></li>
+            <li><a href="/views/how_it_works/">How It Works</a></li>
+            <li><a href="/views/chef">Chef</a></li>
+            <?php
+                if($this->session->userdata('logged_in') === TRUE){
+             ?>
+            <li><a href="/views/cart/">Your Cart <span class= "glyphicon glyphicon-shopping-cart"></span></a></li>
             <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Foods<span class="caret"></span></a>
-              <ul class="dropdown-menu">
-                <li><a href="#">Italian</a></li>
-                <li><a href="#">Japanese</a></li>
-                <li><a href="#">Korean</a></li>
-                <li role="separator" class="divider"></li>
-                <li><a href="#">Vegan</a></li>
-              </ul>
-            </li>
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Your Account<span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="/views/dashboard/">Dashboard</a></li>             
+                  <li role="separator" class="divider"></li>
+                  <li><a href="/users/logout">Sign Out</a></li>              
+                </ul>
+              </li>
+      
+            <!-- Modal for Login & Register-->
+            
+            <?php }else{?>
             <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Locations<span class="caret"></span></a>
-              <ul class="dropdown-menu">
-                <li><a href="#">San Jose</a></li>
-                <li><a href="#">San Francisco</a></li>
-                <li><a href="#">New York</a></li>
-                <li role="separator" class="divider"></li>
-                <li><a href="#">Paris</a></li>
-              </ul>
-            </li>
-            <li><a href="#">Your Cart <span class= "glyphicon glyphicon-shopping-cart"></span></a></li>
+            <a class="dropdown-toggle" href="#" data-toggle="modal" data-target="#myModal">Sign In <strong class="caret"></strong></a>
+            <?php }?>
           </ul>
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container-fluid -->
