@@ -36,14 +36,16 @@ class Meal extends CI_Model {
 
 		$query = "INSERT INTO meals (name, description,location, price, quantity, meal_date,meal_images,created_at, updated_at) VALUES (?,?,?,?,?,?,?, NOW(), NOW())";
 		$values = array($meal['name'],$meal['description'],$meal['location'],$meal['price'],$meal['quantity'],$meal['meal_date'],$meal['meal_images']);
-
-		return $this->db->query($query, $values);
 		$this->db->query($query, $values);
 		$meal_id = $this->db->insert_id();
 		$query2 = "INSERT INTO categories(name) VALUES(?)";
 		$values2 = array($meal['category']);
 		$this->db->query($query2, $values2);
-		return TRUE;
+		$cat_id = $this->db->insert_id();
+		$query3 = "INSERT INTO meals_categories(meal_id, category_id) VALUES(?,?)";
+		$values3 = array($meal_id, $cat_id);
+		$this->db->query($query3, $values3);
+		return $meal_id;
 
 
 	}
@@ -60,11 +62,11 @@ class Meal extends CI_Model {
 	}
 	public function get_meals_by_user_id($id)
 	{
-		return $this->db->query("SELECT * FROM meals WHERE user_id = ?", array($id))->result_array();
+		return $this->db->query("SELECT * FROM meals WHERE user_id = ? ORDER BY meal_id DESC", array($id))->result_array();
 	}
 	public function get_future_meals_by_user_id($id)
 	{
-		return $this->db->query("SELECT * FROM meals WHERE user_id = ? ORDER BY meal_id AND date(meal_date) > CURRENT_DATE", array($id))->result_array();
+		return $this->db->query("SELECT * FROM meals WHERE user_id = ?  AND date(meal_date) > CURRENT_DATE ORDER BY meal_id DESC", array($id))->result_array();
 	}
 	public function get_past_meal_by_user_id($id)
 	{

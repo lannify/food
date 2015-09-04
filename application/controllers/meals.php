@@ -26,10 +26,10 @@ class Meals extends CI_Controller {
 		$validate = $this->Meal->validate($this->input->post());
 		if ($validate[0]=== TRUE)
 		{
-			$meal = $this->Meal->create($this->input->post());
-			if ($meal)
+			$meal_id = $this->Meal->create($this->input->post());
+			if ($meal_id)
 			{
-				redirect('views/chef');
+				redirect('views/meal/'.$meal_id);
 			}
 			else
 			{

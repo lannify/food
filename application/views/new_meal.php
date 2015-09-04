@@ -131,7 +131,7 @@
                             </div>
                             <div class="form-group">
                                 <div class="col-sm-offset-3 col-sm-10">
-                                  <button type="submit" class="btn btn-warning">Order Now</button>
+                                  <button type="submit" class="btn btn-warning">Add Meal</button>
                                 </div>
                             </div>
                           </form>

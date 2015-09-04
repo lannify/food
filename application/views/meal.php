@@ -68,7 +68,7 @@
                 <p>Location: <?= $meal['location']?></p>
                 <p>Price per Person: $<?= $meal['price']?></p>
 
-                <p>Date: <?= date('M d y h:i A',strtotime($meal['meal_date']))?></p>
+                <p>Date: <?= date('M d, Y',strtotime($meal['meal_date']))?></p>
                 <form action="/items/add_to_cart" method = "post">
                   <div class="col-sm-8">
                    <label class="col-sm-6 control-label">Select quantity</label>
