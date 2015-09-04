@@ -45,6 +45,7 @@ class Landings extends CI_Controller {
 		// Populate location JSON for Google Maps
 		$count = 0;
 		$data = array();
+		
 		foreach($results_array as $category)
 		{
 			foreach($category as $result)

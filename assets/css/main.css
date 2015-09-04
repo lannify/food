@@ -1,4 +1,9 @@
 /* Login and reg modal */
+#myModal {
+  width: 500px;
+  left: 35%;
+  right: auto;
+}
 .panel-login {
   margin-top: 25px;
   border-color: #ccc;
@@ -257,21 +262,15 @@
   font-size: 7rem;
   transform: translate(-50%, -50%);
 }
-.lowerOpacity {
-	opacity: 0.2;
-}
 .background-bottom {
   background: 
     linear-gradient(
-      rgba(0, 0, 0, 0.1),
-      rgba(0, 0, 0, 0.1)
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
     ),
     url("/assets/images/chef-kitchen.jpg");
   background-size: cover;
   height: 500px;
-}
-.background-bottom img {
-  opacity: 0.5;
 }
 .background-bottom {
   display: flex;
@@ -279,9 +278,15 @@
   justify-content: center;
   flex-direction: row;
 }
+.background-bottom-form {
+  width: 50%;
+  padding: 20px;
+  background:rgba(255,255,255,0.7);
+  border-radius: 15px;
+}
 .background-bottom-form label {
   font-family: 'Roboto', sans-serif;
-  color: white;
+  color: #333333;
   font-weight: 400;
   font-size: 2rem;
 }
@@ -312,6 +317,9 @@
 }
 .checkbox {
   margin-left: 10px;
+}
+.form-inline {
+  margin-left: 10px;  
 }
 
 .form-meal {

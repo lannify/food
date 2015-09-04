@@ -22,7 +22,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="/views/index/">Home</a>
+          <a class="navbar-brand" href="/">Home</a>
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">      
           <form class="navbar-form navbar-right" role="search">
@@ -37,7 +37,7 @@
                 <ul class="dropdown-menu">
                   <li><a href="/views/dashboard/">Dashboard</a></li>             
                   <li role="separator" class="divider"></li>
-                  <li><a href="/users/logoff">Sign Out</a></li>              
+                  <li><a href="/users/logout">Sign Out</a></li>              
                 </ul>
                 <li><a href="/views/cart/">Your Cart <span class= "glyphicon glyphicon-shopping-cart"></span></a></li>
               </li>
@@ -50,7 +50,21 @@
         <div class="row">
             <div class="col-sm-3 col-md-2 sidebar">
                 <ul class="nav nav-sidebar">
-                    <li class="active"><a href="">Filter options<span class="sr-only">(current)</span></a></li>
+                  <li class="active"><a href="">Filter options<span class="sr-only">(current)</span></a></li>
+                  <li><a href="">Filter by date </a></li>
+                  <li>
+                    <form class="form-inline" action="/landings/search" method="post">
+                      <div class="form-group">
+                        <label for="from_date" class="control-label">From date:</label>
+                        <input type="date" name="from_date" tabindex="1" class="form-control" value="" style="width: 100px;">
+                      </div>
+                      <div class="form-group">
+                        <label for="to_date" class="control-label">To date:</label>
+                        <input type="date" name="to_date" tabindex="2" class="form-control" value="" style="width: 100px;">
+                      </div>
+                      <input class="btn btn-primary btn-xs" type="submit" value="Filter by date">
+                    </form>
+                  </li>
                 </ul>
                 <ul class="nav nav-sidebar">
                     <li class="active"><a href="">Type of Cuisine</a></li>

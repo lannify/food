@@ -33,7 +33,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="/views/index/">Home</a>
+          <a class="navbar-brand" href="/">Home</a>
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">      
           
@@ -124,9 +124,9 @@
                     <form id="request-form" action="/users/register" method="post" role="form" style="display: none;">
                       <div class="form-group">
                         <select class="form-control" name="level">
-                            <option value='' selected disabled>Do You want to Cook or Eat?</option>
-                            <option value='2'>Cook</option>
-                            <option value='3'>Eat</option>
+                            <option value='' selected disabled>Are you a chef or diner?</option>
+                            <option value='2'>I'm going to cook!</option>
+                            <option value='3'>I'm just here to eat.</option>
                           </select>
                       </div>                      
                       <div class="form-group">
@@ -147,7 +147,7 @@
                       <div class="form-group">
                         <div class="row">
                           <div class="col-sm-6 col-sm-offset-3">
-                            <input type="submit" name="register" tabindex="6" id="register" class="form-control btn btn-login" value="Register an Account">
+                            <input type="submit" name="register" tabindex="6" id="register" class="form-control btn btn-login" value="Register">
                           </div>
                         </div>
                       </div>                 
@@ -246,30 +246,34 @@
           <h3>Or search by type and/or date</h3>
         </div>
         <div class="background-bottom col-md-12 col-lg-12 col-sm-12">
-          <div class="col-md-3 col-lg-3 col-sm-3"></div>
-          <div class="background-bottom-form col-md-6 col-lg-6 col-sm-6">
+          <div class="col-md-4 col-lg-4 col-sm-4"></div>
+          <div class="background-bottom-form col-md-4 col-lg-4 col-sm-4">
             <form action="/landings/search" method="post">
               <div class="form-group">
                 <label for="type" class="control-label">Cuisine:</label> 
                 <select class="chosen-select form-control" data-placeholder="Search for foods" style="width:200px;" name="type" multiple>
                   <option value="0" default></option>
                   <optgroup label="Asian">
-                    <option value="1">Thai</option>
-                    <option value="2">Korean</option>
-                    <option value="3">Chinese</option>
-                    <option value="4">Japanese</option>
+                    <option value="119">Thai</option>
+                    <option value="70">Korean</option>
+                    <option value="33">Chinese</option>
+                    <option value="69">Japanese</option>
+                    <option value="65">Indian</option>
                   </optgroup>
                   <optgroup label="Western">
-                    <option value="5">Burgers</option>
-                    <option value="6">Italian</option>
-                    <option value="7">Vegetarian</option>
-                    <option value="8">French</option>
+                    <option value="3">American</option>
+                    <option value="52">French</option>
+                    <option value="68">Italian</option>
+                    <option value="99">Seafood</option>
+                    <option value="86">Pizza</option>
                   </optgroup>
-                  <optgroup label="Fine Dining">
-                    <option value="9">Seafood</option>
-                    <option value="10">Lobster</option>
-                    <option value="11">Steak</option>
-                    <option value="12">Fish</option>
+                  <optgroup label="Other Types">
+                    <option value="55">Gluten-free</option>
+                    <option value="58">Halal</option>
+                    <option value="125">Vegan</option>
+                    <option value="126">Vegetarian</option>                    
+                    <option value="71">Kosher</option>
+                    <option value="35">Comfort Food</option>                    
                   </optgroup>
                 </select>
               </div>
@@ -281,10 +285,10 @@
                 <label for="type" class="control-label">To date:</label>
                 <input type="date" name="to_date" tabindex="2" class="form-control" value="" style="width: 200px;">
               </div>
-              <input class="btn btn-default" type="submit" value="Find meals">
+              <input class="btn btn-primary" type="submit" value="Find meals">
             </form>
           </div> <!-- /.background-bottom-form -->
-          <div class="col-md-3 col-lg-3 col-sm-3"></div>
+          <div class="col-md-4 col-lg-4 col-sm-4"></div>
         </div> <!-- /.background-bottom -->
       </div> <!-- /.row -->
     </div> <!-- /.container-fluid -->
