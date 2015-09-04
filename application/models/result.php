@@ -7,6 +7,21 @@ class Result extends CI_Model {
     $this->load->library('form_validation');
   }
 
+  public function get_meals_by_dates($from_date, $to_date)
+  {
+    $meals = array();
+
+    $query = "SELECT * FROM meals WHERE meal_date BETWEEN ? AND ?";
+    $meals[] = $this->db->query($query, array($from_date, $to_date))->result_array();
+
+    // Check if any meals matched query
+    if(! count($meals) > 0) {
+      $meals[] = false;
+      $meals[] = "No results found! Please try your search again."; 
+    }
+    return $meals;
+  }
+
 	public function get_meals_by_category($category)
 	{
     $meals = array();
@@ -26,7 +41,7 @@ class Result extends CI_Model {
       }
     }
 
-    // Check if any meals exist
+    // Check if any meals matched query
     if(! count($meals) > 0) {
       $meals[] = false;
       $meals[] = "No results found! Please try your search again."; 

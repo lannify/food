@@ -247,7 +247,7 @@
               <div class="form-group">
                 <label for="type" class="control-label">Cuisine:</label> 
                 <select class="chosen-select form-control" data-placeholder="Search for foods" style="width:200px;" name="type" multiple>
-                  <option value></option>
+                  <option value="0" default></option>
                   <optgroup label="Asian">
                     <option value="1">Thai</option>
                     <option value="2">Korean</option>
