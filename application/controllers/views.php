@@ -83,10 +83,13 @@ class Views extends CI_Controller {
 
 	public function checkout()
 	{
-
 		$cart = $this->cart->contents();	
 		$this->load->view('checkout', array ("cart" =>$cart));
+	}
 
+	public function reviews()
+	{
+		$this->load->view('reviews');
 	}
 }
 
