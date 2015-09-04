@@ -85,7 +85,7 @@
                     </select>  
                     <br>  
                   </div>
-                 <? var_dump($meal) ?>
+
                   <div class="row">        
                     <div class="form-group">
                       <div class="col-sm-8">                   

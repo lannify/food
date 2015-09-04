@@ -10,6 +10,13 @@
     <link href="/assets/css/bootstrap-chosen.css" rel="stylesheet">
     <link href="/assets/css/chosen/chosen.css" rel="stylesheet">
     <link href="/assets/css/ihover.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+    <script type="text/javascript">
+      $(document).ready(function() {
+        
+      });
+  </script>
   </head>
   <body>
      <nav class="navbar navbar-default">
@@ -50,56 +57,72 @@
         <div class="row">
           <div class="col-md-8">
             <h1>Check Out</h1>
-            <p>Your Address</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae, aliquam laboriosam numquam delectus corporis vero odit facilis reprehenderit voluptatum, id impedit fuga, pariatur accusamus dicta quo doloribus? Nulla, labore, totam!</p>
-            <p>Your Total</p>
-            <script
-              src="https://checkout.stripe.com/checkout.js"
-              class="stripe-button"
-              data-key="pk_test_6pRNASCoBOKtIshFeQd4XMUh"
+            <hr>
+            <form id = "payment-form" class="form-horizontal" role="form" action = "" method ="post">
+                <div class="form-group">
+                  <label class="col-sm-3 control-label">Name</label>
+                  <div class="col-sm-8">
+                    <input type="text" class="form-control" name = "name" placeholder="">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="col-sm-3 control-label">Street Address</label>
+                  <div class="col-sm-8">
+                    <input type="text" class="form-control" name = "street" placeholder="">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="col-sm-3 control-label">City</label>
+                  <div class="col-sm-8">
+                    <input type="text" class="form-control" name = "city" placeholder="">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="col-sm-3 control-label">Zipcode</label>
+                  <div class="col-sm-8">
+                    <input type="text" class="form-control" name = "zipcode" placeholder="">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="col-sm-3 control-label"></label>
+                  <div class="col-sm-8">                    
+                    <script
+                      src="https://checkout.stripe.com/checkout.js"
+                      class="stripe-button"
+                      data-key="pk_test_6pRNASCoBOKtIshFeQd4XMUh"                   
+                      data-name="Payment"
+                      data-description="2 widgets ($20.00)"
+                      data-amount="2000">
+                    </script>
+                  </div>
+                </div>
+            </form>
            
-              data-name="Demo Site"
-              data-description="2 widgets ($20.00)"
-              data-amount="2000">
-            </script>
           </div>
           <div class="col-md-4">
             <hr>
             <hr>
             <table class="table">
               <thead>
-                <th>Item</th>
-                <th>Price</th>
+                <th>Items</th>
+                <th>Total</th>
               </thead>
               <tbody>
-                <tr>
-                  <td>Item</td>
-                  <td>Price</td>
-                </tr>
-                <tr>
-                  <td>Order Sub Total:</td>
-                  <td>Price</td>
-                </tr>
-                <tr>
-                  <td>Tax:</td>
-                  <td>Price</td>
-                </tr>
+                  <td id="count"><?= count($cart)?></td>
+                  <td id="total">Total: $<?= $this->cart->total() ?></td>
+                </tr>           
               </tbody>
             </table>
 
-        <? var_dump($cart)?>
+    <!--     <? var_dump($cart)?> -->
 
           </div>
         </div>
       </div>
     </div>
-    
-    
-  
-
-
+   
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
     <script src="/assets/js/bootstrap.min.js"></script>
     <script src="/assets/js/main.js"></script>
   </body>

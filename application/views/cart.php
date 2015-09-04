@@ -136,7 +136,7 @@
     <div class="row">
       <div class="col-md-7 col-lg-7 col-sm-7"></div>
       <div class="col-md-2 col-lg-2 col-sm-2">
-        <h4>Total: $23.00</h4>
+        <h4>Total: $<?= $this->cart->total() ?></h4>
         <a href="/views/checkout"><button type="button" class="btn btn-warning btn-md">Checkout</button></a>
       </div>
       <div class="col-md-3 col-lg-3 col-sm-3">
